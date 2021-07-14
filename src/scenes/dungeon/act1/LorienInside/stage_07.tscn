@@ -1,0 +1,290 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/images/design/洛兰深处/stage7-1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/map/act1/01obj010.png" type="Texture" id=2]
+[ext_resource path="res://src/component/act1/TopGate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/component/act1/01obj002.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/component/act1/01obj001.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/component/act1/barrel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/component/act1/RightGate.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/images/map/act1/01tile03.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/act1/granflorispathtree01.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/act1/01obj101.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/act1/01tile02.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/act1/01obj201.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/act1/01tile01.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/bg/01mid1.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/bg/01far1.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/act1/granflorisbush01.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/map/act1/01tile00.png" type="Texture" id=17]
+[ext_resource path="res://src/scripts/dungeon/DungeonStage.gd" type="Script" id=18]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=19]
+
+[sub_resource type="TileSet" id=1]
+0/name = "01tile03.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 480 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "01tile02.png 1"
+1/texture = ExtResource( 11 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 224, 480 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "01tile01.png 2"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 224, 480 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "01tile00.png 3"
+3/texture = ExtResource( 17 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 224, 480 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 70.4225, 13.7959 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 29.5962, 61.7646 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 846.921, 40.4598 )
+
+[node name="stage_07" type="Node2D"]
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 368.657, 559.54, 349.5 ]
+}
+bgm = "forest01_new"
+env = "amb_forest_01"
+
+[node name="stage7-1" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+centered = false
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1007.66, 375 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/mid"]
+texture = ExtResource( 14 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 993.643, 379 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 80 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 240 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 2, 0, 6, 0, 0 )
+
+[node name="01obj101" type="Sprite" parent="environment"]
+position = Vector2( 933.81, 171.895 )
+texture = ExtResource( 10 )
+
+[node name="granflorispathtree01" type="Sprite" parent="environment"]
+position = Vector2( 1210.71, 160.003 )
+texture = ExtResource( 9 )
+
+[node name="TopGate" parent="environment" instance=ExtResource( 3 )]
+position = Vector2( 1212, 279 )
+
+[node name="granflorisbush01" type="Sprite" parent="environment"]
+position = Vector2( 1532.53, 364.999 )
+texture = ExtResource( 16 )
+
+[node name="granflorisbush02" type="Sprite" parent="environment"]
+position = Vector2( 1618.96, 514.286 )
+texture = ExtResource( 16 )
+
+[node name="granflorisbush03" type="Sprite" parent="environment"]
+position = Vector2( -16.4632, 353.775 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="RightGate" parent="environment" instance=ExtResource( 7 )]
+position = Vector2( 40.4086, 365.923 )
+
+[node name="granflorisbush04" type="Sprite" parent="environment"]
+position = Vector2( 57.6193, 541.226 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="01obj010" type="Sprite" parent="environment"]
+position = Vector2( 320, 359 )
+texture = ExtResource( 2 )
+
+[node name="01obj011" type="Sprite" parent="environment"]
+position = Vector2( 527, 358 )
+texture = ExtResource( 2 )
+
+[node name="01obj012" type="Sprite" parent="environment"]
+position = Vector2( 496, 371.5 )
+texture = ExtResource( 2 )
+
+[node name="01obj201" type="Sprite" parent="environment"]
+position = Vector2( 622.285, 396.505 )
+texture = ExtResource( 12 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="objs" type="YSort" parent="stage"]
+
+[node name="01obj002" parent="stage/objs" instance=ExtResource( 4 )]
+position = Vector2( 290.806, 365.734 )
+
+[node name="01obj003" parent="stage/objs" instance=ExtResource( 4 )]
+position = Vector2( 545.652, 365.734 )
+
+[node name="01obj001" parent="stage/objs" instance=ExtResource( 5 )]
+position = Vector2( 425.78, 419.535 )
+
+[node name="barrel" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 1016.65, 404.433 )
+
+[node name="barrel2" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 1018.53, 459.178 )
+
+[node name="barrel3" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 1105.37, 472.392 )
+
+[node name="barrel4" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 1067.61, 475.224 )
+
+[node name="barrel5" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 1103.48, 531.856 )
+
+[node name="barrel6" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 1135.57, 548.846 )
+
+[node name="barrel7" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 785.396, 390.275 )
+
+[node name="barrel8" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 275.704, 449.739 )
+
+[node name="barrel9" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 239.837, 507.315 )
+
+[node name="barrel10" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 366.316, 477.111 )
+
+[node name="barrel11" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 324.785, 529.968 )
+
+[node name="barrel12" parent="stage/objs" instance=ExtResource( 6 )]
+position = Vector2( 414.453, 516.754 )
+
+[node name="monster" type="YSort" parent="stage"]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_04" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1212, 346.057 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_07"
+target = "stage_04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_04"]
+shape = SubResource( 2 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_04"]
+position = Vector2( 0, 60.7384 )
+
+[node name="to_stage_06" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 42.9444, 391.215 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_07"
+target = "stage_06"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_06"]
+shape = SubResource( 4 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_06"]
+position = Vector2( 84.983, 26.6209 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 1567, 600 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( 169.386, 559.54, 132.77, 506.852, 62.6908, 436.773, 17.9736, 393.391, 17.3062, 339.997, 107.408, 341.332, 230.881, 368.029, 1145.91, 368.657, 1155.14, 349.5, 1268.51, 349.5, 1275.39, 368.657, 1330.79, 360.687, 1341.47, 335.325, 1430.9, 337.328, 1436.24, 402.067, 1548.37, 468.142, 1511.66, 516.864, 1515, 559.54, 1654.49, 559.54, 1647.81, 1.61537, -0.0469666, 2.28282, -0.0469666, 559.54 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 831.81, 600 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 3 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bk_amb.ogg-7d9264b38746735cd68684b9171885ed.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/birken/bk_amb.ogg"
+dest_files=[ "res://.import/bk_amb.ogg-7d9264b38746735cd68684b9171885ed.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

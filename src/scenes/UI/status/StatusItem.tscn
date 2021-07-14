@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/images/ui/status_bag/profile_icon0.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 1 )
+
+[node name="StatusItem" type="Node2D"]
+
+[node name="nameLabel" type="Label" parent="."]
+margin_left = 18.8062
+margin_top = 1.0
+margin_right = 98.8062
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "光属性强化"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="valueLabel" type="Label" parent="."]
+margin_left = 47.0
+margin_top = 1.0
+margin_right = 151.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "0.0%"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="Sprite" parent="."]
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 2 )
+centered = false

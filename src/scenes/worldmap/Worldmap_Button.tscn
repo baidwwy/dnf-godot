@@ -1,0 +1,132 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/scripts/worldmap/Worldmap_Button.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/3.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/2.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/1.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/4.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/0.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/5.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/6.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/worldmap/act1/lorien/7.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/ui/selectdungeon/14.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/ui/selectdungeon/12.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/ui/selectdungeon/13.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/ui/selectdungeon/15.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/ui/selectdungeon/11.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/ui/selectdungeon/10.png" type="Texture" id=15]
+
+[node name="Worldmap_Button" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="normalbg" type="TextureRect" parent="."]
+visible = false
+margin_left = -28.3654
+margin_top = -48.7216
+margin_right = 231.635
+margin_bottom = 47.2784
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="normalBtn" type="TextureButton" parent="."]
+margin_left = -12.7423
+margin_top = -32.0917
+margin_right = 217.258
+margin_bottom = 31.9083
+texture_normal = ExtResource( 3 )
+texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="selectbg" type="TextureRect" parent="."]
+visible = false
+margin_left = -28.6991
+margin_top = -61.2451
+margin_right = 295.301
+margin_bottom = 69.7549
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="selectBtn" type="TextureButton" parent="."]
+visible = false
+margin_left = -14.0
+margin_top = -46.0
+margin_right = 280.0
+margin_bottom = 55.0
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maoxian" type="TextureRect" parent="."]
+visible = false
+margin_left = 70.0
+margin_top = -46.0
+margin_right = 280.0
+margin_bottom = 35.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yongshi" type="TextureRect" parent="."]
+visible = false
+margin_left = 70.0
+margin_top = -46.0
+margin_right = 280.0
+margin_bottom = 34.0
+texture = ExtResource( 8 )
+
+[node name="king" type="TextureRect" parent="."]
+visible = false
+margin_left = 70.0
+margin_top = -46.0
+margin_right = 280.0
+margin_bottom = 34.0
+texture = ExtResource( 9 )
+
+[node name="leftBtn" type="TextureButton" parent="."]
+visible = false
+margin_left = 145.5
+margin_top = 35.0
+margin_right = 173.5
+margin_bottom = 53.0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rightBtn" type="TextureButton" parent="."]
+visible = false
+margin_left = 175.0
+margin_top = 35.0
+margin_right = 203.0
+margin_bottom = 53.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="normalBtn" to="." method="_on_normalBtn_mouse_entered"]
+[connection signal="mouse_exited" from="normalBtn" to="." method="_on_normalBtn_mouse_exited"]
+[connection signal="pressed" from="normalBtn" to="." method="_on_normalBtn_pressed"]
+[connection signal="pressed" from="selectBtn" to="." method="_on_enter_map"]
+[connection signal="pressed" from="leftBtn" to="." method="_on_leftBtn_pressed"]
+[connection signal="pressed" from="rightBtn" to="." method="_on_rightBtn_pressed"]

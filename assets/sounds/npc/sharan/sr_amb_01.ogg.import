@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sr_amb_01.ogg-2872a279c47fe03a2c5209f94241bace.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/sharan/sr_amb_01.ogg"
+dest_files=[ "res://.import/sr_amb_01.ogg-2872a279c47fe03a2c5209f94241bace.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

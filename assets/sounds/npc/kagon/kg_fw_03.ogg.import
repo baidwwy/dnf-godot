@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kg_fw_03.ogg-d8a4f77bd25c5b4ac04899a6f2017a4a.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/kagon/kg_fw_03.ogg"
+dest_files=[ "res://.import/kg_fw_03.ogg-d8a4f77bd25c5b4ac04899a6f2017a4a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

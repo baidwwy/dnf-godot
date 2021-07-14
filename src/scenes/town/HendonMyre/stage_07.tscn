@@ -1,0 +1,237 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/map/hendonMyre/hmwall02.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/tiles/hmtile.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/hendonMyre/hmtree00.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/hendonMyre/hmstwayfence01.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/map/hendonMyre/hmobj03_6.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/hendonMyre/hmstwaywall01.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/hendonMyre/hmtree01.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/bg/hmmid01.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/hendonMyre/hmobj03_7.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/hendonMyre/hmstwaywall02.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/bg/hmfar01.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/hendonMyre/hmobj03_13.png" type="Texture" id=13]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=14]
+
+[sub_resource type="TileSet" id=1]
+0/name = "hmwall02.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 134 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "hmtile.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 138 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.64594, 71.5804 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 448, 49 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 23.5597, 99.1135 )
+
+[node name="stage_07" type="Node2D"]
+script = ExtResource( 14 )
+bgm = "hendonmyre"
+env = "amb_town_03"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 12 )
+centered = false
+offset = Vector2( -150, -30 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1311, 243 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/mid"]
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( 0, 130 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1255, 259 )
+
+[node name="hmwall02" type="TileMap" parent="environment"]
+position = Vector2( 0, 289 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 134 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0 )
+
+[node name="hmtile" type="TileMap" parent="environment"]
+position = Vector2( 0, 423 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 224, 138 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0 )
+
+[node name="hmtree00" type="Sprite" parent="environment"]
+position = Vector2( 776, 205 )
+texture = ExtResource( 4 )
+
+[node name="hmtree01" type="Sprite" parent="environment"]
+position = Vector2( 634, 233 )
+texture = ExtResource( 8 )
+
+[node name="hmstwaywall01" type="Sprite" parent="environment"]
+position = Vector2( 0, 95.8814 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="hmstwaywall02" type="Sprite" parent="environment"]
+position = Vector2( 225, 200.192 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="hmobj03_6" type="Sprite" parent="environment"]
+position = Vector2( 867.803, 361.559 )
+texture = ExtResource( 6 )
+
+[node name="hmobj03_7" type="Sprite" parent="environment"]
+position = Vector2( 532.068, 344.891 )
+texture = ExtResource( 10 )
+
+[node name="hmobj03_8" type="Sprite" parent="environment"]
+position = Vector2( 486.795, 359.416 )
+texture = ExtResource( 6 )
+
+[node name="hmobj03_13" type="Sprite" parent="environment"]
+position = Vector2( 573.81, 364.734 )
+texture = ExtResource( 13 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="hmstwayfence01" type="Sprite" parent="."]
+position = Vector2( 47.0365, 531.319 )
+texture = ExtResource( 5 )
+
+[node name="hmstwayfence02" type="Sprite" parent="."]
+position = Vector2( 255.939, 542.665 )
+texture = ExtResource( 5 )
+
+[node name="hmstwayfence03" type="Sprite" parent="."]
+position = Vector2( 464.841, 522.643 )
+texture = ExtResource( 5 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_StormPass" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 6.79046, 482.382 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "HendonMyre"
+target = "StormPass"
+stage = "stage_01"
+type = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_StormPass"]
+shape = SubResource( 3 )
+
+[node name="pos" type="Position2D" parent="doors/to_StormPass"]
+position = Vector2( 74.6437, 0 )
+
+[node name="to_stage_03" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 889.293, 482.382 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_07"
+target = "stage_03"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_03"]
+shape = SubResource( 3 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_03"]
+position = Vector2( -89.797, 0 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 895.803, 600 )
+
+[node name="collision" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2( 448, 361 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 448, 604 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2( -24.1578, 488.319 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource( 5 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="collision"]
+position = Vector2( 920.12, 488.319 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D4"]
+shape = SubResource( 5 )

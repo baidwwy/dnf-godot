@@ -1,0 +1,255 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://src/scenes/npc/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/npc/npc_seria/4.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/npc/npc_seria/3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/npc/npc_seria/2.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/npc/npc_seria/1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/npc/npc_seria/5.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/npc/npc_seria/0.png" type="Texture" id=7]
+[ext_resource path="res://src/scripts/npc/Seria.gd" type="Script" id=8]
+[ext_resource path="res://assets/shader/outline_shader.shader" type="Shader" id=9]
+[ext_resource path="res://assets/sounds/npc/seria/se_amb_01.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/npc/seria/se_tk_02.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/npc/seria/se_tk_01.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/npc/seria/se_fw_01.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/npc/seria/se_fw_02.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/npc/seria/se_tk_03.wav" type="AudioStream" id=15]
+[ext_resource path="res://src/scenes/UI/npc_nemu/Menu_Seria.tscn" type="PackedScene" id=16]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float tilt = 0.4;
+uniform float scale = 0.3;
+uniform float alpha = 0.4;
+uniform bool shadow = true;
+
+void fragment(){
+	vec4 previous_color = texture(TEXTURE,UV);
+	vec4 block_color;
+	if(shadow == true){
+		block_color = vec4(0.0,0.0,0.0,previous_color.a * alpha);
+	}else{
+		block_color = vec4(previous_color.r,previous_color.g,previous_color.b,previous_color.a * alpha);
+	}
+
+    COLOR = block_color;
+}
+
+void vertex(){
+	mat3 mat_scale = mat3(vec3(1.0,0.0,0.0),vec3(0.0,1.0,0.0),vec3(0.0,0.0,1.0));
+	mat3 mat_tilt = mat3(vec3(1.0, tilt, 0.0), vec3(0.0, scale, 0.0), vec3(0.0, 0.0, 1.0));
+	mat3 mul = mat_scale * mat_tilt;
+	vec3 temp = vec3(VERTEX,0.0) * mul;
+	
+	VERTEX =  temp.xy;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/tilt = -0.4
+shader_param/scale = 0.3
+shader_param/alpha = 0.4
+shader_param/shadow = true
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 9 )
+shader_param/outline_color = Color( 0.654902, 0.964706, 0.192157, 1 )
+shader_param/show_outline = false
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=6]
+length = 2.9
+loop = true
+step = 0.18
+tracks/0/type = "value"
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.54, 0.72, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.54, 0.72, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "amb_01"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fw_01"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "fw_02"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 14 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "tk_01"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "tk_02"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "tk_03"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 15 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[node name="Seria" instance=ExtResource( 1 )]
+script = ExtResource( 8 )
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource( 2 )
+position = Vector2( 24.4337, 45.0946 )
+frames = SubResource( 3 )
+
+[node name="body" parent="." index="1"]
+material = SubResource( 4 )
+frames = SubResource( 5 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "default"
+anims/default = SubResource( 6 )
+
+[node name="nameLabel" parent="." index="3"]
+margin_top = -66.7039
+margin_bottom = -49.7039
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "赛丽亚"
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource( 15 )
+
+[node name="talkPlayer" parent="." index="7"]
+anims/amb_01 = SubResource( 7 )
+anims/fw_01 = SubResource( 8 )
+anims/fw_02 = SubResource( 9 )
+anims/tk_01 = SubResource( 10 )
+anims/tk_02 = SubResource( 11 )
+anims/tk_03 = SubResource( 12 )
+
+[node name="Menu_Seria" parent="." index="9" instance=ExtResource( 16 )]
+visible = true
+margin_left = 56.7307
+margin_top = 75.4185
+margin_right = 156.731
+margin_bottom = 159.418
+
+[connection signal="pressed" from="Menu_Seria/talkBtn" to="." method="_on_talkBtn_pressed"]
+[connection signal="pressed" from="Menu_Seria/shopBtn" to="." method="_on_shopBtn_pressed"]
+[connection signal="pressed" from="Menu_Seria/taskBtn" to="." method="_on_taskBtn_pressed"]
+
+[editable path="Menu_Seria"]

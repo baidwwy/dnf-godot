@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/breeze_fw_04.ogg-ef4a3bfb9fb4dbf3ed15ccd65e959399.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/breeze/breeze_fw_04.ogg"
+dest_files=[ "res://.import/breeze_fw_04.ogg-ef4a3bfb9fb4dbf3ed15ccd65e959399.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

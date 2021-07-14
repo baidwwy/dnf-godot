@@ -1,0 +1,772 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://assets/images/ui/windowcommon/Panel.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/simsun.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/scenes/UI/status/bag_buttongroup.tres" type="ButtonGroup" id=4]
+[ext_resource path="res://assets/images/ui/windowcommon/windowtitle1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/ui/windowcommon/277.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/ui/windowcommon/279.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_9.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_8.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_10.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/ui/windowcommon/13.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_5.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_7.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/ui/windowcommon/70.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_4.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_3.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/ui/windowcommon/57.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/ui/status_bag/13.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/ui/status_bag/1.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/ui/status_bag/bag_bg1.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/design/人物和背包.jpg" type="Texture" id=21]
+[ext_resource path="res://assets/images/ui/windowcommon/276.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/ui/status_bag/2.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/ui/windowcommon/278.png" type="Texture" id=24]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_6.png" type="Texture" id=25]
+[ext_resource path="res://src/component/buttons/Button2.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/component/buttons/Tab_Button1.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/scenes/UI/slot/EquipmentSlot.tscn" type="PackedScene" id=28]
+[ext_resource path="res://src/scenes/UI/slot/InventorySlot.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/scripts/com/DraggableBar.gd" type="Script" id=30]
+[ext_resource path="res://src/scripts/UI/Bag.gd" type="Script" id=31]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 104, 111 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+outline_size = 1
+outline_color = Color( 0.105882, 0.105882, 0.105882, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 149, 8 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 23 )
+region_rect = Rect2( 0, 0, 151, 10 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 3 )
+
+[node name="Bag" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 395.0
+margin_top = 25.0
+margin_right = -70.0
+margin_bottom = -63.0
+script = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="人物和背包" type="Sprite" parent="."]
+visible = false
+position = Vector2( -395.295, -25.3533 )
+texture = ExtResource( 21 )
+centered = false
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 8.0
+margin_top = 17.0
+margin_right = 331.0
+margin_bottom = 511.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="windowtitle" type="NinePatchRect" parent="."]
+margin_right = 335.0
+margin_bottom = 39.0
+mouse_filter = 1
+texture = ExtResource( 5 )
+patch_margin_left = 100
+patch_margin_right = 50
+script = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="windowtitle"]
+anchor_top = -0.024202
+anchor_bottom = -0.024202
+margin_left = 4.0
+margin_top = 10.9439
+margin_right = 362.0
+margin_bottom = 33.9439
+custom_fonts/font = SubResource( 2 )
+text = "装备栏(B)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bag_bg1" type="Sprite" parent="."]
+position = Vector2( 170.655, 132.391 )
+texture = ExtResource( 20 )
+
+[node name="itembg" type="NinePatchRect" parent="."]
+modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = 16.0
+margin_top = 217.0
+margin_right = 322.0
+margin_bottom = 435.0
+texture = ExtResource( 17 )
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EquipGrid" type="GridContainer" parent="."]
+margin_left = 19.0
+margin_top = 221.0
+margin_right = 319.0
+margin_bottom = 401.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot1" parent="EquipGrid" instance=ExtResource( 29 )]
+
+[node name="ItemSlot2" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 30.0
+margin_right = 60.0
+
+[node name="ItemSlot3" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 60.0
+margin_right = 90.0
+
+[node name="ItemSlot4" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 90.0
+margin_right = 120.0
+
+[node name="ItemSlot5" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 120.0
+margin_right = 150.0
+
+[node name="ItemSlot6" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 150.0
+margin_right = 180.0
+
+[node name="ItemSlot7" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 180.0
+margin_right = 210.0
+
+[node name="ItemSlot8" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 210.0
+margin_right = 240.0
+
+[node name="ItemSlot9" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 240.0
+margin_right = 270.0
+
+[node name="ItemSlot10" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 270.0
+margin_right = 300.0
+
+[node name="ItemSlot11" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_top = 30.0
+margin_bottom = 60.0
+
+[node name="ItemSlot12" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="ItemSlot13" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="ItemSlot14" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ItemSlot15" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 120.0
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 60.0
+
+[node name="ItemSlot16" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 150.0
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 60.0
+
+[node name="ItemSlot17" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 210.0
+margin_bottom = 60.0
+
+[node name="ItemSlot18" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 210.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 60.0
+
+[node name="ItemSlot19" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 240.0
+margin_top = 30.0
+margin_right = 270.0
+margin_bottom = 60.0
+
+[node name="ItemSlot20" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 270.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="ItemSlot21" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_top = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot22" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot23" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ItemSlot24" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 90.0
+
+[node name="ItemSlot25" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 90.0
+
+[node name="ItemSlot26" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 90.0
+
+[node name="ItemSlot27" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 90.0
+
+[node name="ItemSlot28" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 210.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ItemSlot29" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 240.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 90.0
+
+[node name="ItemSlot30" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+
+[node name="ItemSlot31" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_top = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot32" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 120.0
+
+[node name="ItemSlot33" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 60.0
+margin_top = 90.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot34" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 120.0
+margin_bottom = 120.0
+
+[node name="ItemSlot35" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 120.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 120.0
+
+[node name="ItemSlot36" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+
+[node name="ItemSlot37" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 180.0
+margin_top = 90.0
+margin_right = 210.0
+margin_bottom = 120.0
+
+[node name="ItemSlot38" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 210.0
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 120.0
+
+[node name="ItemSlot39" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 240.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="ItemSlot40" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 270.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+
+[node name="ItemSlot41" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_top = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot42" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 150.0
+
+[node name="ItemSlot43" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 90.0
+margin_bottom = 150.0
+
+[node name="ItemSlot44" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 90.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot45" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 150.0
+
+[node name="ItemSlot46" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 150.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 150.0
+
+[node name="ItemSlot47" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 150.0
+
+[node name="ItemSlot48" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 210.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 150.0
+
+[node name="ItemSlot49" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 240.0
+margin_top = 120.0
+margin_right = 270.0
+margin_bottom = 150.0
+
+[node name="ItemSlot50" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 270.0
+margin_top = 120.0
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="ItemSlot51" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_top = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot52" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 30.0
+margin_top = 150.0
+margin_right = 60.0
+margin_bottom = 180.0
+
+[node name="ItemSlot53" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 180.0
+
+[node name="ItemSlot54" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 90.0
+margin_top = 150.0
+margin_right = 120.0
+margin_bottom = 180.0
+
+[node name="ItemSlot55" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 120.0
+margin_top = 150.0
+margin_right = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot56" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ItemSlot57" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 180.0
+margin_top = 150.0
+margin_right = 210.0
+margin_bottom = 180.0
+
+[node name="ItemSlot58" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 210.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 180.0
+
+[node name="ItemSlot59" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 240.0
+margin_top = 150.0
+margin_right = 270.0
+margin_bottom = 180.0
+
+[node name="ItemSlot60" parent="EquipGrid" instance=ExtResource( 29 )]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 180.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 23.4878
+margin_top = 411.325
+margin_right = 63.4878
+margin_bottom = 428.325
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.890196, 0.854902, 0.756863, 1 )
+text = "重量"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="inventory_limitBar" type="ProgressBar" parent="."]
+margin_left = 58.0
+margin_top = 413.0
+margin_right = 245.0
+margin_bottom = 427.0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zlBtn" parent="." instance=ExtResource( 26 )]
+margin_left = 252.64
+margin_top = 408.416
+margin_right = 314.64
+margin_bottom = 431.416
+focus_mode = 0
+custom_styles/focus = SubResource( 6 )
+enabled_focus_mode = 0
+text = "整理"
+
+[node name="bottom_bg" type="Sprite" parent="."]
+position = Vector2( 169.338, 469 )
+scale = Vector2( 1.24462, 1.25 )
+texture = ExtResource( 18 )
+
+[node name="closeBtn" type="TextureButton" parent="."]
+margin_left = 313.274
+margin_top = 14.4486
+margin_right = 329.274
+margin_bottom = 30.4486
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="equipBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 19.0
+margin_top = 198.0
+margin_right = 77.0
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = ExtResource( 4 )
+text = "装备"
+
+[node name="consuBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 78.5353
+margin_top = 198.0
+margin_right = 136.535
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = ExtResource( 4 )
+text = "消耗品"
+
+[node name="materialBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 138.865
+margin_top = 198.0
+margin_right = 196.865
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = ExtResource( 4 )
+text = "材料"
+
+[node name="exBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 198.844
+margin_top = 198.0
+margin_right = 256.844
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = ExtResource( 4 )
+text = "副职业"
+
+[node name="taskBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 258.585
+margin_top = 198.0
+margin_right = 316.585
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = ExtResource( 4 )
+text = "任务"
+
+[node name="inventoryBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 20.0
+margin_top = 46.0
+margin_right = 107.0
+margin_bottom = 71.0
+text = "物品栏"
+
+[node name="dressBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 105.323
+margin_top = 46.0
+margin_right = 192.323
+margin_bottom = 71.0
+text = "装扮"
+
+[node name="creatureBtn" parent="." instance=ExtResource( 27 )]
+margin_left = 192.233
+margin_top = 46.0
+margin_right = 279.233
+margin_bottom = 71.0
+text = "宠物"
+
+[node name="line" type="NinePatchRect" parent="."]
+margin_left = 13.0
+margin_top = 69.0
+margin_right = 326.0
+margin_bottom = 72.0
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shopBtn" type="TextureButton" parent="."]
+margin_left = 20.6786
+margin_top = 472.1
+margin_right = 43.6786
+margin_bottom = 495.1
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 15 )
+texture_disabled = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shopBtn2" type="TextureButton" parent="."]
+margin_left = 152.08
+margin_top = 472.1
+margin_right = 175.08
+margin_bottom = 495.1
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saveLabel" type="Label" parent="."]
+margin_left = 16.7194
+margin_top = 443.945
+margin_right = 137.719
+margin_bottom = 460.945
+custom_fonts/font = SubResource( 7 )
+text = "0 个"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="diamond" type="Label" parent="."]
+margin_left = 16.7194
+margin_top = 474.899
+margin_right = 137.719
+margin_bottom = 491.899
+custom_fonts/font = SubResource( 7 )
+text = "0 点券"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gold" type="Label" parent="."]
+margin_left = 174.0
+margin_top = 475.0
+margin_right = 314.0
+margin_bottom = 492.0
+custom_fonts/font = SubResource( 7 )
+text = "0 金币"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pvp_point" type="Label" parent="."]
+margin_left = 191.73
+margin_top = 443.945
+margin_right = 312.73
+margin_bottom = 460.945
+custom_fonts/font = SubResource( 7 )
+text = "0 点"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="leftEquip" type="Control" parent="."]
+margin_left = 24.0
+margin_top = 79.0
+margin_right = 145.0
+margin_bottom = 160.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shoulder" parent="leftEquip" instance=ExtResource( 28 )]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 39.0
+margin_bottom = 38.0
+
+[node name="Jacket" parent="leftEquip" instance=ExtResource( 28 )]
+margin_left = 42.25
+margin_top = 2.0
+margin_right = 78.25
+margin_bottom = 38.0
+
+[node name="Pants" parent="leftEquip" instance=ExtResource( 28 )]
+margin_left = 81.75
+margin_top = 2.0
+margin_right = 117.75
+margin_bottom = 38.0
+
+[node name="Shoes" parent="leftEquip" instance=ExtResource( 28 )]
+margin_left = 3.0
+margin_top = 42.2596
+margin_right = 39.0
+margin_bottom = 78.2596
+
+[node name="Belt" parent="leftEquip" instance=ExtResource( 28 )]
+margin_left = 42.25
+margin_top = 42.2596
+margin_right = 78.25
+margin_bottom = 78.2596
+
+[node name="rightEquip" type="Control" parent="."]
+margin_left = 196.804
+margin_top = 79.0
+margin_right = 317.804
+margin_bottom = 160.0
+
+[node name="Wrist" parent="rightEquip" instance=ExtResource( 28 )]
+margin_left = 2.50104
+margin_top = 2.0
+margin_right = 38.501
+margin_bottom = 38.0
+
+[node name="Amulet" parent="rightEquip" instance=ExtResource( 28 )]
+margin_left = 41.751
+margin_top = 2.0
+margin_right = 77.751
+margin_bottom = 38.0
+
+[node name="Ring" parent="rightEquip" instance=ExtResource( 28 )]
+margin_left = 81.251
+margin_top = 2.0
+margin_right = 117.251
+margin_bottom = 38.0
+
+[node name="Weapon" parent="rightEquip" instance=ExtResource( 28 )]
+margin_left = 41.751
+margin_top = 42.0797
+margin_right = 77.751
+margin_bottom = 78.0797
+
+[node name="Title" parent="rightEquip" instance=ExtResource( 28 )]
+margin_left = 81.251
+margin_top = 42.0797
+margin_right = 117.251
+margin_bottom = 78.0797
+
+[connection signal="pressed" from="closeBtn" to="." method="_on_closeBtn_pressed"]
+
+[editable path="EquipGrid/ItemSlot25"]

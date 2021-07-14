@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/characterSelectStage.ogg-d58e3b5551f8c6c72572aa364a2168d7.oggstr"
+
+[deps]
+
+source_file="res://assets/music/characterSelectStage.ogg"
+dest_files=[ "res://.import/characterSelectStage.ogg-d58e3b5551f8c6c72572aa364a2168d7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

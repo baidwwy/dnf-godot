@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/simona_tk_01.ogg-be827572784b9f995d9f51a4ffe0c13b.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/simona/simona_tk_01.ogg"
+dest_files=[ "res://.import/simona_tk_01.ogg-be827572784b9f995d9f51a4ffe0c13b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

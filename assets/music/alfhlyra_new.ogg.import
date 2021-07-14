@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/alfhlyra_new.ogg-758aa63579957a0dad97c19b5b560d77.oggstr"
+
+[deps]
+
+source_file="res://assets/music/alfhlyra_new.ogg"
+dest_files=[ "res://.import/alfhlyra_new.ogg-758aa63579957a0dad97c19b5b560d77.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

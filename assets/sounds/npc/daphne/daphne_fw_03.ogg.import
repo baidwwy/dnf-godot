@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/daphne_fw_03.ogg-0b584c4988c9f0377f85379655fc5211.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/daphne/daphne_fw_03.ogg"
+dest_files=[ "res://.import/daphne_fw_03.ogg-0b584c4988c9f0377f85379655fc5211.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

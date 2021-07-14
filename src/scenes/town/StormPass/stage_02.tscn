@@ -1,0 +1,153 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/tres/stormPass_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/images/map/bg/spfar01.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/stormPass/spobj00.png" type="Texture" id=3]
+[ext_resource path="res://src/component/obj/stormbattlegateleftr.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/component/obj/stormbattlegaterightr.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/images/map/bg/spmid00.png" type="Texture" id=6]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=7]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.95164, 78.4381 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 448, 80 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 20.2235, 165.834 )
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 726.891 ],
+"_edit_vertical_guides_": [ 895.992 ]
+}
+bgm = "storm_pass"
+env = "amb_snowwind_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 721, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/ParallaxBackground/far"]
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -320 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 826, 998 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 644, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 6 )
+centered = false
+offset = Vector2( 0, 125 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 127 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 224, 120 )
+format = 1
+tile_data = PoolIntArray( 65536, 26, 0, 65537, 17, 0, 65538, 17, 0, 65539, 33, 0, 131072, 12, 0, 131073, 0, 0, 131074, 0, 0, 131075, 12, 0, 196608, 15, 0, 196609, 12, 0, 196610, 12, 0, 196611, 1, 0, 262144, 19, 0, 262145, 14, 0, 262146, 14, 0, 262147, 22, 0 )
+
+[node name="spobj00" type="Sprite" parent="environment"]
+position = Vector2( 0, 19 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="stormbattlegateleftr" parent="environment" instance=ExtResource( 4 )]
+position = Vector2( 94, 296 )
+
+[node name="stormbattlegaterightr" parent="environment" instance=ExtResource( 5 )]
+position = Vector2( 129, 465 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 6.36783, 416.155 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource( 1 )
+
+[node name="pos" type="Position2D" parent="doors/to_Entrance"]
+position = Vector2( 85.7781, 0 )
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 889.248, 416.155 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource( 1 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_01"]
+position = Vector2( -87.9471, 0 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 896, 726 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2( 448, 263.557 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 448, 570.316 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2( -20.4236, 415.796 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource( 3 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="collision"]
+position = Vector2( 915.967, 415.796 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D4"]
+shape = SubResource( 3 )

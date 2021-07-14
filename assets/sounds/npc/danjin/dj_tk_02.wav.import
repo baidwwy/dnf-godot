@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dj_tk_02.wav-145d1636dd1012cc7f4cac380df28592.sample"
+
+[deps]
+
+source_file="res://assets/sounds/npc/danjin/dj_tk_02.wav"
+dest_files=[ "res://.import/dj_tk_02.wav-145d1636dd1012cc7f4cac380df28592.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

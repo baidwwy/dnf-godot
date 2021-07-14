@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/iris_tk_05.ogg-82d142170cf078f914ae8a607ab3f1d1.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/iris/iris_tk_05.ogg"
+dest_files=[ "res://.import/iris_tk_05.ogg-82d142170cf078f914ae8a607ab3f1d1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

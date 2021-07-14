@@ -1,0 +1,186 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/map/tiles/elvengardobject05.png" type="Texture" id=2]
+[ext_resource path="res://src/scenes/com/DoorArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/images/map/tiles/01tile03.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/bg/01mid1.png" type="Texture" id=5]
+[ext_resource path="res://src/component/obj/01obj009.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/images/map/bg/01far1.png" type="Texture" id=7]
+[ext_resource path="res://src/component/obj/01obj102.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/component/obj/elvenrdg.tscn" type="PackedScene" id=11]
+
+[sub_resource type="TileSet" id=1]
+0/name = "01tile03.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 236 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "elvengardobject05.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 81 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3.59457, 40 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5.05768, 39.0105 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 448.544, 54.0672 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 448, 21.569 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 18.8326, 141.432 )
+
+[node name="D_Elvengard" type="Node2D"]
+script = ExtResource( 1 )
+bgm = "forest_town"
+env = "amb_forest_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="GrassMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 101 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 224 )
+format = 1
+tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0 )
+
+[node name="RoadMap" type="TileMap" parent="environment"]
+position = Vector2( 0, -7 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 224, 81 )
+format = 1
+tile_data = PoolIntArray( 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0 )
+
+[node name="elvenrdg" parent="environment" instance=ExtResource( 11 )]
+position = Vector2( 810.977, 252.293 )
+
+[node name="01obj102" parent="environment" instance=ExtResource( 10 )]
+position = Vector2( 151.734, 159.622 )
+
+[node name="01obj009" parent="environment" instance=ExtResource( 6 )]
+position = Vector2( 320.486, 342.669 )
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 925, 375 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/mid"]
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 640, 379 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" parent="doors" instance=ExtResource( 3 )]
+position = Vector2( 3.58058, 440 )
+current = "stage_02"
+target = "stage_01"
+
+[node name="CollisionShape2D" parent="doors/to_stage_01" index="0"]
+shape = SubResource( 3 )
+
+[node name="pos" parent="doors/to_stage_01" index="1"]
+position = Vector2( 61.7949, 0 )
+
+[node name="to_Entrance" parent="doors" instance=ExtResource( 3 )]
+position = Vector2( 891.062, 438.173 )
+current = "stage_02"
+target = "Lorien"
+type = 2
+
+[node name="CollisionShape2D" parent="doors/to_Entrance" index="0"]
+shape = SubResource( 4 )
+
+[node name="pos" parent="doors/to_Entrance" index="1"]
+position = Vector2( -59.259, 0 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2( 442.17, 323.612 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+position = Vector2( 5, 0 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 448.306, 572.418 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 6 )
+
+[node name="right" type="StaticBody2D" parent="collision"]
+position = Vector2( 915.5, 426.253 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/right"]
+position = Vector2( -1, 0 )
+shape = SubResource( 7 )
+
+[node name="left" type="StaticBody2D" parent="collision"]
+position = Vector2( -18.8881, 448.278 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/left"]
+position = Vector2( -1, 0 )
+shape = SubResource( 7 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 896, 600 )
+
+[editable path="doors/to_stage_01"]
+[editable path="doors/to_Entrance"]

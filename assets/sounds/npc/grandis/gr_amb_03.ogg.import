@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gr_amb_03.ogg-b25e9484b93113b42005fba0ec7536de.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/grandis/gr_amb_03.ogg"
+dest_files=[ "res://.import/gr_amb_03.ogg-b25e9484b93113b42005fba0ec7536de.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

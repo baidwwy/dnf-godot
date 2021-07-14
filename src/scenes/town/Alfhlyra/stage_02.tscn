@@ -1,0 +1,186 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_0.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/map/bg/alffar.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/bg/alfmid.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gate.png" type="Texture" id=4]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/map/alfhlyra/alftile01.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_3.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_4.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/alfhlyra/biggrass.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/alfhlyra/smgrass.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/alfhlyra/midgrass.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gateedge.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/alfhlyra/alfobj01.png" type="Texture" id=15]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=16]
+
+[sub_resource type="Animation" id=1]
+resource_name = "move"
+length = 40.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1120, 156 ), Vector2( -480, 156 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.15161, 68.4971 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 22.2271, 49.2909 )
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 360.219, 600.0, 505.875 ],
+"_edit_vertical_guides_": [ -37.7135 ]
+}
+bgm = "alfhlyra_new"
+env = "amb_forest_04"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 831, 330 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="fog" type="Sprite" parent="environment/background/mid"]
+position = Vector2( -1120, 156 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 2245, 158 )
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment"]
+autoplay = "move"
+anims/move = SubResource( 1 )
+
+[node name="alftile01" type="Sprite" parent="environment"]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="d_gate" type="Sprite" parent="environment"]
+position = Vector2( 997, 223 )
+texture = ExtResource( 4 )
+
+[node name="light" type="AnimatedSprite" parent="environment/d_gate"]
+position = Vector2( 4, 103 )
+frames = SubResource( 2 )
+frame = 3
+playing = true
+
+[node name="biggrass" type="Sprite" parent="environment"]
+position = Vector2( 389.019, 454.739 )
+texture = ExtResource( 11 )
+
+[node name="biggrass2" type="Sprite" parent="environment"]
+position = Vector2( 562.822, 419.529 )
+texture = ExtResource( 11 )
+
+[node name="smgrass" type="Sprite" parent="environment"]
+position = Vector2( 495.399, 483.207 )
+texture = ExtResource( 12 )
+
+[node name="midgrass" type="Sprite" parent="environment"]
+position = Vector2( 483.412, 334.125 )
+texture = ExtResource( 13 )
+
+[node name="smgrass2" type="Sprite" parent="environment"]
+position = Vector2( 639.236, 330 )
+texture = ExtResource( 12 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="alfobj01" type="Sprite" parent="."]
+position = Vector2( 549.249, 510.827 )
+texture = ExtResource( 15 )
+
+[node name="d_gateedge" type="Sprite" parent="."]
+position = Vector2( 1048, 362 )
+texture = ExtResource( 14 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 6.8484, 432.997 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource( 3 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_01"]
+position = Vector2( 76.8552, 0 )
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1036.58, 410.076 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+rotation = -0.692896
+shape = SubResource( 4 )
+
+[node name="pos" type="Position2D" parent="doors/to_Entrance"]
+position = Vector2( -83.1548, 38.4276 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 1120, 600 )
+
+[node name="collision" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( -0.916943, 360.219, 899.23, 360.219, 980.547, 401.939, 1018.02, 399.11, 1051.26, 414.667, 1029.41, 472.364, 996.811, 508.005, -0.916943, 506.591, -0.209835, 600.636, 1120.55, 599.929, 1119.85, 1.00912, -39.1008, 1.00912, -37.8283, 505.954, 0, 505.875 )

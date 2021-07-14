@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hendonmyre_new.ogg-c22996587d5f924113781853d1ab176a.oggstr"
+
+[deps]
+
+source_file="res://assets/music/hendonmyre_new.ogg"
+dest_files=[ "res://.import/hendonmyre_new.ogg-c22996587d5f924113781853d1ab176a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

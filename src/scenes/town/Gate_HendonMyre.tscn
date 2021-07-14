@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=1]
+[ext_resource path="res://src/component/obj/gatepillar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/images/map/bg/gateback.png" type="Texture" id=3]
+[ext_resource path="res://src/scenes/com/DoorArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/images/design/赛利亚房间.png" type="Texture" id=5]
+[ext_resource path="res://src/scenes/npc/Seria.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/npc/Postbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scenes/npc/Storate.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 157.839, 13.7959 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 159.484, 16.1339 )
+
+[node name="Gate" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 336.104, 601.269 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 635.61, 323.678 ]
+}
+bgm = "gate"
+
+[node name="赛利亚房间" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 5 )
+centered = false
+
+[node name="gateback" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_03" parent="doors" instance=ExtResource( 4 )]
+position = Vector2( 476, 545.713 )
+current = "Gate"
+target = "stage_03"
+
+[node name="CollisionShape2D" parent="doors/to_stage_03" index="0"]
+shape = SubResource( 1 )
+
+[node name="pos" parent="doors/to_stage_03" index="1"]
+position = Vector2( 0, -31.1815 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+position = Vector2( 6.30676, 15.27 )
+polygon = PoolVector2Array( 0.900494, -0.233976, 954.08, 0.473131, 952.666, 595.15, 635.175, 593.029, 635.138, 337.235, 316.108, 337.235, 316.27, 593.736, 1.6076, 593.029 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 475.005, 576.052 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 2 )
+
+[node name="Seria" parent="." instance=ExtResource( 6 )]
+margin_left = 472.935
+margin_top = 298.48
+margin_right = 537.935
+margin_bottom = 315.48
+
+[node name="Postbox" parent="." instance=ExtResource( 7 )]
+margin_left = 693.385
+margin_top = 350.368
+margin_right = 758.385
+margin_bottom = 367.368
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="gatepillar" parent="." instance=ExtResource( 2 )]
+position = Vector2( 483.404, 502.576 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 954, 600 )
+
+[node name="Born" type="Position2D" parent="."]
+position = Vector2( 488, 437 )
+
+[node name="Storate" parent="." instance=ExtResource( 8 )]
+margin_left = 282.853
+margin_top = 415.699
+margin_right = 282.853
+margin_bottom = 415.699
+
+[editable path="doors/to_stage_03"]

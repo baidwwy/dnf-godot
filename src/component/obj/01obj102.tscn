@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/images/map/act1/01obj102.png" type="Texture" id=1]
+
+[node name="01obj102" type="Sprite"]
+texture = ExtResource( 1 )

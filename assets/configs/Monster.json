@@ -1,0 +1,3 @@
+[
+{"ID":1,"name":"哥布林","face":"0.png","hp_max":70,"lv_min":1,"lv_max":6,"physical_attack":90,"physical_defense":90,"magical_attack":90,"magical_defense":90,"category":"human","fire_resistance":0,"water_resistance":0,"light_resistance":0,"dark_resistance":0,"attack_speed":400,"move_speed":300,"cast_speed":700,"hit_recovery":500,"weight":45000,"sight":300,"warlike":60,"attack_delay":1500,"item":"1000:50#1047:200#1004:100#3171:7000"}
+]

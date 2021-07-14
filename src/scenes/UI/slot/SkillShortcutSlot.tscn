@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/shader/gray.shader" type="Shader" id=1]
+[ext_resource path="res://src/scripts/UI/slot/SkillShortcutSlot.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/ui/windowcommon/Grid_Select.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/bitmapfont/s_lv/s_lv.tres" type="BitmapFont" id=4]
+[ext_resource path="res://assets/fonts/bitmapfont/s_lv/LV.png" type="Texture" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/is_gray = false
+
+[node name="SkillShortcutSlot" type="TextureRect"]
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="."]
+material = SubResource( 1 )
+margin_right = 34.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 35, 35 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lv" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+margin_left = -7.0
+margin_right = -8.0
+margin_bottom = 7.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 4 )
+text = "50"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="static_lv" type="TextureRect" parent="."]
+visible = false
+margin_left = 9.0
+margin_right = 20.0
+margin_bottom = 7.0
+rect_scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_SkillShortcutSlot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_SkillShortcutSlot_mouse_exited"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/roger_tk_03.ogg-39271bb49c9be186e5f0234fcd8f5521.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/roger/roger_tk_03.ogg"
+dest_files=[ "res://.import/roger_tk_03.ogg-39271bb49c9be186e5f0234fcd8f5521.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ambox_result.ogg-450681893ff8d2114d093330b94ce2e2.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/ui/ambox_result.ogg"
+dest_files=[ "res://.import/ambox_result.ogg-450681893ff8d2114d093330b94ce2e2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

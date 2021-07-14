@@ -1,0 +1,4576 @@
+[gd_scene load_steps=154 format=2]
+
+[ext_resource path="res://assets/images/mainhud/8.png" type="Texture" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://src/scenes/UI/Loading.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/images/ui/windowcommon/Panel.png" type="Texture" id=4]
+[ext_resource path="res://src/scenes/UI/Status.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/fonts/simsun.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/images/mainhud/4.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/mainhud/15.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/ui/windowcommon/windowtitle1.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/ui/windowcommon/277.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/ui/windowcommon/279.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_9.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_8.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/ui/windowcommon/12.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_10.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/ui/windowcommon/13.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_5.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_7.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/ui/windowcommon/70.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_4.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/mainhud/1.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/mainhud/16.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/mainhud/2.png" type="Texture" id=24]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_3.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/ui/windowcommon/57.png" type="Texture" id=26]
+[ext_resource path="res://assets/images/ui/status_bag/13.png" type="Texture" id=27]
+[ext_resource path="res://assets/images/ui/status_bag/1.png" type="Texture" id=28]
+[ext_resource path="res://assets/images/ui/windowcommon/15.png" type="Texture" id=29]
+[ext_resource path="res://assets/images/mainhud/5.png" type="Texture" id=30]
+[ext_resource path="res://assets/images/ui/status_bag/bag_bg1.png" type="Texture" id=31]
+[ext_resource path="res://assets/images/ui/windowcommon/14.png" type="Texture" id=32]
+[ext_resource path="res://assets/images/design/人物和背包.jpg" type="Texture" id=33]
+[ext_resource path="res://assets/images/ui/windowcommon/276.png" type="Texture" id=34]
+[ext_resource path="res://assets/images/ui/status_bag/2.png" type="Texture" id=35]
+[ext_resource path="res://assets/images/ui/windowcommon/278.png" type="Texture" id=36]
+[ext_resource path="res://assets/images/ui/status_bag/inventory_6.png" type="Texture" id=37]
+[ext_resource path="res://assets/images/ui/windowcommon/safe_title_0.png" type="Texture" id=38]
+[ext_resource path="res://src/component/buttons/Button2.tscn" type="PackedScene" id=39]
+[ext_resource path="res://src/component/buttons/Tab_Button1.tscn" type="PackedScene" id=40]
+[ext_resource path="res://src/scenes/UI/slot/EquipmentSlot.tscn" type="PackedScene" id=41]
+[ext_resource path="res://src/scenes/UI/slot/InventorySlot.tscn" type="PackedScene" id=42]
+[ext_resource path="res://src/scripts/com/DraggableBar.gd" type="Script" id=43]
+[ext_resource path="res://src/scripts/UI/Bag.gd" type="Script" id=44]
+[ext_resource path="res://assets/images/mainhud/17.png" type="Texture" id=45]
+[ext_resource path="res://assets/images/mainhud/18.png" type="Texture" id=46]
+[ext_resource path="res://src/scripts/UI/StorageUI.gd" type="Script" id=47]
+[ext_resource path="res://assets/images/mainhud/3.png" type="Texture" id=48]
+[ext_resource path="res://assets/images/mainhud/30.png" type="Texture" id=49]
+[ext_resource path="res://assets/images/mainhud/14.png" type="Texture" id=50]
+[ext_resource path="res://assets/images/mainhud/31.png" type="Texture" id=51]
+[ext_resource path="res://assets/images/design/mainui_design.png" type="Texture" id=52]
+[ext_resource path="res://assets/images/mainhud/10.png" type="Texture" id=53]
+[ext_resource path="res://assets/images/mainhud/11.png" type="Texture" id=54]
+[ext_resource path="res://assets/images/mainhud/0.png" type="Texture" id=55]
+[ext_resource path="res://assets/images/mainhud/6.png" type="Texture" id=56]
+[ext_resource path="res://assets/images/mainhud/9.png" type="Texture" id=57]
+[ext_resource path="res://assets/images/mainhud/12.png" type="Texture" id=58]
+[ext_resource path="res://assets/images/mainhud/13.png" type="Texture" id=59]
+[ext_resource path="res://assets/images/mainhud/19.png" type="Texture" id=60]
+[ext_resource path="res://assets/images/mainhud/7.png" type="Texture" id=61]
+[ext_resource path="res://assets/images/mainhud/32.png" type="Texture" id=62]
+[ext_resource path="res://assets/images/mainhud/34.png" type="Texture" id=63]
+[ext_resource path="res://assets/images/mainhud/35.png" type="Texture" id=64]
+[ext_resource path="res://assets/images/mainhud/33.png" type="Texture" id=65]
+[ext_resource path="res://assets/fonts/bitmapfont/level02/10.png" type="Texture" id=66]
+[ext_resource path="res://assets/fonts/bitmapfont/sp/sp.tres" type="BitmapFont" id=67]
+[ext_resource path="res://assets/fonts/bitmapfont/level02/level02.tres" type="BitmapFont" id=68]
+[ext_resource path="res://src/scripts/UI/Mainhud.gd" type="Script" id=69]
+[ext_resource path="res://src/scenes/UI/slot/InvShortcutSlot.tscn" type="PackedScene" id=70]
+[ext_resource path="res://assets/images/ui/windowcommon/93.png" type="Texture" id=71]
+[ext_resource path="res://assets/images/ui/windowcommon/90.png" type="Texture" id=72]
+[ext_resource path="res://assets/images/ui/windowcommon/92.png" type="Texture" id=73]
+[ext_resource path="res://assets/images/ui/windowcommon/91.png" type="Texture" id=74]
+[ext_resource path="res://assets/images/ui/windowcommon/110.png" type="Texture" id=75]
+[ext_resource path="res://assets/images/ui/window_title_accessory/1.png" type="Texture" id=76]
+[ext_resource path="res://assets/images/ui/windowcommon/112.png" type="Texture" id=77]
+[ext_resource path="res://assets/images/ui/windowcommon/113.png" type="Texture" id=78]
+[ext_resource path="res://assets/images/ui/windowcommon/111.png" type="Texture" id=79]
+[ext_resource path="res://assets/images/ui/skillbuy/15.png" type="Texture" id=80]
+[ext_resource path="res://src/scenes/UI/slot/SkillSlot.tscn" type="PackedScene" id=81]
+[ext_resource path="res://src/component/buttons/Button1.tscn" type="PackedScene" id=82]
+[ext_resource path="res://assets/images/ui/windowcommon/exskillquickslot.png" type="Texture" id=83]
+[ext_resource path="res://src/scenes/UI/slot/SkillShortcutSlot.tscn" type="PackedScene" id=84]
+[ext_resource path="res://src/scripts/UI/Skillinventory.gd" type="Script" id=85]
+[ext_resource path="res://src/scenes/UI/toolTip/ToolTipSkill.tscn" type="PackedScene" id=86]
+[ext_resource path="res://src/scenes/UI/toolTip/ToolTipEquip.tscn" type="PackedScene" id=87]
+[ext_resource path="res://assets/sounds/ui/click1.wav" type="AudioStream" id=88]
+[ext_resource path="res://assets/images/ui/navigation/key_over.png" type="Texture" id=89]
+[ext_resource path="res://assets/images/ui/navigation/select_normal.png" type="Texture" id=90]
+[ext_resource path="res://assets/images/ui/navigation/gameclose_disabled.png" type="Texture" id=91]
+[ext_resource path="res://assets/images/ui/navigation/gameclose_over.png" type="Texture" id=92]
+[ext_resource path="res://assets/images/ui/navigation/select_pressed.png" type="Texture" id=93]
+[ext_resource path="res://assets/images/ui/navigation/key_normal.png" type="Texture" id=94]
+[ext_resource path="res://assets/images/ui/navigation/backtown_pressed.png" type="Texture" id=95]
+[ext_resource path="res://assets/images/ui/navigation/backtown_over.png" type="Texture" id=96]
+[ext_resource path="res://assets/images/ui/navigation/key_pressed.png" type="Texture" id=97]
+[ext_resource path="res://assets/images/ui/navigation/key_disabled.png" type="Texture" id=98]
+[ext_resource path="res://assets/images/ui/navigation/select_over.png" type="Texture" id=99]
+[ext_resource path="res://assets/images/ui/navigation/gameclose_pressed.png" type="Texture" id=100]
+[ext_resource path="res://assets/images/ui/navigation/backtown_normal.png" type="Texture" id=101]
+[ext_resource path="res://assets/images/ui/navigation/gameclose_normal.png" type="Texture" id=102]
+[ext_resource path="res://assets/images/ui/navigation/select_disabled.png" type="Texture" id=103]
+[ext_resource path="res://assets/images/ui/navigation/backtown_disabled.png" type="Texture" id=104]
+[ext_resource path="res://assets/images/ui/navigation/option_over.png" type="Texture" id=105]
+[ext_resource path="res://assets/images/ui/navigation/option_pressed.png" type="Texture" id=106]
+[ext_resource path="res://assets/images/ui/navigation/option_disabled.png" type="Texture" id=107]
+[ext_resource path="res://src/scripts/UI/OptionMenu.gd" type="Script" id=108]
+[ext_resource path="res://assets/images/ui/navigation/option_normal.png" type="Texture" id=109]
+[ext_resource path="res://assets/images/ui/navigation/quest_over.png" type="Texture" id=110]
+[ext_resource path="res://assets/images/ui/navigation/exjob_disabled.png" type="Texture" id=111]
+[ext_resource path="res://assets/images/ui/navigation/exjob_over.png" type="Texture" id=112]
+[ext_resource path="res://assets/images/ui/navigation/exjob_pressed.png" type="Texture" id=113]
+[ext_resource path="res://assets/images/ui/navigation/quest_pressed.png" type="Texture" id=114]
+[ext_resource path="res://assets/images/ui/navigation/quest_disabled.png" type="Texture" id=115]
+[ext_resource path="res://assets/images/ui/navigation/quest_normal.png" type="Texture" id=116]
+[ext_resource path="res://assets/images/ui/navigation/exjob_normal.png" type="Texture" id=117]
+[ext_resource path="res://src/scripts/UI/MyinfoMenu.gd" type="Script" id=118]
+[ext_resource path="res://src/scenes/UI/monster/Monster_HP_BOSS.tscn" type="PackedScene" id=119]
+[ext_resource path="res://src/scenes/UI/monster/Monster_HP_Elite.tscn" type="PackedScene" id=120]
+[ext_resource path="res://src/scenes/UI/monster/Monster_HP_Normal.tscn" type="PackedScene" id=121]
+[ext_resource path="res://src/scripts/UI/MonsterHP.gd" type="Script" id=122]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 104, 111 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+outline_size = 1
+outline_color = Color( 0.105882, 0.105882, 0.105882, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 28 )
+region_rect = Rect2( 0, 0, 149, 8 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 35 )
+region_rect = Rect2( 0, 0, 151, 10 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="ButtonGroup" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 104, 111 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=10]
+size = 15
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 15
+outline_size = 1
+outline_color = Color( 0.105882, 0.105882, 0.105882, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 28 )
+region_rect = Rect2( 0, 0, 149, 8 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 35 )
+region_rect = Rect2( 0, 0, 151, 10 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 32 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 29 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 56, 23 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.478431 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 15
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=21]
+texture = ExtResource( 74 )
+region_rect = Rect2( 0, 0, 77, 23 )
+
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 73 )
+region_rect = Rect2( 0, 0, 77, 23 )
+
+[sub_resource type="StyleBoxTexture" id=23]
+texture = ExtResource( 71 )
+region_rect = Rect2( 0, 0, 77, 23 )
+
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 72 )
+region_rect = Rect2( 0, 0, 77, 23 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.478431 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 79 )
+region_rect = Rect2( 0, 0, 48, 20 )
+
+[sub_resource type="StyleBoxTexture" id=27]
+texture = ExtResource( 77 )
+region_rect = Rect2( 0, 0, 48, 22 )
+
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 78 )
+region_rect = Rect2( 0, 0, 48, 20 )
+
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 75 )
+region_rect = Rect2( 0, 0, 48, 20 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.478431 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="ButtonGroup" id=31]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="Main" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Control" parent="Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.27032
+margin_top = 0.819091
+margin_right = 3.27032
+margin_bottom = 0.819092
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mainhud" type="Control" parent="Main/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 490.0
+margin_right = -800.0
+margin_bottom = -110.0
+rect_min_size = Vector2( 800, 110 )
+mouse_filter = 2
+script = ExtResource( 69 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainui_design" type="Sprite" parent="Main/Panel/Mainhud"]
+visible = false
+texture = ExtResource( 52 )
+centered = false
+
+[node name="bg" type="TextureRect" parent="Main/Panel/Mainhud"]
+rect_min_size = Vector2( 800, 110 )
+texture = ExtResource( 55 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="expBar" type="TextureProgress" parent="Main/Panel/Mainhud"]
+margin_left = 89.5469
+margin_top = 102.163
+margin_right = 710.547
+margin_bottom = 106.163
+rect_min_size = Vector2( 621, 4 )
+value = 100.0
+texture_progress = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fatigueBar" type="TextureProgress" parent="Main/Panel/Mainhud"]
+margin_left = 345.778
+margin_top = 55.323
+margin_right = 453.778
+margin_bottom = 59.323
+rect_min_size = Vector2( 108, 4 )
+value = 50.0
+texture_progress = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SP" type="Label" parent="Main/Panel/Mainhud"]
+margin_left = 733.911
+margin_top = 95.528
+margin_right = 773.911
+margin_bottom = 107.528
+custom_fonts/font = ExtResource( 67 )
+custom_colors/font_color = Color( 0.435294, 0.682353, 0.768627, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hpBar" type="TextureProgress" parent="Main/Panel/Mainhud"]
+margin_left = 15.803
+margin_top = 19.0
+margin_right = 85.803
+margin_bottom = 89.0
+value = 100.0
+texture_progress = ExtResource( 22 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mpBar" type="TextureProgress" parent="Main/Panel/Mainhud"]
+margin_left = 715.049
+margin_top = 19.0
+margin_right = 785.049
+margin_bottom = 89.0
+value = 100.0
+texture_progress = ExtResource( 24 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="upBtn" type="TextureButton" parent="Main/Panel/Mainhud"]
+margin_left = 74.966
+margin_top = 95.0
+margin_right = 83.966
+margin_bottom = 109.0
+rect_min_size = Vector2( 9, 14 )
+texture_normal = ExtResource( 65 )
+texture_pressed = ExtResource( 64 )
+texture_hover = ExtResource( 63 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="downBtn" type="TextureButton" parent="Main/Panel/Mainhud"]
+margin_left = 74.966
+margin_top = 95.0
+margin_right = 83.966
+margin_bottom = 109.0
+rect_min_size = Vector2( 9, 14 )
+texture_normal = ExtResource( 49 )
+texture_pressed = ExtResource( 62 )
+texture_hover = ExtResource( 51 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Node2D" parent="Main/Panel/Mainhud"]
+position = Vector2( 345.839, 65 )
+
+[node name="bagBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+margin_right = 18.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 61 )
+texture_hover = ExtResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stateBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+margin_left = 21.8745
+margin_right = 39.8745
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 53 )
+texture_hover = ExtResource( 57 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fightBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+margin_left = 67.2
+margin_right = 85.2
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 54 )
+texture_pressed = ExtResource( 59 )
+texture_hover = ExtResource( 58 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tutBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+margin_left = 44.5
+margin_right = 62.5
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 50 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setBtn" type="TextureButton" parent="Main/Panel/Mainhud/buttons"]
+margin_left = 90.0
+margin_right = 108.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 45 )
+texture_pressed = ExtResource( 60 )
+texture_hover = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lv" type="Label" parent="Main/Panel/Mainhud"]
+margin_left = 39.0
+margin_top = 96.0
+margin_right = 79.0
+margin_bottom = 123.0
+rect_min_size = Vector2( 40, 12 )
+custom_fonts/font = ExtResource( 68 )
+text = "15
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="10" type="Sprite" parent="Main/Panel/Mainhud"]
+position = Vector2( 33.779, 102 )
+texture = ExtResource( 66 )
+
+[node name="ex" type="Control" parent="Main/Panel/Mainhud"]
+margin_left = 473.0
+margin_top = 15.7026
+margin_right = 696.0
+margin_bottom = 50.7026
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ex_icon1" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 83 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ex_icon2" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+margin_left = 36.5
+margin_right = 71.5
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 83 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ex_icon3" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+margin_left = 74.0
+margin_right = 109.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 83 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ex_icon4" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+margin_left = 111.5
+margin_right = 146.5
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 83 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ex_icon5" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+margin_left = 149.0
+margin_right = 184.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 83 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ex_icon6" type="TextureRect" parent="Main/Panel/Mainhud/ex"]
+margin_left = 186.5
+margin_right = 221.5
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 83 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InvShortcut" type="Control" parent="Main/Panel/Mainhud"]
+modulate = Color( 1, 1, 1, 0.905882 )
+margin_left = 105.0
+margin_top = 61.0
+margin_right = 341.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 36, 36 )
+
+[node name="InvShortbutSlot1" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource( 70 )]
+
+[node name="InvShortbutSlot2" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource( 70 )]
+margin_left = 37.5
+margin_right = 72.5
+
+[node name="InvShortbutSlot3" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource( 70 )]
+margin_left = 75.0
+margin_right = 110.0
+
+[node name="InvShortbutSlot4" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource( 70 )]
+margin_left = 112.0
+margin_right = 147.0
+
+[node name="InvShortbutSlot5" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource( 70 )]
+margin_left = 149.8
+margin_right = 184.8
+
+[node name="InvShortbutSlot6" parent="Main/Panel/Mainhud/InvShortcut" instance=ExtResource( 70 )]
+margin_left = 187.0
+margin_right = 222.0
+
+[node name="SkillShortcutGrid" type="Control" parent="Main/Panel/Mainhud"]
+visible = false
+margin_left = 473.0
+margin_top = 16.0
+margin_right = 703.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 36, 36 )
+
+[node name="SkillShortcutSlot1" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+
+[node name="SkillShortcutSlot2" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 36.0
+margin_right = 71.0
+
+[node name="SkillShortcutSlot3" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 74.0
+margin_right = 109.0
+
+[node name="SkillShortcutSlot4" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 111.0
+margin_right = 146.0
+
+[node name="SkillShortcutSlot5" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 148.0
+margin_right = 183.0
+
+[node name="SkillShortcutSlot6" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 186.0
+margin_right = 221.0
+
+[node name="SkillShortcutSlot7" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_top = 45.0
+margin_bottom = 80.0
+
+[node name="SkillShortcutSlot8" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 36.0
+margin_top = 44.895
+margin_right = 71.0
+margin_bottom = 79.895
+
+[node name="SkillShortcutSlot9" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 74.0
+margin_top = 45.0
+margin_right = 109.0
+margin_bottom = 80.0
+
+[node name="SkillShortcutSlot10" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 111.0
+margin_top = 45.0
+margin_right = 146.0
+margin_bottom = 80.0
+
+[node name="SkillShortcutSlot11" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 148.0
+margin_top = 45.0
+margin_right = 183.0
+margin_bottom = 80.0
+
+[node name="SkillShortcutSlot12" parent="Main/Panel/Mainhud/SkillShortcutGrid" instance=ExtResource( 84 )]
+margin_left = 186.0
+margin_top = 45.0
+margin_right = 221.0
+margin_bottom = 80.0
+
+[node name="Bag" type="Control" parent="Main/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 395.0
+margin_top = 25.0
+margin_right = -70.0
+margin_bottom = -63.0
+script = ExtResource( 44 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="人物和背包" type="Sprite" parent="Main/Panel/Bag"]
+visible = false
+position = Vector2( -395.295, -25.3533 )
+texture = ExtResource( 33 )
+centered = false
+
+[node name="Panel" type="Panel" parent="Main/Panel/Bag"]
+margin_left = 8.0
+margin_top = 17.0
+margin_right = 331.0
+margin_bottom = 511.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="windowtitle" type="NinePatchRect" parent="Main/Panel/Bag"]
+margin_right = 335.0
+margin_bottom = 39.0
+mouse_filter = 1
+texture = ExtResource( 10 )
+patch_margin_left = 100
+patch_margin_right = 50
+script = ExtResource( 43 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="Main/Panel/Bag/windowtitle"]
+anchor_top = -0.024202
+anchor_bottom = -0.024202
+margin_left = 4.0
+margin_top = 10.9439
+margin_right = 362.0
+margin_bottom = 33.9439
+custom_fonts/font = SubResource( 2 )
+text = "装备栏(B)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bag_bg1" type="Sprite" parent="Main/Panel/Bag"]
+position = Vector2( 170.655, 132.391 )
+texture = ExtResource( 31 )
+
+[node name="itembg" type="NinePatchRect" parent="Main/Panel/Bag"]
+modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = 16.0
+margin_top = 217.0
+margin_right = 322.0
+margin_bottom = 435.0
+texture = ExtResource( 26 )
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EquipGrid" type="GridContainer" parent="Main/Panel/Bag"]
+margin_left = 19.0
+margin_top = 221.0
+margin_right = 319.0
+margin_bottom = 401.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_right = 60.0
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_right = 90.0
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_right = 120.0
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_right = 150.0
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_right = 180.0
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_right = 210.0
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_right = 240.0
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_right = 270.0
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_right = 300.0
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_top = 30.0
+margin_bottom = 60.0
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 60.0
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 60.0
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 210.0
+margin_bottom = 60.0
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 60.0
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 30.0
+margin_right = 270.0
+margin_bottom = 60.0
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_top = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 90.0
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 90.0
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 90.0
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 90.0
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 90.0
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_top = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 120.0
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 90.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 120.0
+margin_bottom = 120.0
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 120.0
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 90.0
+margin_right = 210.0
+margin_bottom = 120.0
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 120.0
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_top = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 150.0
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 90.0
+margin_bottom = 150.0
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 150.0
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 150.0
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 150.0
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 150.0
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 120.0
+margin_right = 270.0
+margin_bottom = 150.0
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 120.0
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_top = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 150.0
+margin_right = 60.0
+margin_bottom = 180.0
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 180.0
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 150.0
+margin_right = 120.0
+margin_bottom = 180.0
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 150.0
+margin_right = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 150.0
+margin_right = 210.0
+margin_bottom = 180.0
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 180.0
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 150.0
+margin_right = 270.0
+margin_bottom = 180.0
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/EquipGrid" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 180.0
+
+[node name="Stackable" type="GridContainer" parent="Main/Panel/Bag"]
+margin_left = 19.0
+margin_top = 221.0
+margin_right = 319.0
+margin_bottom = 401.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_right = 60.0
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_right = 90.0
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_right = 120.0
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_right = 150.0
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_right = 180.0
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_right = 210.0
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_right = 240.0
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_right = 270.0
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_right = 300.0
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_top = 30.0
+margin_bottom = 60.0
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 60.0
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 60.0
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 210.0
+margin_bottom = 60.0
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 60.0
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 30.0
+margin_right = 270.0
+margin_bottom = 60.0
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_top = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 90.0
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 90.0
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 90.0
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 90.0
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 90.0
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_top = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 120.0
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 90.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 120.0
+margin_bottom = 120.0
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 120.0
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 90.0
+margin_right = 210.0
+margin_bottom = 120.0
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 120.0
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_top = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 150.0
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 90.0
+margin_bottom = 150.0
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 150.0
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 150.0
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 150.0
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 150.0
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 120.0
+margin_right = 270.0
+margin_bottom = 150.0
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 120.0
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_top = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 150.0
+margin_right = 60.0
+margin_bottom = 180.0
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 180.0
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 150.0
+margin_right = 120.0
+margin_bottom = 180.0
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 150.0
+margin_right = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 150.0
+margin_right = 210.0
+margin_bottom = 180.0
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 180.0
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 150.0
+margin_right = 270.0
+margin_bottom = 180.0
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Stackable" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 180.0
+
+[node name="Materials" type="GridContainer" parent="Main/Panel/Bag"]
+margin_left = 19.0
+margin_top = 221.0
+margin_right = 319.0
+margin_bottom = 401.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_right = 60.0
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_right = 90.0
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_right = 120.0
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_right = 150.0
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_right = 180.0
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_right = 210.0
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_right = 240.0
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_right = 270.0
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_right = 300.0
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_top = 30.0
+margin_bottom = 60.0
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 60.0
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 60.0
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 210.0
+margin_bottom = 60.0
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 60.0
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 30.0
+margin_right = 270.0
+margin_bottom = 60.0
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_top = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 90.0
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 90.0
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 90.0
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 90.0
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 90.0
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_top = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 120.0
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 90.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 120.0
+margin_bottom = 120.0
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 120.0
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 90.0
+margin_right = 210.0
+margin_bottom = 120.0
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 120.0
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_top = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 150.0
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 90.0
+margin_bottom = 150.0
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 150.0
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 150.0
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 150.0
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 150.0
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 120.0
+margin_right = 270.0
+margin_bottom = 150.0
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 120.0
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_top = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 150.0
+margin_right = 60.0
+margin_bottom = 180.0
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 180.0
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 150.0
+margin_right = 120.0
+margin_bottom = 180.0
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 150.0
+margin_right = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 150.0
+margin_right = 210.0
+margin_bottom = 180.0
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 180.0
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 150.0
+margin_right = 270.0
+margin_bottom = 180.0
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Materials" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 180.0
+
+[node name="Experjob" type="GridContainer" parent="Main/Panel/Bag"]
+margin_left = 19.0
+margin_top = 221.0
+margin_right = 319.0
+margin_bottom = 401.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_right = 60.0
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_right = 90.0
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_right = 120.0
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_right = 150.0
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_right = 180.0
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_right = 210.0
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_right = 240.0
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_right = 270.0
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_right = 300.0
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_top = 30.0
+margin_bottom = 60.0
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 60.0
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 60.0
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 210.0
+margin_bottom = 60.0
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 60.0
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 30.0
+margin_right = 270.0
+margin_bottom = 60.0
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_top = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 90.0
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 90.0
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 90.0
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 90.0
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 90.0
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_top = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 120.0
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 90.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 120.0
+margin_bottom = 120.0
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 120.0
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 90.0
+margin_right = 210.0
+margin_bottom = 120.0
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 120.0
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_top = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 150.0
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 90.0
+margin_bottom = 150.0
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 150.0
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 150.0
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 150.0
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 150.0
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 120.0
+margin_right = 270.0
+margin_bottom = 150.0
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 120.0
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_top = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 150.0
+margin_right = 60.0
+margin_bottom = 180.0
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 180.0
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 150.0
+margin_right = 120.0
+margin_bottom = 180.0
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 150.0
+margin_right = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 150.0
+margin_right = 210.0
+margin_bottom = 180.0
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 180.0
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 150.0
+margin_right = 270.0
+margin_bottom = 180.0
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Experjob" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 180.0
+
+[node name="Quest" type="GridContainer" parent="Main/Panel/Bag"]
+margin_left = 19.0
+margin_top = 221.0
+margin_right = 319.0
+margin_bottom = 401.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot1" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+
+[node name="ItemSlot2" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_right = 60.0
+
+[node name="ItemSlot3" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_right = 90.0
+
+[node name="ItemSlot4" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_right = 120.0
+
+[node name="ItemSlot5" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_right = 150.0
+
+[node name="ItemSlot6" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_right = 180.0
+
+[node name="ItemSlot7" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_right = 210.0
+
+[node name="ItemSlot8" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_right = 240.0
+
+[node name="ItemSlot9" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_right = 270.0
+
+[node name="ItemSlot10" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_right = 300.0
+
+[node name="ItemSlot11" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_top = 30.0
+margin_bottom = 60.0
+
+[node name="ItemSlot12" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="ItemSlot13" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="ItemSlot14" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ItemSlot15" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 60.0
+
+[node name="ItemSlot16" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 30.0
+margin_right = 180.0
+margin_bottom = 60.0
+
+[node name="ItemSlot17" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 210.0
+margin_bottom = 60.0
+
+[node name="ItemSlot18" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 60.0
+
+[node name="ItemSlot19" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 30.0
+margin_right = 270.0
+margin_bottom = 60.0
+
+[node name="ItemSlot20" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="ItemSlot21" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_top = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot22" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+
+[node name="ItemSlot23" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ItemSlot24" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 90.0
+
+[node name="ItemSlot25" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 90.0
+
+[node name="ItemSlot26" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 90.0
+
+[node name="ItemSlot27" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 210.0
+margin_bottom = 90.0
+
+[node name="ItemSlot28" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ItemSlot29" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 60.0
+margin_right = 270.0
+margin_bottom = 90.0
+
+[node name="ItemSlot30" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 90.0
+
+[node name="ItemSlot31" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_top = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot32" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 120.0
+
+[node name="ItemSlot33" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 90.0
+margin_right = 90.0
+margin_bottom = 120.0
+
+[node name="ItemSlot34" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 120.0
+margin_bottom = 120.0
+
+[node name="ItemSlot35" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 120.0
+
+[node name="ItemSlot36" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+
+[node name="ItemSlot37" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 90.0
+margin_right = 210.0
+margin_bottom = 120.0
+
+[node name="ItemSlot38" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 120.0
+
+[node name="ItemSlot39" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 90.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="ItemSlot40" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+
+[node name="ItemSlot41" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_top = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot42" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 150.0
+
+[node name="ItemSlot43" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 90.0
+margin_bottom = 150.0
+
+[node name="ItemSlot44" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 150.0
+
+[node name="ItemSlot45" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 150.0
+
+[node name="ItemSlot46" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 150.0
+
+[node name="ItemSlot47" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 210.0
+margin_bottom = 150.0
+
+[node name="ItemSlot48" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 150.0
+
+[node name="ItemSlot49" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 120.0
+margin_right = 270.0
+margin_bottom = 150.0
+
+[node name="ItemSlot50" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 120.0
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="ItemSlot51" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_top = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot52" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 30.0
+margin_top = 150.0
+margin_right = 60.0
+margin_bottom = 180.0
+
+[node name="ItemSlot53" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 180.0
+
+[node name="ItemSlot54" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 90.0
+margin_top = 150.0
+margin_right = 120.0
+margin_bottom = 180.0
+
+[node name="ItemSlot55" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 120.0
+margin_top = 150.0
+margin_right = 150.0
+margin_bottom = 180.0
+
+[node name="ItemSlot56" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ItemSlot57" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 180.0
+margin_top = 150.0
+margin_right = 210.0
+margin_bottom = 180.0
+
+[node name="ItemSlot58" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 210.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 180.0
+
+[node name="ItemSlot59" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 240.0
+margin_top = 150.0
+margin_right = 270.0
+margin_bottom = 180.0
+
+[node name="ItemSlot60" parent="Main/Panel/Bag/Quest" instance=ExtResource( 42 )]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 180.0
+
+[node name="Label" type="Label" parent="Main/Panel/Bag"]
+margin_left = 23.4878
+margin_top = 411.325
+margin_right = 63.4878
+margin_bottom = 428.325
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.890196, 0.854902, 0.756863, 1 )
+text = "重量"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="inventory_limitBar" type="ProgressBar" parent="Main/Panel/Bag"]
+margin_left = 58.0
+margin_top = 413.0
+margin_right = 245.0
+margin_bottom = 427.0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zlBtn" parent="Main/Panel/Bag" instance=ExtResource( 39 )]
+margin_left = 252.64
+margin_top = 408.416
+margin_right = 314.64
+margin_bottom = 431.416
+focus_mode = 0
+custom_styles/focus = SubResource( 6 )
+enabled_focus_mode = 0
+text = "整理"
+
+[node name="bottom_bg" type="Sprite" parent="Main/Panel/Bag"]
+position = Vector2( 169.338, 469 )
+scale = Vector2( 1.24462, 1.25 )
+texture = ExtResource( 27 )
+
+[node name="closeBtn" type="TextureButton" parent="Main/Panel/Bag"]
+margin_left = 313.274
+margin_top = 14.4486
+margin_right = 329.274
+margin_bottom = 30.4486
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 36 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="equipBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 19.0
+margin_top = 198.0
+margin_right = 77.0
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = SubResource( 7 )
+text = "装备"
+
+[node name="stackableBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 78.5353
+margin_top = 198.0
+margin_right = 136.535
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = SubResource( 7 )
+text = "消耗品"
+
+[node name="materialBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 138.865
+margin_top = 198.0
+margin_right = 196.865
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = SubResource( 7 )
+text = "材料"
+
+[node name="exBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 198.844
+margin_top = 198.0
+margin_right = 256.844
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = SubResource( 7 )
+text = "副职业"
+
+[node name="questBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 258.585
+margin_top = 198.0
+margin_right = 316.585
+margin_bottom = 218.0
+focus_mode = 0
+enabled_focus_mode = 0
+group = SubResource( 7 )
+text = "任务"
+
+[node name="inventoryBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 20.0
+margin_top = 46.0
+margin_right = 107.0
+margin_bottom = 71.0
+text = "物品栏"
+
+[node name="dressBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 105.323
+margin_top = 46.0
+margin_right = 192.323
+margin_bottom = 71.0
+text = "装扮"
+
+[node name="creatureBtn" parent="Main/Panel/Bag" instance=ExtResource( 40 )]
+margin_left = 192.233
+margin_top = 46.0
+margin_right = 279.233
+margin_bottom = 71.0
+text = "宠物"
+
+[node name="line" type="NinePatchRect" parent="Main/Panel/Bag"]
+margin_left = 13.0
+margin_top = 69.0
+margin_right = 326.0
+margin_bottom = 72.0
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shopBtn" type="TextureButton" parent="Main/Panel/Bag"]
+margin_left = 20.6786
+margin_top = 472.1
+margin_right = 43.6786
+margin_bottom = 495.1
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 21 )
+texture_disabled = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shopBtn2" type="TextureButton" parent="Main/Panel/Bag"]
+margin_left = 152.08
+margin_top = 472.1
+margin_right = 175.08
+margin_bottom = 495.1
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saveLabel" type="Label" parent="Main/Panel/Bag"]
+margin_left = 16.7194
+margin_top = 443.945
+margin_right = 137.719
+margin_bottom = 460.945
+custom_fonts/font = SubResource( 8 )
+text = "0 个"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="diamond" type="Label" parent="Main/Panel/Bag"]
+margin_left = 16.7194
+margin_top = 474.899
+margin_right = 137.719
+margin_bottom = 491.899
+custom_fonts/font = SubResource( 8 )
+text = "0 点券"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gold" type="Label" parent="Main/Panel/Bag"]
+margin_left = 174.0
+margin_top = 475.0
+margin_right = 314.0
+margin_bottom = 492.0
+custom_fonts/font = SubResource( 8 )
+text = "0 金币"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pvp_point" type="Label" parent="Main/Panel/Bag"]
+margin_left = 191.73
+margin_top = 443.945
+margin_right = 312.73
+margin_bottom = 460.945
+custom_fonts/font = SubResource( 8 )
+text = "0 点"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="leftEquip" type="Control" parent="Main/Panel/Bag"]
+margin_left = 24.0
+margin_top = 79.0
+margin_right = 145.0
+margin_bottom = 160.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shoulder" parent="Main/Panel/Bag/leftEquip" instance=ExtResource( 41 )]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 39.0
+margin_bottom = 38.0
+
+[node name="Jacket" parent="Main/Panel/Bag/leftEquip" instance=ExtResource( 41 )]
+margin_left = 42.25
+margin_top = 2.0
+margin_right = 78.25
+margin_bottom = 38.0
+
+[node name="Pants" parent="Main/Panel/Bag/leftEquip" instance=ExtResource( 41 )]
+margin_left = 81.75
+margin_top = 2.0
+margin_right = 117.75
+margin_bottom = 38.0
+
+[node name="Shoes" parent="Main/Panel/Bag/leftEquip" instance=ExtResource( 41 )]
+margin_left = 3.0
+margin_top = 42.2596
+margin_right = 39.0
+margin_bottom = 78.2596
+
+[node name="Belt" parent="Main/Panel/Bag/leftEquip" instance=ExtResource( 41 )]
+margin_left = 42.25
+margin_top = 42.2596
+margin_right = 78.25
+margin_bottom = 78.2596
+
+[node name="rightEquip" type="Control" parent="Main/Panel/Bag"]
+margin_left = 196.804
+margin_top = 79.0
+margin_right = 317.804
+margin_bottom = 160.0
+
+[node name="Wrist" parent="Main/Panel/Bag/rightEquip" instance=ExtResource( 41 )]
+margin_left = 2.50104
+margin_top = 2.0
+margin_right = 38.501
+margin_bottom = 38.0
+
+[node name="Amulet" parent="Main/Panel/Bag/rightEquip" instance=ExtResource( 41 )]
+margin_left = 41.751
+margin_top = 2.0
+margin_right = 77.751
+margin_bottom = 38.0
+
+[node name="Ring" parent="Main/Panel/Bag/rightEquip" instance=ExtResource( 41 )]
+margin_left = 81.251
+margin_top = 2.0
+margin_right = 117.251
+margin_bottom = 38.0
+
+[node name="Weapon" parent="Main/Panel/Bag/rightEquip" instance=ExtResource( 41 )]
+margin_left = 41.751
+margin_top = 42.0797
+margin_right = 77.751
+margin_bottom = 78.0797
+
+[node name="Title" parent="Main/Panel/Bag/rightEquip" instance=ExtResource( 41 )]
+margin_left = 81.251
+margin_top = 42.0797
+margin_right = 117.251
+margin_bottom = 78.0797
+
+[node name="windowSound" type="AudioStreamPlayer" parent="Main/Panel/Bag"]
+stream = ExtResource( 88 )
+
+[node name="StorateUI" type="Control" parent="Main/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 63.028
+margin_top = 143.775
+margin_right = -398.972
+margin_bottom = -306.225
+script = ExtResource( 47 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Panel" parent="Main/Panel/StorateUI"]
+margin_left = 8.0
+margin_top = 17.0
+margin_right = 331.0
+margin_bottom = 149.0
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowTitle" type="NinePatchRect" parent="Main/Panel/StorateUI"]
+margin_right = 338.0
+margin_bottom = 40.0
+mouse_filter = 1
+texture = ExtResource( 38 )
+patch_margin_left = 70
+patch_margin_right = 20
+script = ExtResource( 43 )
+
+[node name="title" type="Label" parent="Main/Panel/StorateUI/WindowTitle"]
+anchor_top = -0.024202
+anchor_bottom = -0.024202
+margin_left = 4.0
+margin_top = 10.9681
+margin_right = 332.0
+margin_bottom = 33.9681
+custom_fonts/font = SubResource( 10 )
+text = "破烂的铁质金库"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Main/Panel/StorateUI"]
+margin_left = 19.0
+margin_top = 47.0
+margin_right = 319.0
+margin_bottom = 77.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="bottom" type="Control" parent="Main/Panel/StorateUI"]
+margin_left = 16.0
+margin_top = 83.0
+margin_right = 323.0
+margin_bottom = 143.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="itembg" type="NinePatchRect" parent="Main/Panel/StorateUI/bottom"]
+modulate = Color( 1, 1, 1, 0.627451 )
+margin_right = 306.0
+margin_bottom = 29.0
+texture = ExtResource( 26 )
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Main/Panel/StorateUI/bottom"]
+margin_left = 8.4878
+margin_top = 6.38031
+margin_right = 48.4878
+margin_bottom = 23.3803
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.890196, 0.854902, 0.756863, 1 )
+text = "重量"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="inventory_limitBar" type="ProgressBar" parent="Main/Panel/StorateUI/bottom"]
+margin_left = 43.0
+margin_top = 8.0553
+margin_right = 230.0
+margin_bottom = 22.0553
+custom_styles/fg = SubResource( 12 )
+custom_styles/bg = SubResource( 13 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="upBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource( 39 )]
+margin_left = 237.64
+margin_top = 3.47128
+margin_right = 299.64
+margin_bottom = 26.4713
+focus_mode = 0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+enabled_focus_mode = 0
+text = "升级"
+
+[node name="takeinBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource( 39 )]
+margin_left = 40.0
+margin_top = 34.0
+margin_right = 102.0
+margin_bottom = 57.0
+focus_mode = 0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+enabled_focus_mode = 0
+text = "放入"
+
+[node name="takeoutBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource( 39 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -31.5
+margin_top = 4.0
+margin_right = 30.5
+margin_bottom = 27.0
+focus_mode = 0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+enabled_focus_mode = 0
+text = "取出"
+
+[node name="zlBtn" parent="Main/Panel/StorateUI/bottom" instance=ExtResource( 39 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 52.3528
+margin_top = 4.0
+margin_right = 114.353
+margin_bottom = 27.0
+focus_mode = 0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+enabled_focus_mode = 0
+text = "整理"
+
+[node name="closeBtn" type="TextureButton" parent="Main/Panel/StorateUI"]
+margin_left = 315.154
+margin_top = 13.0774
+margin_right = 331.154
+margin_bottom = 29.0774
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 36 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skillinventory" type="Control" parent="Main/Panel"]
+visible = false
+anchor_right = 0.353
+anchor_bottom = 0.641
+margin_left = 406.0
+margin_top = 77.0
+margin_right = 407.6
+margin_bottom = 75.4
+script = ExtResource( 85 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 548.732 ]
+}
+
+[node name="bg" type="NinePatchRect" parent="Main/Panel/Skillinventory"]
+margin_left = 10.0
+margin_top = 22.0
+margin_right = 278.0
+margin_bottom = 383.0
+texture = ExtResource( 4 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="windowtitle" type="TextureRect" parent="Main/Panel/Skillinventory"]
+margin_right = 284.0
+margin_bottom = 39.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="Main/Panel/Skillinventory/windowtitle"]
+margin_left = 4.0
+margin_top = 10.0
+margin_right = 278.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 20 )
+text = "技能栏"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="grid1" type="GridContainer" parent="Main/Panel/Skillinventory"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -117.0
+margin_right = 100.0
+margin_bottom = 117.0
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_right = 64.0
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_right = 98.0
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_right = 132.0
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_right = 166.0
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_right = 200.0
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_top = 34.0
+margin_bottom = 64.0
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 34.0
+margin_right = 98.0
+margin_bottom = 64.0
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 34.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 34.0
+margin_right = 166.0
+margin_bottom = 64.0
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_top = 68.0
+margin_bottom = 98.0
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 98.0
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 98.0
+margin_bottom = 98.0
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 98.0
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 166.0
+margin_bottom = 98.0
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 98.0
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_top = 102.0
+margin_bottom = 132.0
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 102.0
+margin_right = 64.0
+margin_bottom = 132.0
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 102.0
+margin_right = 98.0
+margin_bottom = 132.0
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 102.0
+margin_right = 132.0
+margin_bottom = 132.0
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 102.0
+margin_right = 166.0
+margin_bottom = 132.0
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 102.0
+margin_right = 200.0
+margin_bottom = 132.0
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_top = 136.0
+margin_bottom = 166.0
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 166.0
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 98.0
+margin_bottom = 166.0
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 166.0
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 166.0
+margin_bottom = 166.0
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 166.0
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_top = 170.0
+margin_bottom = 200.0
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 170.0
+margin_right = 64.0
+margin_bottom = 200.0
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 170.0
+margin_right = 98.0
+margin_bottom = 200.0
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 170.0
+margin_right = 132.0
+margin_bottom = 200.0
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 170.0
+margin_right = 166.0
+margin_bottom = 200.0
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 170.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_top = 204.0
+margin_bottom = 234.0
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 234.0
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 98.0
+margin_bottom = 234.0
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 234.0
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 166.0
+margin_bottom = 234.0
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid1" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 234.0
+
+[node name="grid2" type="GridContainer" parent="Main/Panel/Skillinventory"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -117.0
+margin_right = 100.0
+margin_bottom = 117.0
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_right = 64.0
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_right = 98.0
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_right = 132.0
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_right = 166.0
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_right = 200.0
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_top = 34.0
+margin_bottom = 64.0
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 34.0
+margin_right = 98.0
+margin_bottom = 64.0
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 34.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 34.0
+margin_right = 166.0
+margin_bottom = 64.0
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_top = 68.0
+margin_bottom = 98.0
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 98.0
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 98.0
+margin_bottom = 98.0
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 98.0
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 166.0
+margin_bottom = 98.0
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 98.0
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_top = 102.0
+margin_bottom = 132.0
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 102.0
+margin_right = 64.0
+margin_bottom = 132.0
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 102.0
+margin_right = 98.0
+margin_bottom = 132.0
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 102.0
+margin_right = 132.0
+margin_bottom = 132.0
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 102.0
+margin_right = 166.0
+margin_bottom = 132.0
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 102.0
+margin_right = 200.0
+margin_bottom = 132.0
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_top = 136.0
+margin_bottom = 166.0
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 166.0
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 98.0
+margin_bottom = 166.0
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 166.0
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 166.0
+margin_bottom = 166.0
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 166.0
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_top = 170.0
+margin_bottom = 200.0
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 170.0
+margin_right = 64.0
+margin_bottom = 200.0
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 170.0
+margin_right = 98.0
+margin_bottom = 200.0
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 170.0
+margin_right = 132.0
+margin_bottom = 200.0
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 170.0
+margin_right = 166.0
+margin_bottom = 200.0
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 170.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_top = 204.0
+margin_bottom = 234.0
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 234.0
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 98.0
+margin_bottom = 234.0
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 234.0
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 166.0
+margin_bottom = 234.0
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid2" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 234.0
+
+[node name="grid3" type="GridContainer" parent="Main/Panel/Skillinventory"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -117.0
+margin_right = 100.0
+margin_bottom = 117.0
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_right = 64.0
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_right = 98.0
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_right = 132.0
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_right = 166.0
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_right = 200.0
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_top = 34.0
+margin_bottom = 64.0
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 34.0
+margin_right = 98.0
+margin_bottom = 64.0
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 34.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 34.0
+margin_right = 166.0
+margin_bottom = 64.0
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_top = 68.0
+margin_bottom = 98.0
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 98.0
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 98.0
+margin_bottom = 98.0
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 98.0
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 166.0
+margin_bottom = 98.0
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 98.0
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_top = 102.0
+margin_bottom = 132.0
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 102.0
+margin_right = 64.0
+margin_bottom = 132.0
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 102.0
+margin_right = 98.0
+margin_bottom = 132.0
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 102.0
+margin_right = 132.0
+margin_bottom = 132.0
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 102.0
+margin_right = 166.0
+margin_bottom = 132.0
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 102.0
+margin_right = 200.0
+margin_bottom = 132.0
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_top = 136.0
+margin_bottom = 166.0
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 166.0
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 98.0
+margin_bottom = 166.0
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 166.0
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 166.0
+margin_bottom = 166.0
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 166.0
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_top = 170.0
+margin_bottom = 200.0
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 170.0
+margin_right = 64.0
+margin_bottom = 200.0
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 170.0
+margin_right = 98.0
+margin_bottom = 200.0
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 170.0
+margin_right = 132.0
+margin_bottom = 200.0
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 170.0
+margin_right = 166.0
+margin_bottom = 200.0
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 170.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_top = 204.0
+margin_bottom = 234.0
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 234.0
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 98.0
+margin_bottom = 234.0
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 234.0
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 166.0
+margin_bottom = 234.0
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid3" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 234.0
+
+[node name="grid4" type="GridContainer" parent="Main/Panel/Skillinventory"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -117.0
+margin_right = 100.0
+margin_bottom = 117.0
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_right = 64.0
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_right = 98.0
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_right = 132.0
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_right = 166.0
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_right = 200.0
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_top = 34.0
+margin_bottom = 64.0
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 34.0
+margin_right = 98.0
+margin_bottom = 64.0
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 34.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 34.0
+margin_right = 166.0
+margin_bottom = 64.0
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_top = 68.0
+margin_bottom = 98.0
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 98.0
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 98.0
+margin_bottom = 98.0
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 98.0
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 166.0
+margin_bottom = 98.0
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 98.0
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_top = 102.0
+margin_bottom = 132.0
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 102.0
+margin_right = 64.0
+margin_bottom = 132.0
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 102.0
+margin_right = 98.0
+margin_bottom = 132.0
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 102.0
+margin_right = 132.0
+margin_bottom = 132.0
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 102.0
+margin_right = 166.0
+margin_bottom = 132.0
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 102.0
+margin_right = 200.0
+margin_bottom = 132.0
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_top = 136.0
+margin_bottom = 166.0
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 166.0
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 98.0
+margin_bottom = 166.0
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 166.0
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 166.0
+margin_bottom = 166.0
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 166.0
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_top = 170.0
+margin_bottom = 200.0
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 170.0
+margin_right = 64.0
+margin_bottom = 200.0
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 170.0
+margin_right = 98.0
+margin_bottom = 200.0
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 170.0
+margin_right = 132.0
+margin_bottom = 200.0
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 170.0
+margin_right = 166.0
+margin_bottom = 200.0
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 170.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_top = 204.0
+margin_bottom = 234.0
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 234.0
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 98.0
+margin_bottom = 234.0
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 234.0
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 166.0
+margin_bottom = 234.0
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid4" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 234.0
+
+[node name="grid5" type="GridContainer" parent="Main/Panel/Skillinventory"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -117.0
+margin_right = 100.0
+margin_bottom = 117.0
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SkillSlot1" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+
+[node name="SkillSlot2" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_right = 64.0
+
+[node name="SkillSlot3" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_right = 98.0
+
+[node name="SkillSlot4" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_right = 132.0
+
+[node name="SkillSlot5" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_right = 166.0
+
+[node name="SkillSlot6" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_right = 200.0
+
+[node name="SkillSlot7" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_top = 34.0
+margin_bottom = 64.0
+
+[node name="SkillSlot8" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="SkillSlot9" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 34.0
+margin_right = 98.0
+margin_bottom = 64.0
+
+[node name="SkillSlot10" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 34.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="SkillSlot11" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 34.0
+margin_right = 166.0
+margin_bottom = 64.0
+
+[node name="SkillSlot12" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="SkillSlot13" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_top = 68.0
+margin_bottom = 98.0
+
+[node name="SkillSlot14" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 98.0
+
+[node name="SkillSlot15" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 98.0
+margin_bottom = 98.0
+
+[node name="SkillSlot16" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 98.0
+
+[node name="SkillSlot17" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 166.0
+margin_bottom = 98.0
+
+[node name="SkillSlot18" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 98.0
+
+[node name="SkillSlot19" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_top = 102.0
+margin_bottom = 132.0
+
+[node name="SkillSlot20" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 102.0
+margin_right = 64.0
+margin_bottom = 132.0
+
+[node name="SkillSlot21" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 102.0
+margin_right = 98.0
+margin_bottom = 132.0
+
+[node name="SkillSlot22" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 102.0
+margin_right = 132.0
+margin_bottom = 132.0
+
+[node name="SkillSlot23" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 102.0
+margin_right = 166.0
+margin_bottom = 132.0
+
+[node name="SkillSlot24" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 102.0
+margin_right = 200.0
+margin_bottom = 132.0
+
+[node name="SkillSlot25" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_top = 136.0
+margin_bottom = 166.0
+
+[node name="SkillSlot26" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 166.0
+
+[node name="SkillSlot27" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 98.0
+margin_bottom = 166.0
+
+[node name="SkillSlot28" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 166.0
+
+[node name="SkillSlot29" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 166.0
+margin_bottom = 166.0
+
+[node name="SkillSlot30" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 166.0
+
+[node name="SkillSlot31" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_top = 170.0
+margin_bottom = 200.0
+
+[node name="SkillSlot32" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 170.0
+margin_right = 64.0
+margin_bottom = 200.0
+
+[node name="SkillSlot33" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 170.0
+margin_right = 98.0
+margin_bottom = 200.0
+
+[node name="SkillSlot34" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 170.0
+margin_right = 132.0
+margin_bottom = 200.0
+
+[node name="SkillSlot35" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 170.0
+margin_right = 166.0
+margin_bottom = 200.0
+
+[node name="SkillSlot36" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 170.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="SkillSlot37" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_top = 204.0
+margin_bottom = 234.0
+
+[node name="SkillSlot38" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 34.0
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 234.0
+
+[node name="SkillSlot39" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 98.0
+margin_bottom = 234.0
+
+[node name="SkillSlot40" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 102.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 234.0
+
+[node name="SkillSlot41" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 166.0
+margin_bottom = 234.0
+
+[node name="SkillSlot42" parent="Main/Panel/Skillinventory/grid5" instance=ExtResource( 81 )]
+margin_left = 170.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 234.0
+
+[node name="lockBtn" parent="Main/Panel/Skillinventory" instance=ExtResource( 82 )]
+margin_left = 57.1881
+margin_top = 345.29
+margin_right = 134.188
+margin_bottom = 368.29
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/disabled = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
+text = "锁定操作"
+
+[node name="unclockBtn" parent="Main/Panel/Skillinventory" instance=ExtResource( 82 )]
+margin_left = 150.027
+margin_top = 345.29
+margin_right = 227.027
+margin_bottom = 368.29
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/disabled = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
+text = "解除操作"
+
+[node name="closeBtn" type="TextureButton" parent="Main/Panel/Skillinventory"]
+margin_left = 261.831
+margin_top = 13.4486
+margin_right = 277.831
+margin_bottom = 29.4486
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 36 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="t_acc" type="TextureRect" parent="Main/Panel/Skillinventory"]
+margin_left = 3.30763
+margin_top = 6.92966
+margin_right = 33.3076
+margin_bottom = 36.9297
+texture = ExtResource( 76 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tab_Button1" parent="Main/Panel/Skillinventory" instance=ExtResource( 40 )]
+margin_left = 21.1037
+margin_top = 47.247
+margin_right = 69.1037
+margin_bottom = 69.247
+focus_mode = 0
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
+enabled_focus_mode = 0
+group = SubResource( 31 )
+text = "波动"
+
+[node name="Tab_Button2" parent="Main/Panel/Skillinventory" instance=ExtResource( 40 )]
+margin_left = 69.1305
+margin_top = 47.247
+margin_right = 117.13
+margin_bottom = 69.247
+focus_mode = 0
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
+enabled_focus_mode = 0
+group = SubResource( 31 )
+text = "剑术"
+
+[node name="Tab_Button3" parent="Main/Panel/Skillinventory" instance=ExtResource( 40 )]
+margin_left = 117.212
+margin_top = 47.247
+margin_right = 165.212
+margin_bottom = 69.247
+focus_mode = 0
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
+enabled_focus_mode = 0
+group = SubResource( 31 )
+text = "血气"
+
+[node name="Tab_Button4" parent="Main/Panel/Skillinventory" instance=ExtResource( 40 )]
+margin_left = 164.609
+margin_top = 47.247
+margin_right = 212.609
+margin_bottom = 69.247
+focus_mode = 0
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
+enabled_focus_mode = 0
+group = SubResource( 31 )
+text = "鬼神"
+
+[node name="Tab_Button5" parent="Main/Panel/Skillinventory" instance=ExtResource( 40 )]
+margin_left = 213.171
+margin_top = 47.247
+margin_right = 261.171
+margin_bottom = 69.247
+focus_mode = 0
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
+enabled_focus_mode = 0
+group = SubResource( 31 )
+text = "通用"
+
+[node name="line" type="NinePatchRect" parent="Main/Panel/Skillinventory"]
+margin_left = 16.0
+margin_top = 69.0
+margin_right = 272.0
+margin_bottom = 72.0
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="15" type="NinePatchRect" parent="Main/Panel/Skillinventory"]
+margin_left = 43.0
+margin_top = 313.0
+margin_right = 242.0
+margin_bottom = 331.0
+rect_min_size = Vector2( 181, 18 )
+texture = ExtResource( 80 )
+patch_margin_left = 60
+patch_margin_right = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SP" type="Label" parent="Main/Panel/Skillinventory"]
+margin_left = 90.0013
+margin_top = 314.572
+margin_right = 236.001
+margin_bottom = 331.572
+rect_min_size = Vector2( 55, 17 )
+custom_fonts/font = ExtResource( 67 )
+custom_colors/font_color = Color( 0.435294, 0.682353, 0.768627, 1 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="windowSound" type="AudioStreamPlayer" parent="Main/Panel/Skillinventory"]
+stream = ExtResource( 88 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Status" parent="UI" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Popup" type="CanvasLayer" parent="."]
+
+[node name="OptionMenu" type="Popup" parent="Popup"]
+visible = true
+margin_left = 340.0
+margin_top = 389.706
+margin_right = 465.0
+margin_bottom = 542.706
+script = ExtResource( 108 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="NinePatchRect" parent="Popup/OptionMenu"]
+margin_right = 125.0
+margin_bottom = 153.0
+texture = ExtResource( 4 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/OptionMenu/bg"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = -65.0
+margin_right = 54.0
+margin_bottom = 65.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/OptionMenu/bg/MarginContainer"]
+margin_right = 108.0
+margin_bottom = 130.0
+custom_constants/separation = 0
+
+[node name="optionBtn" type="TextureButton" parent="Popup/OptionMenu/bg/MarginContainer/VBoxContainer"]
+margin_right = 108.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 108, 26 )
+texture_normal = ExtResource( 109 )
+texture_pressed = ExtResource( 106 )
+texture_hover = ExtResource( 105 )
+texture_disabled = ExtResource( 107 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keyBtn" type="TextureButton" parent="Popup/OptionMenu/bg/MarginContainer/VBoxContainer"]
+margin_top = 26.0
+margin_right = 108.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 108, 26 )
+texture_normal = ExtResource( 94 )
+texture_pressed = ExtResource( 97 )
+texture_hover = ExtResource( 89 )
+texture_disabled = ExtResource( 98 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="selectBtn" type="TextureButton" parent="Popup/OptionMenu/bg/MarginContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 108.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 108, 26 )
+texture_normal = ExtResource( 90 )
+texture_pressed = ExtResource( 93 )
+texture_hover = ExtResource( 99 )
+texture_disabled = ExtResource( 103 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backtownBtn" type="TextureButton" parent="Popup/OptionMenu/bg/MarginContainer/VBoxContainer"]
+margin_top = 78.0
+margin_right = 108.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 108, 26 )
+texture_normal = ExtResource( 101 )
+texture_pressed = ExtResource( 95 )
+texture_hover = ExtResource( 96 )
+texture_disabled = ExtResource( 104 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gamecloseBtn" type="TextureButton" parent="Popup/OptionMenu/bg/MarginContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 108.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 108, 26 )
+texture_normal = ExtResource( 102 )
+texture_pressed = ExtResource( 100 )
+texture_hover = ExtResource( 92 )
+texture_disabled = ExtResource( 91 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MyinfoMenu" type="Popup" parent="Popup"]
+margin_left = 340.0
+margin_top = 473.0
+margin_right = 465.0
+margin_bottom = 540.0
+script = ExtResource( 118 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="NinePatchRect" parent="Popup/MyinfoMenu"]
+margin_right = 125.0
+margin_bottom = 67.0
+texture = ExtResource( 4 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/MyinfoMenu/bg"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = -26.0
+margin_right = 54.0
+margin_bottom = 26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/MyinfoMenu/bg/MarginContainer"]
+margin_right = 108.0
+margin_bottom = 52.0
+custom_constants/separation = 0
+
+[node name="questBtn" type="TextureButton" parent="Popup/MyinfoMenu/bg/MarginContainer/VBoxContainer"]
+margin_right = 108.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 108, 26 )
+texture_normal = ExtResource( 116 )
+texture_pressed = ExtResource( 114 )
+texture_hover = ExtResource( 110 )
+texture_disabled = ExtResource( 115 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exjobBtn" type="TextureButton" parent="Popup/MyinfoMenu/bg/MarginContainer/VBoxContainer"]
+margin_top = 26.0
+margin_right = 108.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 108, 26 )
+disabled = true
+texture_normal = ExtResource( 117 )
+texture_pressed = ExtResource( 113 )
+texture_hover = ExtResource( 112 )
+texture_disabled = ExtResource( 111 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="CanvasLayer" parent="."]
+
+[node name="ToolTip" type="CanvasLayer" parent="."]
+
+[node name="ToolTipSkill" parent="ToolTip" instance=ExtResource( 86 )]
+visible = false
+
+[node name="ToolTipEquip" parent="ToolTip" instance=ExtResource( 87 )]
+visible = false
+
+[node name="LoadingLayer" type="CanvasLayer" parent="."]
+
+[node name="Loading" parent="LoadingLayer" instance=ExtResource( 3 )]
+visible = false
+
+[node name="MonsterHP" type="CanvasLayer" parent="."]
+script = ExtResource( 122 )
+
+[node name="Monster_HP_Normal" parent="MonsterHP" instance=ExtResource( 121 )]
+visible = false
+margin_top = 98.0
+margin_bottom = -470.0
+
+[node name="Monster_HP_Elite" parent="MonsterHP" instance=ExtResource( 120 )]
+visible = false
+margin_left = -2.0
+margin_top = 96.0
+margin_right = -2.0
+margin_bottom = -468.0
+
+[node name="Monster_HP_BOSS" parent="MonsterHP" instance=ExtResource( 119 )]
+visible = false
+margin_top = 95.0
+margin_bottom = -473.0
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
+bus = "BGM"
+
+[node name="ENVPlayer" type="AudioStreamPlayer" parent="."]
+bus = "ENV"
+
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/bagBtn" to="Main/Panel/Mainhud" method="_on_bag"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/stateBtn" to="Main/Panel/Mainhud" method="_on_state"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/fightBtn" to="Main/Panel/Mainhud" method="_on_fight"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/tutBtn" to="Main/Panel/Mainhud" method="_on_tutBtn_pressed"]
+[connection signal="pressed" from="Main/Panel/Mainhud/buttons/setBtn" to="Main/Panel/Mainhud" method="_on_setBtn_pressed"]
+[connection signal="visibility_changed" from="Main/Panel/Bag" to="Main/Panel/Bag" method="_on_Bag_visibility_changed"]
+[connection signal="pressed" from="Main/Panel/Bag/closeBtn" to="Main/Panel/Bag" method="_on_closeBtn_pressed"]
+[connection signal="toggled" from="Main/Panel/Bag/equipBtn" to="Main/Panel/Bag" method="_on_equipBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/stackableBtn" to="Main/Panel/Bag" method="_on_stackableBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/materialBtn" to="Main/Panel/Bag" method="_on_materialBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/exBtn" to="Main/Panel/Bag" method="_on_exBtn_toggled"]
+[connection signal="toggled" from="Main/Panel/Bag/questBtn" to="Main/Panel/Bag" method="_on_questBtn_toggled"]
+[connection signal="pressed" from="Main/Panel/StorateUI/closeBtn" to="Main/Panel/StorateUI" method="_on_closeBtn_pressed"]
+[connection signal="visibility_changed" from="Main/Panel/Skillinventory" to="Main/Panel/Skillinventory" method="_on_Skillinventory_visibility_changed"]
+[connection signal="pressed" from="Main/Panel/Skillinventory/lockBtn" to="Main/Panel/Skillinventory" method="_on_lockBtn_pressed"]
+[connection signal="pressed" from="Main/Panel/Skillinventory/unclockBtn" to="Main/Panel/Skillinventory" method="_on_unclockBtn_pressed"]
+[connection signal="pressed" from="Main/Panel/Skillinventory/closeBtn" to="Main/Panel/Skillinventory" method="_on_closeBtn_pressed"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button1" to="Main/Panel/Skillinventory" method="_on_Tab_Button1_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button2" to="Main/Panel/Skillinventory" method="_on_Tab_Button2_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button3" to="Main/Panel/Skillinventory" method="_on_Tab_Button3_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button4" to="Main/Panel/Skillinventory" method="_on_Tab_Button4_toggled"]
+[connection signal="toggled" from="Main/Panel/Skillinventory/Tab_Button5" to="Main/Panel/Skillinventory" method="_on_Tab_Button5_toggled"]
+[connection signal="pressed" from="Popup/OptionMenu/bg/MarginContainer/VBoxContainer/optionBtn" to="Popup/OptionMenu" method="_on_optionBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/bg/MarginContainer/VBoxContainer/keyBtn" to="Popup/OptionMenu" method="_on_keyBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/bg/MarginContainer/VBoxContainer/selectBtn" to="Popup/OptionMenu" method="_on_selectBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/bg/MarginContainer/VBoxContainer/backtownBtn" to="Popup/OptionMenu" method="_on_backtownBtn_pressed"]
+[connection signal="pressed" from="Popup/OptionMenu/bg/MarginContainer/VBoxContainer/gamecloseBtn" to="Popup/OptionMenu" method="_on_gamecloseBtn_pressed"]
+[connection signal="pressed" from="Popup/MyinfoMenu/bg/MarginContainer/VBoxContainer/questBtn" to="Popup/MyinfoMenu" method="_on_questBtn_pressed"]
+[connection signal="pressed" from="Popup/MyinfoMenu/bg/MarginContainer/VBoxContainer/exjobBtn" to="Popup/MyinfoMenu" method="_on_exjobBtn_pressed"]
+
+[editable path="Main/Panel/Bag/EquipGrid/ItemSlot25"]

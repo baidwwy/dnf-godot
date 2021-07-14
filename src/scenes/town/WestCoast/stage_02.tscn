@@ -1,0 +1,402 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/images/map/hendonMyre/hmwall02.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/map/tiles/hmtile.png" type="Texture" id=2]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/map/path/hendonpath_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/obj/hmpoll_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/map/hendonMyre/hmbggrass0.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/hendonMyre/hmbggrass1.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/hendonMyre/hmbgbox_3.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/hendonMyre/hmbgbox_4.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/hendonMyre/hmstreetlamp_0.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/hendonMyre/hmbgflowerpot0.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/hendonMyre/hmbgbox_1.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/hendonMyre/hmtree01.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/hendonMyre/hmobj01_22.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/sign/sign9.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/bg/hmfar01.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/map/bg/hmmid01.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/map/path/hendonpath_3.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/map/path/hendonpath_0.png" type="Texture" id=19]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=20]
+[ext_resource path="res://src/scenes/npc/Sharan.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/scenes/npc/Iris.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/scenes/npc/Danjin3.tscn" type="PackedScene" id=23]
+
+[sub_resource type="TileSet" id=1]
+0/name = "hmwall02.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 134 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "hmtile.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 138 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="Animation" id=3]
+resource_name = "flash"
+length = 2.1
+loop = true
+step = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("hendonpath_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.313726 ), Color( 1, 1, 1, 0.862745 ), Color( 1, 1, 1, 0.313726 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 67.6446, 4.47723 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 54.7553, 4.47723 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 46.1355, 6.5968 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 4.70166, 72.4477 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 5.39427, 70.5656 )
+
+[node name="stage_02" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 599.977, 358.136, 552.5, 562.234 ],
+"_edit_vertical_guides_": [ 1792.26, 270.5, 1813.0, -33.1966 ]
+}
+bgm = "westcoast"
+env = "amb_town_03"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 16 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1002, 243 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 895, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/mid"]
+texture = ExtResource( 17 )
+centered = false
+offset = Vector2( 0, 130 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1255, 259 )
+
+[node name="hmwall02" type="TileMap" parent="environment"]
+position = Vector2( 0, 288 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 134 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 6, 0, 0, 7, 0, 0 )
+
+[node name="hmtile" type="TileMap" parent="environment"]
+position = Vector2( 0, 422 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 224, 138 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0 )
+
+[node name="hendonpath_2" type="Sprite" parent="environment"]
+position = Vector2( 336, 300 )
+texture = ExtResource( 4 )
+
+[node name="hendonpath_3" type="Sprite" parent="environment"]
+position = Vector2( 1232, 300 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hmpoll_3" type="Sprite" parent="environment"]
+position = Vector2( 102, 256.5 )
+texture = ExtResource( 5 )
+
+[node name="hmpoll_4" type="Sprite" parent="environment"]
+position = Vector2( 1700, 256.5 )
+texture = ExtResource( 5 )
+
+[node name="hmbgbox_3" type="Sprite" parent="environment"]
+position = Vector2( 134.808, 395.88 )
+texture = ExtResource( 8 )
+
+[node name="hmbgbox_4" type="Sprite" parent="environment"]
+position = Vector2( 80.3683, 397.003 )
+texture = ExtResource( 9 )
+
+[node name="hmbgbox_5" type="Sprite" parent="environment"]
+position = Vector2( 25.9289, 395.88 )
+texture = ExtResource( 8 )
+
+[node name="hmstreetlamp_0" type="Sprite" parent="environment"]
+position = Vector2( 230.639, 245.261 )
+texture = ExtResource( 10 )
+
+[node name="hmstreetlamp_1" type="Sprite" parent="environment"]
+position = Vector2( 1368.6, 243.763 )
+texture = ExtResource( 10 )
+
+[node name="hmtree01" type="Sprite" parent="environment"]
+position = Vector2( 1084.67, 234.024 )
+texture = ExtResource( 13 )
+
+[node name="hmobj01_22" type="Sprite" parent="environment"]
+position = Vector2( 613.205, 200.312 )
+texture = ExtResource( 14 )
+
+[node name="sign9" type="Sprite" parent="environment"]
+position = Vector2( 907.016, 305.058 )
+texture = ExtResource( 15 )
+
+[node name="grass" type="Node2D" parent="environment"]
+
+[node name="hmbggrass0" type="Sprite" parent="environment/grass"]
+position = Vector2( 129.195, 403.737 )
+texture = ExtResource( 6 )
+
+[node name="hmbggrass1" type="Sprite" parent="environment/grass"]
+position = Vector2( 260.523, 403.176 )
+texture = ExtResource( 7 )
+
+[node name="hmbggrass2" type="Sprite" parent="environment/grass"]
+position = Vector2( 429.506, 366.794 )
+texture = ExtResource( 7 )
+
+[node name="hmbgbox_3" type="Sprite" parent="environment/grass"]
+position = Vector2( 516.44, 396.402 )
+texture = ExtResource( 8 )
+
+[node name="hmbgflowerpot0" type="Sprite" parent="environment/grass"]
+position = Vector2( 566.207, 381.283 )
+texture = ExtResource( 11 )
+
+[node name="hmbggrass3" type="Sprite" parent="environment/grass"]
+position = Vector2( 874.888, 414.671 )
+texture = ExtResource( 7 )
+
+[node name="hmbggrass4" type="Sprite" parent="environment/grass"]
+position = Vector2( 969.101, 391.437 )
+texture = ExtResource( 6 )
+
+[node name="hmbgbox_4" type="Sprite" parent="environment/grass"]
+position = Vector2( 1140.15, 392.328 )
+texture = ExtResource( 9 )
+
+[node name="hmbgbox_5" type="Sprite" parent="environment/grass"]
+position = Vector2( 1083.14, 391.437 )
+texture = ExtResource( 8 )
+
+[node name="hmbgbox_1" type="Sprite" parent="environment"]
+position = Vector2( 1495.92, 367.46 )
+texture = ExtResource( 12 )
+
+[node name="hmbgbox_2" type="Sprite" parent="environment"]
+position = Vector2( 1449.6, 367.46 )
+texture = ExtResource( 12 )
+
+[node name="hmbgbox_6" type="Sprite" parent="environment"]
+position = Vector2( 1495.92, 335.641 )
+texture = ExtResource( 12 )
+
+[node name="hmbgbox_7" type="Sprite" parent="environment"]
+position = Vector2( 1449.6, 335.641 )
+texture = ExtResource( 12 )
+
+[node name="hmbgbox_8" type="Sprite" parent="environment"]
+position = Vector2( 1478.96, 304.174 )
+texture = ExtResource( 12 )
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="Sharan" parent="npc" instance=ExtResource( 21 )]
+margin_left = 628.918
+margin_top = 335.23
+margin_right = 693.918
+margin_bottom = 352.23
+
+[node name="Iris" parent="npc" instance=ExtResource( 22 )]
+margin_left = 1053.67
+margin_top = 354.108
+margin_right = 1118.67
+margin_bottom = 371.108
+
+[node name="Danjin3" parent="npc" instance=ExtResource( 23 )]
+margin_left = 1539.93
+margin_top = 341.532
+margin_right = 1604.93
+margin_bottom = 358.532
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="hendonpath_0" type="Sprite" parent="."]
+position = Vector2( 378.005, 492.878 )
+texture = ExtResource( 19 )
+
+[node name="hendonpath_3" type="Sprite" parent="hendonpath_0"]
+modulate = Color( 1, 1, 1, 0.404917 )
+position = Vector2( 3.55896, -35.131 )
+texture = ExtResource( 18 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hendonpath_0"]
+autoplay = "flash"
+anims/flash = SubResource( 3 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 377.325, 557.146 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource( 4 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_01"]
+position = Vector2( -0.841858, -46.0209 )
+
+[node name="to_stage_0" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 324.712, 368.714 )
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_0"]
+shape = SubResource( 5 )
+disabled = true
+
+[node name="pos" type="Position2D" parent="doors/to_stage_0"]
+position = Vector2( 14.0308, 30.5871 )
+
+[node name="to_stage_05" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1220.3, 365.074 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+target = "stage_05"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_05"]
+shape = SubResource( 6 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_05"]
+position = Vector2( 20.7656, 32.2708 )
+
+[node name="to_stage_04" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1787.27, 480.647 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+target = "stage_04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_04"]
+shape = SubResource( 7 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_04"]
+position = Vector2( -61.5183, 0 )
+
+[node name="to_stage_06" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 5.67125, 481.13 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_02"
+target = "stage_06"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_06"]
+shape = SubResource( 8 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_06"]
+position = Vector2( 67.8823, 0 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 1792.26, 600 )
+
+[node name="collision" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2( 896, 585.863 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( -895.849, -33.3331, -586.823, -32.584, -586.449, -23.5942, -450.477, -24.3433, -450.477, -33.3332, 895.752, -33.3331, 895.752, 13.8636, -896.599, 13.8636 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PoolVector2Array( -0.921921, 552.625, -0.408773, 410.293, 269.896, 409.959, 269.875, 368.797, 375.093, 368.519, 451.664, 410.405, 1173.37, 409.687, 1173.8, 358.136, 1262.89, 358.136, 1346.07, 410.33, 1792.62, 410.293, 1792.47, 552.948, 1812.96, 552.948, 1813, 0, 0.136375, 0.0158253, -34.1404, -0.00364685, -33.7539, 552.905 )

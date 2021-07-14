@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kg_amb_01.ogg-0737f628d5021ae72180219c8f7abc3f.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/kagon/kg_amb_01.ogg"
+dest_files=[ "res://.import/kg_amb_01.ogg-0737f628d5021ae72180219c8f7abc3f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

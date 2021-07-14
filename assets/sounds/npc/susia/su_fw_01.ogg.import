@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/su_fw_01.ogg-36224a524f4f9fdc56c2f594f2944943.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/susia/su_fw_01.ogg"
+dest_files=[ "res://.import/su_fw_01.ogg-36224a524f4f9fdc56c2f594f2944943.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

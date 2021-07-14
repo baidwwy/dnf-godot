@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/char_delete.ogg-7d235db7a424aaf6b4f8b5cb658c0516.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/ui/char_delete.ogg"
+dest_files=[ "res://.import/char_delete.ogg-7d235db7a424aaf6b4f8b5cb658c0516.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

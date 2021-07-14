@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gr_fw_04.ogg-a1902d2e2af99e2fe78e17c4950c5bf5.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/grandis/gr_fw_04.ogg"
+dest_files=[ "res://.import/gr_fw_04.ogg-a1902d2e2af99e2fe78e17c4950c5bf5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

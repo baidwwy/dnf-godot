@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/fonts/DaysOne-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/images/monster_hp/normal_bg.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/design/小怪血条.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/common_etc/monster_type/0.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://src/scenes/UI/monster/progress.gd" type="Script" id=6]
+[ext_resource path="res://src/scripts/UI/monster/Monster_HP_Normal.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Monster_HP_Normal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -568.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="小怪血条" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -98 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="bg" type="NinePatchRect" parent="."]
+margin_left = 4.0
+margin_right = 576.0
+margin_bottom = 32.0
+texture = ExtResource( 2 )
+patch_margin_left = 32
+patch_margin_right = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="type" type="TextureRect" parent="."]
+margin_left = 34.75
+margin_top = -0.8125
+margin_right = 66.75
+margin_bottom = 14.1875
+rect_min_size = Vector2( 32, 15 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nameLabel" type="Label" parent="."]
+margin_left = 70.0
+margin_top = -2.0
+margin_right = 148.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 1 )
+text = "Lv2 哥布林"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hp_layer_num" type="Label" parent="."]
+margin_left = 456.0
+margin_top = -12.0
+margin_right = 571.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 2 )
+text = "x2"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="progress" type="ColorRect" parent="."]
+margin_left = 33.0
+margin_top = 17.0
+margin_right = 573.0
+margin_bottom = 26.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="face" type="TextureRect" parent="."]
+margin_left = 6.0
+margin_top = 2.0
+margin_right = 30.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 24, 24 )

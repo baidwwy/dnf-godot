@@ -1,0 +1,312 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://src/scenes/npc/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/shader/shadow_shader.shader" type="Shader" id=2]
+[ext_resource path="res://assets/images/npc/npc_rino/1.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/npc/npc_rino/2.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/npc/npc_rino/0.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/npc/npc_rino/3.png" type="Texture" id=6]
+[ext_resource path="res://assets/shader/outline_shader.shader" type="Shader" id=7]
+[ext_resource path="res://assets/sounds/npc/rino/rino_fw_04.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/npc/rino/rino_tk_03.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/npc/rino/rino_fw_02.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/npc/rino/rino_amb_02.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/npc/rino/rino_amb_03.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/npc/rino/rino_fw_01.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/npc/rino/rino_amb_01.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/npc/rino/rino_fw_03.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/npc/rino/rino_tk_01.ogg" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/npc/rino/rino_tk_02.ogg" type="AudioStream" id=17]
+[ext_resource path="res://src/scripts/npc/Rino.gd" type="Script" id=18]
+[ext_resource path="res://src/scenes/UI/npc_nemu/Menu_Type2.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/images/face/npc/popup/rino.png" type="Texture" id=20]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
+shader_param/tilt = 0.4
+shader_param/scale = 0.3
+shader_param/alpha = 0.4
+shader_param/shadow = true
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.654902, 0.964706, 0.192157, 1 )
+shader_param/show_outline = false
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "amb_01"
+length = 4.7
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 14 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "amb_02"
+length = 6.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "amb_03"
+length = 4.5
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "fw_01"
+length = 3.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "fw_02"
+length = 6.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "fw_03"
+length = 4.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 15 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "fw_04"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 8 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "tk_01"
+length = 1.7
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 16 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "tk_02"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "tk_03"
+length = 4.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[node name="Rino" instance=ExtResource( 1 )]
+script = ExtResource( 18 )
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource( 1 )
+position = Vector2( -26.7271, 47.2177 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="body" parent="." index="1"]
+material = SubResource( 3 )
+frames = SubResource( 4 )
+flip_h = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "default"
+anims/default = SubResource( 5 )
+
+[node name="nameLabel" parent="." index="3"]
+margin_left = -46.727
+margin_top = -92.7908
+margin_right = 49.273
+margin_bottom = -75.7908
+text = "雷诺"
+
+[node name="mouse_check" parent="." index="4"]
+margin_left = -45.0
+margin_top = -73.0
+margin_right = 45.0
+margin_bottom = 72.0
+
+[node name="talkPlayer" parent="." index="7"]
+anims/amb_01 = SubResource( 6 )
+anims/amb_02 = SubResource( 7 )
+anims/amb_03 = SubResource( 8 )
+anims/fw_01 = SubResource( 9 )
+anims/fw_02 = SubResource( 10 )
+anims/fw_03 = SubResource( 11 )
+anims/fw_04 = SubResource( 12 )
+anims/tk_01 = SubResource( 13 )
+anims/tk_02 = SubResource( 14 )
+anims/tk_03 = SubResource( 15 )
+
+[node name="Menu_Type2" parent="." index="10" instance=ExtResource( 19 )]
+
+[node name="faceIcon" parent="Menu_Type2/top" index="0"]
+texture = ExtResource( 20 )
+
+[node name="nameLabel" parent="Menu_Type2/top" index="1"]
+text = "雷诺"
+
+[editable path="Menu_Type2"]

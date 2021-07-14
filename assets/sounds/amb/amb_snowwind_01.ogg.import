@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/amb_snowwind_01.ogg-97cb9a936649a0f04553304607326ff2.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/amb/amb_snowwind_01.ogg"
+dest_files=[ "res://.import/amb_snowwind_01.ogg-97cb9a936649a0f04553304607326ff2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

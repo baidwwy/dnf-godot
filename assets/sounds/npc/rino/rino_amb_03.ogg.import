@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rino_amb_03.ogg-0e878b3808e4768db7e21497c93a2c51.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/rino/rino_amb_03.ogg"
+dest_files=[ "res://.import/rino_amb_03.ogg-0e878b3808e4768db7e21497c93a2c51.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,381 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://assets/images/map/light/seriahousewave00/4.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/8.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/tiles/alfhtileex.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/map/alfhlyra/alfseriahouse.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/alfhlyra/alfhrdg.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/0.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/sign/sign8.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/7.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/0.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/2.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/6.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/6.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/alfhlyra/cottage.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/2.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/1.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/5.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/map/alfhlyra/deadtree1.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/map/alfhlyra/bigrock.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/5.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/3.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/map/alfhlyra/alfhltw.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/design/阿法利亚stage1-1.png" type="Texture" id=24]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/8.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/7.png" type="Texture" id=26]
+[ext_resource path="res://assets/images/map/tiles/alftile.png" type="Texture" id=27]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/4.png" type="Texture" id=28]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_0.png" type="Texture" id=29]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_2.png" type="Texture" id=30]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_1.png" type="Texture" id=31]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_5.png" type="Texture" id=32]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_3.png" type="Texture" id=33]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_4.png" type="Texture" id=34]
+[ext_resource path="res://assets/images/map/alfhlyra/cottageforge_6.png" type="Texture" id=35]
+[ext_resource path="res://assets/images/map/alfhlyra/udgate.png" type="Texture" id=36]
+[ext_resource path="res://assets/images/map/alfhlyra/udgatelight_0.png" type="Texture" id=37]
+[ext_resource path="res://assets/images/map/alfhlyra/udgatelight_1.png" type="Texture" id=38]
+[ext_resource path="res://assets/images/map/alfhlyra/udgatelight_2.png" type="Texture" id=39]
+[ext_resource path="res://assets/images/map/bg/alffar.png" type="Texture" id=40]
+[ext_resource path="res://assets/images/map/bg/alfmid.png" type="Texture" id=41]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=42]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=43]
+[ext_resource path="res://src/scenes/npc/Birken2.tscn" type="PackedScene" id=44]
+[ext_resource path="res://src/scenes/npc/Gale.tscn" type="PackedScene" id=45]
+[ext_resource path="res://src/scenes/npc/Breeze.tscn" type="PackedScene" id=46]
+[ext_resource path="res://src/scenes/npc/Klonter.tscn" type="PackedScene" id=47]
+[ext_resource path="res://src/scenes/npc/Danjin4.tscn" type="PackedScene" id=48]
+
+[sub_resource type="TileSet" id=1]
+0/name = "alftile.png 0"
+0/texture = ExtResource( 27 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 256 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "alfhtileex.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 224, 120 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 26 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 29 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+resource_name = "move"
+length = 40.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1120, 156 ), Vector2( -480, 156 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10.5525, 125.152 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 49.4332, 11.1979 )
+
+[node name="stage_01" type="Node2D"]
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 363.852, 659.562, 720.0 ]
+}
+bgm = "alfhlyra_new"
+env = "amb_forest_04"
+
+[node name="阿法利亚stage1-1" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 24 )
+centered = false
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 40 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 831, 330 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="fog" type="Sprite" parent="environment/background/mid"]
+position = Vector2( -1120, 156 )
+texture = ExtResource( 41 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -960, 0, 3910, 158 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 304 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 256 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0 )
+
+[node name="bigrock" type="Sprite" parent="environment"]
+position = Vector2( 98.826, 247.316 )
+texture = ExtResource( 20 )
+
+[node name="deadtree1" type="Sprite" parent="environment"]
+position = Vector2( 310, 220 )
+texture = ExtResource( 19 )
+
+[node name="alfhltw" type="Sprite" parent="environment"]
+position = Vector2( 141.959, 165.292 )
+texture = ExtResource( 23 )
+
+[node name="egseriahouse" type="Node2D" parent="environment"]
+position = Vector2( 538.923, 169.852 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="environment/egseriahouse"]
+texture = ExtResource( 6 )
+
+[node name="seriahousewave01" type="AnimatedSprite" parent="environment/egseriahouse"]
+position = Vector2( 0, 100 )
+frames = SubResource( 2 )
+frame = 6
+playing = true
+
+[node name="seriahousewave00" type="AnimatedSprite" parent="environment/egseriahouse"]
+position = Vector2( 0, 100 )
+frames = SubResource( 3 )
+frame = 7
+playing = true
+
+[node name="sign8" type="Sprite" parent="environment"]
+position = Vector2( 830.764, 284.994 )
+texture = ExtResource( 9 )
+
+[node name="cottage" type="Sprite" parent="environment"]
+position = Vector2( 1109, 257 )
+texture = ExtResource( 15 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="environment/cottage"]
+position = Vector2( 138.104, 78.1795 )
+frames = SubResource( 4 )
+frame = 4
+playing = true
+
+[node name="cottage2" type="Sprite" parent="environment"]
+position = Vector2( 1590, 242 )
+texture = ExtResource( 15 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="environment/cottage2"]
+position = Vector2( 138.104, 78.1795 )
+frames = SubResource( 4 )
+frame = 4
+playing = true
+
+[node name="alfhrdg" type="Sprite" parent="environment"]
+position = Vector2( 2328.22, 166.622 )
+texture = ExtResource( 7 )
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment"]
+autoplay = "move"
+anims/move = SubResource( 5 )
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="Birken2" parent="npc" instance=ExtResource( 44 )]
+margin_left = 318.812
+margin_top = 302.503
+margin_right = 383.812
+margin_bottom = 319.503
+
+[node name="Gale" parent="npc" instance=ExtResource( 45 )]
+margin_left = 1076.02
+margin_top = 320.142
+margin_right = 1141.02
+margin_bottom = 337.142
+
+[node name="Breeze" parent="npc" instance=ExtResource( 46 )]
+margin_left = 1576.21
+margin_top = 314.0
+margin_right = 1641.21
+margin_bottom = 331.0
+
+[node name="Klonter" parent="npc" instance=ExtResource( 47 )]
+margin_left = 1958.6
+margin_top = 282.974
+margin_right = 2023.6
+margin_bottom = 299.974
+
+[node name="Danjin4" parent="npc" instance=ExtResource( 48 )]
+margin_left = 2146.74
+margin_top = 276.304
+margin_right = 2211.74
+margin_bottom = 293.304
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="udgate" type="Sprite" parent="."]
+position = Vector2( 1041.52, 577.385 )
+texture = ExtResource( 36 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="udgate"]
+position = Vector2( 4.00903, -70.381 )
+frames = SubResource( 6 )
+frame = 2
+playing = true
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_04" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 9.17387, 510.558 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 43 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "stage_04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_04"]
+shape = SubResource( 7 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_04"]
+position = Vector2( 74.0836, 0 )
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 2454, 510.558 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 43 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "stage_02"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+shape = SubResource( 7 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_02"]
+position = Vector2( -71.5005, 0 )
+
+[node name="to_stage_03" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1043.05, 675.598 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 43 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "stage_03"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_03"]
+shape = SubResource( 8 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_03"]
+position = Vector2( 0, -39.3119 )
+
+[node name="to_Gate" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 541.422, 322 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 43 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "Gate"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Gate"]
+shape = SubResource( 8 )
+
+[node name="pos" type="Position2D" parent="doors/to_Gate"]
+position = Vector2( 0, 41.852 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 2464, 720 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( -1.42084, 363.852, 468.241, 363.852, 503.599, 319.869, 576.559, 318.185, 615.845, 363.852, 2463.98, 363.852, 2464.16, 659.38, 2521.53, 659.562, 2528.3, 1.0054, -54.4139, 0.11438, -57.0608, 659.562, -0.428314, 659.562 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PoolVector2Array( 0, 659.562, 1003.53, 659.562, 1004.79, 679.537, 1079, 678.486, 1081.1, 659.562, 2464, 659.562, 2464, 720, 0, 720 )

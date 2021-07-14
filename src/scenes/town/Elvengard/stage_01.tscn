@@ -1,0 +1,273 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://assets/images/map/bg/01mid1.png" type="Texture" id=1]
+[ext_resource path="res://src/scenes/com/DoorArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/images/map/obj/blacksmith02.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/bg/01far1.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/tiles/01tile03.png" type="Texture" id=5]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=6]
+[ext_resource path="res://assets/images/map/obj/blacksmith01.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/tiles/elvengardobject05.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/sign/sign0.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/obj/blacksmith00.png" type="Texture" id=10]
+[ext_resource path="res://src/component/obj/blacksmith.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/component/obj/elvenltw.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/component/flag/flag0.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/component/obj/egseriahouse.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/scenes/npc/Linus.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/component/obj/01obj102.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/component/path/elvenpath2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/component/obj/elvenrdg.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/scenes/npc/Danjin.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/scenes/monster/goblin/Goblin.tscn" type="PackedScene" id=20]
+
+[sub_resource type="TileSet" id=1]
+0/name = "01tile03.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 235 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "elvengardobject05.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 81 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 38, 11 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 7, 40 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7, 39 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 83, 11 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 789.46, 21.569 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 18.8326, 141.432 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 18.8326, 84.7472 )
+
+[node name="Elvengard_map1" type="Node2D"]
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 377.519, 340.199 ]
+}
+bgm = "forest_town"
+env = "amb_forest_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 925, 375 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/mid"]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 931, 379 )
+
+[node name="GrassMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 101 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 224 )
+format = 1
+tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0 )
+
+[node name="RoadMap" type="TileMap" parent="environment"]
+position = Vector2( 0, -7 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 224, 81 )
+format = 1
+tile_data = PoolIntArray( 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0 )
+
+[node name="blacksmith" parent="environment" instance=ExtResource( 11 )]
+position = Vector2( 377.881, 309.362 )
+frames = SubResource( 3 )
+frame = 2
+
+[node name="elvenltw" parent="environment" instance=ExtResource( 12 )]
+position = Vector2( 86.1251, 281.352 )
+
+[node name="flag0" parent="environment" instance=ExtResource( 13 )]
+position = Vector2( 495.045, 279.134 )
+
+[node name="egseriahouse" parent="environment" instance=ExtResource( 14 )]
+position = Vector2( 783, 190 )
+
+[node name="sign0" type="Sprite" parent="environment"]
+position = Vector2( 1070.8, 267.514 )
+texture = ExtResource( 9 )
+
+[node name="01obj102" parent="environment" instance=ExtResource( 16 )]
+position = Vector2( 1216, 179 )
+
+[node name="elvenrdg" parent="environment" instance=ExtResource( 18 )]
+position = Vector2( 1479.18, 264.349 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Gate" parent="doors" instance=ExtResource( 2 )]
+position = Vector2( 782, 339 )
+current = "stage_01"
+target = "Gate"
+
+[node name="CollisionShape2D" parent="doors/to_Gate" index="0"]
+shape = SubResource( 4 )
+
+[node name="pos" parent="doors/to_Gate" index="1"]
+position = Vector2( -2.5697, 30.144 )
+
+[node name="to_HendonMyre" parent="doors" instance=ExtResource( 2 )]
+position = Vector2( 7, 435 )
+current = "Elvengard"
+target = "HendonMyre"
+stage = "stage_02"
+type = 1
+
+[node name="CollisionShape2D" parent="doors/to_HendonMyre" index="0"]
+shape = SubResource( 5 )
+
+[node name="pos" parent="doors/to_HendonMyre" index="1"]
+position = Vector2( 82.6499, -0.891907 )
+
+[node name="to_stage_02" parent="doors" instance=ExtResource( 2 )]
+position = Vector2( 1561, 438 )
+current = "stage_01"
+target = "stage_02"
+
+[node name="CollisionShape2D" parent="doors/to_stage_02" index="0"]
+shape = SubResource( 6 )
+
+[node name="pos" parent="doors/to_stage_02" index="1"]
+position = Vector2( -45.9619, 0 )
+
+[node name="to_Alfhlyra" parent="doors" instance=ExtResource( 2 )]
+position = Vector2( 1090, 549 )
+current = "Elvengard"
+target = "Alfhlyra"
+stage = "stage_04"
+type = 1
+
+[node name="CollisionShape2D" parent="doors/to_Alfhlyra" index="0"]
+shape = SubResource( 7 )
+
+[node name="pos" parent="doors/to_Alfhlyra" index="1"]
+position = Vector2( 0.5, -47.5 )
+
+[node name="Linus" parent="." instance=ExtResource( 15 )]
+margin_left = 450.714
+margin_top = 308.136
+margin_right = 515.714
+margin_bottom = 325.136
+
+[node name="Danjin" parent="." instance=ExtResource( 19 )]
+margin_left = 1354.73
+margin_top = 325.689
+margin_right = 1419.73
+margin_bottom = 342.689
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="Goblin" parent="stage" instance=ExtResource( 20 )]
+position = Vector2( 611.149, 447.647 )
+
+[node name="elvenpath2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1089.92, 499.589 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 1568, 600 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2( 789.419, 323.612 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( -790.562, 53.7334, -70.7271, 53.7334, -44.5641, 16.2567, 43.1172, 16.2567, 63.6233, 54.4405, 779.215, 53.7334, 778.149, -323.461, -790.916, -323.461 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 788.419, 572.418 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 8 )
+
+[node name="left" type="StaticBody2D" parent="collision"]
+position = Vector2( -18.8881, 448.278 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/left"]
+position = Vector2( -1, 0 )
+shape = SubResource( 9 )
+
+[node name="right" type="StaticBody2D" parent="collision"]
+position = Vector2( 1587.09, 464.021 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/right"]
+position = Vector2( -1, 0 )
+shape = SubResource( 10 )
+
+[editable path="doors/to_Gate"]
+[editable path="doors/to_HendonMyre"]
+[editable path="doors/to_stage_02"]
+[editable path="doors/to_Alfhlyra"]

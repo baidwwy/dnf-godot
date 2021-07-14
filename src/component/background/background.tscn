@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="background" type="ParallaxBackground"]
+
+[node name="far" type="ParallaxLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="far"]
+centered = false
+
+[node name="mid" type="ParallaxLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="mid"]
+centered = false

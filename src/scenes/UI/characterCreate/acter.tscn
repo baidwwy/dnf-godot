@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/images/ui/selectcharacter/12.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/ui/selectcharacter/3.png" type="Texture" id=3]
+[ext_resource path="res://src/scripts/UI/characterCreate/acter.gd" type="Script" id=4]
+[ext_resource path="res://assets/images/ui/selectcharacter/31.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/ui/selectcharacter/11.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="acter" type="TextureButton"]
+anchor_right = 0.146
+anchor_bottom = 0.341
+margin_right = 2.2
+margin_bottom = 2.40001
+rect_min_size = Vector2( 119, 207 )
+toggle_mode = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bottom" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 126 )
+frames = SubResource( 1 )
+centered = false
+
+[node name="focus" type="TextureRect" parent="."]
+anchor_right = 0.149
+anchor_bottom = 0.345
+margin_right = 101.269
+margin_bottom = 135.585
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+anchor_right = 0.149
+anchor_bottom = 0.345
+margin_right = 101.269
+margin_bottom = 135.585
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="nameLabel" type="Label" parent="."]
+margin_top = 168.0
+margin_right = 119.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.662745, 0.470588, 1 )
+text = "Lv.43 青芒果"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jobLabel" type="Label" parent="."]
+margin_top = 185.031
+margin_right = 119.0
+margin_bottom = 202.031
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.662745, 0.470588, 1 )
+text = "鬼剑士"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_acter_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_acter_mouse_exited"]

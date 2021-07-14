@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lo_tk_03.ogg-acd3bfc53f4de34871a338ff9c6ff2d1.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/lorian/lo_tk_03.ogg"
+dest_files=[ "res://.import/lo_tk_03.ogg-acd3bfc53f4de34871a338ff9c6ff2d1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gale_amb_03.ogg-7cd0fb2a6b6f846bfbc54ffc1cbf3220.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/gale/gale_amb_03.ogg"
+dest_files=[ "res://.import/gale_amb_03.ogg-7cd0fb2a6b6f846bfbc54ffc1cbf3220.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

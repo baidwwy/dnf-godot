@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/oran_amb_01.ogg-89f54b23a9cc8beaf3da56b02f39804f.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/oran/oran_amb_01.ogg"
+dest_files=[ "res://.import/oran_amb_01.ogg-89f54b23a9cc8beaf3da56b02f39804f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

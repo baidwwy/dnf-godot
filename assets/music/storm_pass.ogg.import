@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/storm_pass.ogg-ce4ba0de8bb59489fabb52926f10d765.oggstr"
+
+[deps]
+
+source_file="res://assets/music/storm_pass.ogg"
+dest_files=[ "res://.import/storm_pass.ogg-ce4ba0de8bb59489fabb52926f10d765.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

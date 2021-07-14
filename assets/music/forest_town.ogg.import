@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/forest_town.ogg-41b322103a7dfa8ac5dfaa7f8779cbec.oggstr"
+
+[deps]
+
+source_file="res://assets/music/forest_town.ogg"
+dest_files=[ "res://.import/forest_town.ogg-41b322103a7dfa8ac5dfaa7f8779cbec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

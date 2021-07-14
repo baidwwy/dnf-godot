@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/op_amb_01.ogg-0851fff068b44384dc2a4a8aff199d95.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/ophelia/op_amb_01.ogg"
+dest_files=[ "res://.import/op_amb_01.ogg-0851fff068b44384dc2a4a8aff199d95.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

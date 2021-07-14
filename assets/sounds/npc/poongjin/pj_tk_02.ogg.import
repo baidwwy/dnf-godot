@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pj_tk_02.ogg-c350c3885b81d070e8c7da1f1645d786.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/poongjin/pj_tk_02.ogg"
+dest_files=[ "res://.import/pj_tk_02.ogg-c350c3885b81d070e8c7da1f1645d786.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kiri_tk_06.ogg-b7a9c59ef37f111f1c6b2f273419df74.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/kiri/kiri_tk_06.ogg"
+dest_files=[ "res://.import/kiri_tk_06.ogg-b7a9c59ef37f111f1c6b2f273419df74.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

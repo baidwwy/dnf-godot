@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/balena_amb_01.ogg-4d92244445cf0a1b7b1df8ead53000b2.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/balena/balena_amb_01.ogg"
+dest_files=[ "res://.import/balena_amb_01.ogg-4d92244445cf0a1b7b1df8ead53000b2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

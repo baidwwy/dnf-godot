@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sin_tk_01.ogg-74cedf677b478e629e1bc6e5cd1c70e8.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/sinda/sin_tk_01.ogg"
+dest_files=[ "res://.import/sin_tk_01.ogg-74cedf677b478e629e1bc6e5cd1c70e8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

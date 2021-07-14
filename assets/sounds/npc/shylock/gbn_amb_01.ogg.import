@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gbn_amb_01.ogg-f63b049c8533d17bb8760a4ead78dd41.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/shylock/gbn_amb_01.ogg"
+dest_files=[ "res://.import/gbn_amb_01.ogg-f63b049c8533d17bb8760a4ead78dd41.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

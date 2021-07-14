@@ -1,0 +1,460 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://assets/music/characterSelectStage.ogg" type="AudioStream" id=1]
+[ext_resource path="res://src/scripts/UI/Start.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/loading/loading.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/images/design/选择角色.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/ui/selectcharacter/7.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/ui/selectcharacter/8.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/ui/selectcharacter/10.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/ui/selectcharacter/9.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/ui/selectcharacter/0.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/ui/selectcharacter/1.png" type="Texture" id=10]
+[ext_resource path="res://src/component/buttons/Button1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/images/ui/windowcommon/Panel.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/ui/selectcharacter/34.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/ui/selectcharacter/2.png" type="Texture" id=14]
+[ext_resource path="res://src/scenes/UI/characterCreate/acter.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/component/theme/vscrollbar.tres" type="Theme" id=16]
+[ext_resource path="res://src/scenes/UI/characterCreate/CharacterCreate.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/scenes/UI/characterCreate/select_buttongroup.tres" type="ButtonGroup" id=18]
+[ext_resource path="res://assets/sounds/ui/click2.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/sounds/ui/icondrop.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=21]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 800, 600 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 21 )
+
+[sub_resource type="Theme" id=3]
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 0.1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = SubResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 125, 43 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 125, 43 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 125, 43 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 125, 43 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 21 )
+
+[node name="Start" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="选择角色" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 799, 74 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="title" type="Sprite" parent="."]
+visible = false
+position = Vector2( 400.269, 49.1325 )
+texture = ExtResource( 10 )
+
+[node name="SelectCharacter" type="Control" parent="."]
+margin_right = 800.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="panelbg" type="NinePatchRect" parent="SelectCharacter"]
+modulate = Color( 1, 1, 1, 0.866667 )
+margin_left = 19.0
+margin_top = 70.0
+margin_right = 783.0
+margin_bottom = 515.0
+texture = ExtResource( 12 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Sprite" parent="SelectCharacter"]
+position = Vector2( 174.005, 96.4892 )
+texture = ExtResource( 14 )
+
+[node name="kuang" type="NinePatchRect" parent="SelectCharacter"]
+margin_left = 26.0
+margin_top = 77.0
+margin_right = 778.0
+margin_bottom = 512.0
+texture = ExtResource( 13 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SelectCharacter"]
+anchor_right = 1.0
+anchor_bottom = 0.852
+margin_left = 28.0
+margin_top = 87.0
+margin_right = -24.9999
+margin_bottom = -6.20001
+rect_min_size = Vector2( 747, 418 )
+theme = ExtResource( 16 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="SelectCharacter/ScrollContainer"]
+margin_right = 734.0
+margin_bottom = 837.0
+rect_min_size = Vector2( 734, 740 )
+custom_constants/vseparation = 3
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acter1" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 119.0
+margin_bottom = 207.0
+group = ExtResource( 18 )
+
+[node name="acter2" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_right = 242.0
+margin_bottom = 207.0
+group = ExtResource( 18 )
+
+[node name="acter3" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 246.0
+margin_right = 365.0
+margin_bottom = 207.0
+group = ExtResource( 18 )
+
+[node name="acter4" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 369.0
+margin_right = 488.0
+margin_bottom = 207.0
+group = ExtResource( 18 )
+
+[node name="acter5" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 492.0
+margin_right = 611.0
+margin_bottom = 207.0
+group = ExtResource( 18 )
+
+[node name="acter6" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 615.0
+margin_right = 734.0
+margin_bottom = 207.0
+group = ExtResource( 18 )
+
+[node name="acter7" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 210.0
+margin_right = 119.0
+margin_bottom = 417.0
+group = ExtResource( 18 )
+
+[node name="acter8" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_top = 210.0
+margin_right = 242.0
+margin_bottom = 417.0
+group = ExtResource( 18 )
+
+[node name="acter9" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 246.0
+margin_top = 210.0
+margin_right = 365.0
+margin_bottom = 417.0
+group = ExtResource( 18 )
+
+[node name="acter10" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 369.0
+margin_top = 210.0
+margin_right = 488.0
+margin_bottom = 417.0
+group = ExtResource( 18 )
+
+[node name="acter11" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 492.0
+margin_top = 210.0
+margin_right = 611.0
+margin_bottom = 417.0
+group = ExtResource( 18 )
+
+[node name="acter12" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 615.0
+margin_top = 210.0
+margin_right = 734.0
+margin_bottom = 417.0
+group = ExtResource( 18 )
+
+[node name="acter13" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 420.0
+margin_right = 119.0
+margin_bottom = 627.0
+group = ExtResource( 18 )
+
+[node name="acter14" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_top = 420.0
+margin_right = 242.0
+margin_bottom = 627.0
+group = ExtResource( 18 )
+
+[node name="acter15" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 246.0
+margin_top = 420.0
+margin_right = 365.0
+margin_bottom = 627.0
+group = ExtResource( 18 )
+
+[node name="acter16" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 369.0
+margin_top = 420.0
+margin_right = 488.0
+margin_bottom = 627.0
+group = ExtResource( 18 )
+
+[node name="acter17" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 492.0
+margin_top = 420.0
+margin_right = 611.0
+margin_bottom = 627.0
+group = ExtResource( 18 )
+
+[node name="acter18" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 615.0
+margin_top = 420.0
+margin_right = 734.0
+margin_bottom = 627.0
+group = ExtResource( 18 )
+
+[node name="acter19" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 630.0
+margin_right = 119.0
+margin_bottom = 837.0
+group = ExtResource( 18 )
+
+[node name="acter20" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_top = 630.0
+margin_right = 242.0
+margin_bottom = 837.0
+group = ExtResource( 18 )
+
+[node name="acter21" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 246.0
+margin_top = 630.0
+margin_right = 365.0
+margin_bottom = 837.0
+group = ExtResource( 18 )
+
+[node name="acter22" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 369.0
+margin_top = 630.0
+margin_right = 488.0
+margin_bottom = 837.0
+group = ExtResource( 18 )
+
+[node name="acter23" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 492.0
+margin_top = 630.0
+margin_right = 611.0
+margin_bottom = 837.0
+group = ExtResource( 18 )
+
+[node name="acter24" parent="SelectCharacter/ScrollContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 615.0
+margin_top = 630.0
+margin_right = 734.0
+margin_bottom = 837.0
+group = ExtResource( 18 )
+
+[node name="createBtn" parent="." instance=ExtResource( 11 )]
+margin_left = 137.0
+margin_top = 536.0
+margin_right = 214.0
+margin_bottom = 559.0
+text = "创建角色"
+
+[node name="deleteBtn" parent="." instance=ExtResource( 11 )]
+margin_left = 215.572
+margin_top = 536.0
+margin_right = 292.572
+margin_bottom = 559.0
+text = "删除角色"
+
+[node name="optionBtn" parent="." instance=ExtResource( 11 )]
+margin_left = 507.241
+margin_top = 536.0
+margin_right = 584.241
+margin_bottom = 559.0
+text = "选项"
+
+[node name="closeBtn" parent="." instance=ExtResource( 11 )]
+margin_left = 587.421
+margin_top = 536.0
+margin_right = 664.421
+margin_bottom = 559.0
+text = "结束游戏"
+
+[node name="StartBtn" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -62.5
+margin_top = -73.204
+margin_right = 62.5
+margin_bottom = -30.204
+rect_min_size = Vector2( 125, 43 )
+hint_tooltip = "开始游戏"
+focus_mode = 0
+theme = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+bus = "BGM"
+
+[node name="CharacterCreate" parent="." instance=ExtResource( 17 )]
+visible = false
+
+[node name="clickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+bus = "SFX"
+
+[node name="selectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+bus = "SFX"
+
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter1" to="." method="_on_acter_toggled" binds= [ 1 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter2" to="." method="_on_acter_toggled" binds= [ 2 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter3" to="." method="_on_acter_toggled" binds= [ 3 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter4" to="." method="_on_acter_toggled" binds= [ 4 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter5" to="." method="_on_acter_toggled" binds= [ 5 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter6" to="." method="_on_acter_toggled" binds= [ 6 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter7" to="." method="_on_acter_toggled" binds= [ 7 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter8" to="." method="_on_acter_toggled" binds= [ 8 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter9" to="." method="_on_acter_toggled" binds= [ 9 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter10" to="." method="_on_acter_toggled" binds= [ 10 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter11" to="." method="_on_acter_toggled" binds= [ 11 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter12" to="." method="_on_acter_toggled" binds= [ 12 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter13" to="." method="_on_acter_toggled" binds= [ 13 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter14" to="." method="_on_acter_toggled" binds= [ 14 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter15" to="." method="_on_acter_toggled" binds= [ 15 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter16" to="." method="_on_acter_toggled" binds= [ 16 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter17" to="." method="_on_acter_toggled" binds= [ 17 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter18" to="." method="_on_acter_toggled" binds= [ 18 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter19" to="." method="_on_acter_toggled" binds= [ 19 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter20" to="." method="_on_acter_toggled" binds= [ 20 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter21" to="." method="_on_acter_toggled" binds= [ 21 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter22" to="." method="_on_acter_toggled" binds= [ 22 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter23" to="." method="_on_acter_toggled" binds= [ 23 ]]
+[connection signal="toggled" from="SelectCharacter/ScrollContainer/GridContainer/acter24" to="." method="_on_acter_toggled" binds= [ 24 ]]
+[connection signal="pressed" from="createBtn" to="." method="_on_createBtn_pressed"]
+[connection signal="pressed" from="closeBtn" to="." method="_on_quitGame"]
+[connection signal="pressed" from="StartBtn" to="." method="_on_StartBtn_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_closeLoading"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mintai_amb_01.ogg-57f9d29c954c4c92bc3d097fd98e359e.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/mintai/mintai_amb_01.ogg"
+dest_files=[ "res://.import/mintai_amb_01.ogg-57f9d29c954c4c92bc3d097fd98e359e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

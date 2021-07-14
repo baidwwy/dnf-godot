@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tavern.ogg-bce33604f8763904750bf8f32cec4a11.oggstr"
+
+[deps]
+
+source_file="res://assets/music/tavern.ogg"
+dest_files=[ "res://.import/tavern.ogg-bce33604f8763904750bf8f32cec4a11.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

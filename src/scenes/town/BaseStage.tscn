@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="BaseMap" type="Node2D"]
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="objs" type="YSort" parent="stage"]
+
+[node name="monster" type="YSort" parent="stage"]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 800, 600 )
+
+[node name="collision" type="Node2D" parent="."]

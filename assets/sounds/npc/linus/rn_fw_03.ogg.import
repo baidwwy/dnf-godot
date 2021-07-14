@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rn_fw_03.ogg-94f34795b115b35c394b989b5d34d3ca.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/linus/rn_fw_03.ogg"
+dest_files=[ "res://.import/rn_fw_03.ogg-94f34795b115b35c394b989b5d34d3ca.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

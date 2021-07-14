@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/orca_amb_02.ogg-f8d16431563e55c6237ee8351f3618cf.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/orca/orca_amb_02.ogg"
+dest_files=[ "res://.import/orca_amb_02.ogg-f8d16431563e55c6237ee8351f3618cf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

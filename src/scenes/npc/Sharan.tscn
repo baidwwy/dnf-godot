@@ -1,0 +1,254 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/scenes/npc/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/shader/shadow_shader.shader" type="Shader" id=2]
+[ext_resource path="res://assets/images/npc/npc_sharan/0.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/npc/npc_sharan/1.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/npc/npc_sharan/3.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/npc/npc_sharan/2.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/npc/npc_sharan/4.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/npc/npc_sharan/5.png" type="Texture" id=8]
+[ext_resource path="res://assets/shader/outline_shader.shader" type="Shader" id=9]
+[ext_resource path="res://src/scripts/npc/Sharan.gd" type="Script" id=10]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_amb_02.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_fw_01.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_fw_02.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_amb_01.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_tk_01.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_tk_02.ogg" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/npc/sharan/sr_fw_03.ogg" type="AudioStream" id=17]
+[ext_resource path="res://src/scenes/UI/npc_nemu/Menu_Type3.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/images/face/npc/popup/sharan.png" type="Texture" id=19]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
+shader_param/tilt = 0.4
+shader_param/scale = 0.3
+shader_param/alpha = 0.4
+shader_param/shadow = true
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 9 )
+shader_param/outline_color = Color( 0.654902, 0.964706, 0.192157, 1 )
+shader_param/show_outline = false
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+length = 1.08
+loop = true
+step = 0.18
+tracks/0/type = "value"
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.54, 0.72, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.54, 0.72, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "amb_01"
+length = 2.7
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 14 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "amb_02"
+length = 2.3
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fw_01"
+length = 1.7
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "fw_02"
+length = 3.5
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "fw_03"
+length = 1.5
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "tk_01"
+length = 1.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 15 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "tk_02"
+length = 3.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 16 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[node name="Sharan" instance=ExtResource( 1 )]
+script = ExtResource( 10 )
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource( 1 )
+position = Vector2( -27.6179, 45.8814 )
+frames = SubResource( 2 )
+
+[node name="body" parent="." index="1"]
+material = SubResource( 3 )
+frames = SubResource( 4 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "default"
+anims/default = SubResource( 5 )
+
+[node name="nameLabel" parent="." index="3"]
+margin_top = -97.2454
+margin_bottom = -80.2454
+text = "莎兰"
+
+[node name="mouse_check" parent="." index="4"]
+margin_left = -45.0
+margin_top = -73.0
+margin_right = 45.0
+margin_bottom = 72.0
+
+[node name="npc_talk" parent="." index="5"]
+stream = ExtResource( 16 )
+
+[node name="talkPlayer" parent="." index="7"]
+anims/amb_01 = SubResource( 6 )
+anims/amb_02 = SubResource( 7 )
+anims/fw_01 = SubResource( 8 )
+anims/fw_02 = SubResource( 9 )
+anims/fw_03 = SubResource( 10 )
+anims/tk_01 = SubResource( 11 )
+anims/tk_02 = SubResource( 12 )
+
+[node name="Menu_Type3" parent="." index="10" instance=ExtResource( 18 )]
+visible = true
+
+[node name="faceIcon" parent="Menu_Type3/top" index="0"]
+texture = ExtResource( 19 )
+
+[node name="nameLabel" parent="Menu_Type3/top" index="1"]
+text = "莎兰"
+
+[editable path="Menu_Type3"]

@@ -1,0 +1,180 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/images/worldmap/bg/lorien.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/design/洛兰.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/ui/selectdungeon/17.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/ui/selectdungeon/18.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/ui/selectdungeon/20.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/ui/selectdungeon/21.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/ui/selectdungeon/26.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/ui/selectdungeon/25.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/ui/selectdungeon/29.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/ui/selectdungeon/28.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/ui/selectdungeon/27.png" type="Texture" id=11]
+[ext_resource path="res://src/scenes/worldmap/Worldmap_Button.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/images/worldmap/act1/lorieninside/0.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/worldmap/act1/lorieninside/4.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/worldmap/act1/lorieninside/1.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/worldmap/act1/lorieninside/3.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/worldmap/act1/lorieninside/2.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/worldmap/act1/lorieninside/5.png" type="Texture" id=18]
+[ext_resource path="res://src/scripts/worldmap/Worldmap.gd" type="Script" id=19]
+[ext_resource path="res://src/scenes/dungeon/act1/Lorien/Lorien.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/scenes/dungeon/act1/LorienInside/LorienInside.tscn" type="PackedScene" id=21]
+
+[node name="Lorien" type="Control"]
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="洛兰" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="enterBtn" type="TextureButton" parent="."]
+margin_left = 528.325
+margin_top = 471.738
+margin_right = 731.325
+margin_bottom = 511.738
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backBtn" type="TextureButton" parent="."]
+margin_left = 527.782
+margin_top = 513.769
+margin_right = 662.782
+margin_bottom = 548.769
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="openHellBtn" type="TextureButton" parent="."]
+margin_left = 594.079
+margin_top = 427.767
+margin_right = 754.079
+margin_bottom = 456.767
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="closeHellBtn" type="TextureButton" parent="."]
+visible = false
+margin_left = 590.079
+margin_top = 427.767
+margin_right = 754.079
+margin_bottom = 456.767
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lorien" parent="buttons" instance=ExtResource( 12 )]
+margin_left = 361.0
+margin_top = 268.0
+margin_right = 607.0
+margin_bottom = 291.0
+dungeon = ExtResource( 20 )
+
+[node name="LorienInside" parent="buttons" instance=ExtResource( 12 )]
+margin_left = 310.547
+margin_top = 304.136
+margin_right = 557.547
+margin_bottom = 329.136
+dungeon = ExtResource( 21 )
+
+[node name="normalbg" parent="buttons/LorienInside" index="0"]
+margin_left = -88.4657
+margin_top = -27.7698
+margin_right = 171.534
+margin_bottom = 137.23
+texture = ExtResource( 16 )
+
+[node name="normalBtn" parent="buttons/LorienInside" index="1"]
+margin_left = -73.0
+margin_top = -12.0
+margin_right = 157.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 73.2341, 12.579 )
+texture_normal = ExtResource( 17 )
+texture_disabled = ExtResource( 14 )
+
+[node name="selectbg" parent="buttons/LorienInside" index="2"]
+margin_left = -114.848
+margin_top = -27.5713
+margin_right = 209.152
+margin_bottom = 173.429
+texture = ExtResource( 15 )
+
+[node name="selectBtn" parent="buttons/LorienInside" index="3"]
+margin_left = -99.8722
+margin_top = -13.4025
+margin_right = 194.128
+margin_bottom = 157.598
+texture_normal = ExtResource( 13 )
+
+[node name="maoxian" parent="buttons/LorienInside" index="4"]
+margin_left = -100.0
+margin_top = 57.0
+margin_right = 110.0
+margin_bottom = 138.0
+texture = ExtResource( 18 )
+
+[node name="yongshi" parent="buttons/LorienInside" index="5"]
+margin_left = -100.0
+margin_top = 57.0
+margin_right = 110.0
+margin_bottom = 137.0
+
+[node name="king" parent="buttons/LorienInside" index="6"]
+margin_left = -100.0
+margin_top = 57.0
+margin_right = 110.0
+margin_bottom = 137.0
+
+[node name="leftBtn" parent="buttons/LorienInside" index="7"]
+margin_left = -23.8409
+margin_top = 137.784
+margin_right = 4.1591
+margin_bottom = 155.784
+
+[node name="rightBtn" parent="buttons/LorienInside" index="8"]
+margin_left = 4.86667
+margin_top = 138.174
+margin_right = 32.8667
+margin_bottom = 156.174
+
+[connection signal="pressed" from="enterBtn" to="." method="_on_enterBtn_pressed"]
+[connection signal="pressed" from="backBtn" to="." method="_on_backBtn_pressed"]
+[connection signal="pressed" from="openHellBtn" to="." method="_on_openHellBtn_pressed"]
+[connection signal="pressed" from="closeHellBtn" to="." method="_on_closeHellBtn_pressed"]
+
+[editable path="buttons/LorienInside"]

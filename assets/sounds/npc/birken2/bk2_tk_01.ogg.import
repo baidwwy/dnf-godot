@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bk2_tk_01.ogg-d3ec8336bde72b2d8b7049f9d143584c.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/birken2/bk2_tk_01.ogg"
+dest_files=[ "res://.import/bk2_tk_01.ogg-d3ec8336bde72b2d8b7049f9d143584c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

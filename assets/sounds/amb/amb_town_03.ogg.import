@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/amb_town_03.ogg-3128ffc9a9b15e0f15007dd69c17e7fc.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/amb/amb_town_03.ogg"
+dest_files=[ "res://.import/amb_town_03.ogg-3128ffc9a9b15e0f15007dd69c17e7fc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/iris_amb_01.ogg-a3c56bd2b393b5d7c85ff2ffd6d669d9.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/iris/iris_amb_01.ogg"
+dest_files=[ "res://.import/iris_amb_01.ogg-a3c56bd2b393b5d7c85ff2ffd6d669d9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

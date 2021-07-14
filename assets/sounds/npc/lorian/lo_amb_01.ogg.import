@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lo_amb_01.ogg-fad25323ce375ade24559f6f1b2d1ec5.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/lorian/lo_amb_01.ogg"
+dest_files=[ "res://.import/lo_amb_01.ogg-fad25323ce375ade24559f6f1b2d1ec5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

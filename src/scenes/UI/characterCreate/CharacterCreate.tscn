@@ -1,0 +1,287 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://assets/images/design/创建角色.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/charactercreate/0.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/charactercreate/8.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/charactercreate/6.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/charactercreate/9.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/charactercreate/7.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/charactercreate/31.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/charactercreate/29.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/charactercreate/30.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/charactercreate/10.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/charactercreate/11.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/charactercreate/13.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/charactercreate/18.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/charactercreate/12.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/charactercreate/19.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/charactercreate/20.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/charactercreate/21.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/charactercreate/26.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/charactercreate/27.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/charactercreate/28.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/charactercreate/33.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/charactercreate/32.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/ui/windowcommon/Panel.png" type="Texture" id=23]
+[ext_resource path="res://src/component/buttons/Button1.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/images/charactercreate/46.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/charactercreate/44.png" type="Texture" id=26]
+[ext_resource path="res://assets/images/charactercreate/60.png" type="Texture" id=27]
+[ext_resource path="res://assets/images/charactercreate/52.png" type="Texture" id=28]
+[ext_resource path="res://assets/images/charactercreate/39.png" type="Texture" id=29]
+[ext_resource path="res://assets/images/charactercreate/38.png" type="Texture" id=30]
+[ext_resource path="res://assets/images/charactercreate/41.png" type="Texture" id=31]
+[ext_resource path="res://assets/images/charactercreate/43.png" type="Texture" id=32]
+[ext_resource path="res://src/scripts/UI/characterCreate/CharacterCreate.gd" type="Script" id=33]
+[ext_resource path="res://src/scenes/UI/characterCreate/create_buttongroup.tres" type="ButtonGroup" id=34]
+[ext_resource path="res://assets/sounds/ui/click2.ogg" type="AudioStream" id=35]
+[ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=36]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 800, 600 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 23 )
+region_rect = Rect2( 0, 0, 104, 111 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0.215686, 0.215686, 0.396078, 1 )
+font_data = ExtResource( 36 )
+
+[node name="CharacterCreate" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 33 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="创建角色" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+centered = false
+
+[node name="cutscene_swordman" type="Sprite" parent="."]
+visible = false
+position = Vector2( 257, 241 )
+texture = ExtResource( 30 )
+
+[node name="cutscene_fighter" type="Sprite" parent="."]
+visible = false
+position = Vector2( 132, 299 )
+texture = ExtResource( 29 )
+
+[node name="cutscene_gunner" type="Sprite" parent="."]
+visible = false
+position = Vector2( 210, 300 )
+texture = ExtResource( 31 )
+
+[node name="cutscene_mage" type="Sprite" parent="."]
+position = Vector2( 130, 215 )
+scale = Vector2( 1.12, 1.12 )
+texture = ExtResource( 32 )
+
+[node name="cutscene_priest" type="Sprite" parent="."]
+visible = false
+position = Vector2( 162, 313 )
+scale = Vector2( 1.12, 1.12 )
+texture = ExtResource( 26 )
+
+[node name="swordmanBtn" type="TextureButton" parent="."]
+margin_left = 43.244
+margin_top = 488.62
+margin_right = 147.244
+margin_bottom = 561.62
+toggle_mode = true
+group = ExtResource( 34 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fighterBtn" type="TextureButton" parent="."]
+margin_left = 163.093
+margin_top = 488.62
+margin_right = 267.093
+margin_bottom = 561.62
+toggle_mode = true
+group = ExtResource( 34 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gunnerBtn" type="TextureButton" parent="."]
+margin_left = 283.735
+margin_top = 488.62
+margin_right = 387.735
+margin_bottom = 561.62
+toggle_mode = true
+group = ExtResource( 34 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mageBtn" type="TextureButton" parent="."]
+margin_left = 404.171
+margin_top = 488.62
+margin_right = 508.171
+margin_bottom = 561.62
+toggle_mode = true
+group = ExtResource( 34 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="priestBtn" type="TextureButton" parent="."]
+margin_left = 525.02
+margin_top = 488.62
+margin_right = 629.02
+margin_bottom = 561.62
+toggle_mode = true
+group = ExtResource( 34 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="desbg" type="NinePatchRect" parent="."]
+margin_left = 364.0
+margin_top = 125.0
+margin_right = 746.0
+margin_bottom = 455.0
+texture = ExtResource( 23 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="job_title" type="Sprite" parent="."]
+position = Vector2( 553, 65.5 )
+texture = ExtResource( 25 )
+
+[node name="job_hard" type="Sprite" parent="."]
+position = Vector2( 555.731, 194.444 )
+texture = ExtResource( 28 )
+
+[node name="job_des" type="Sprite" parent="."]
+position = Vector2( 549.366, 337.395 )
+texture = ExtResource( 27 )
+
+[node name="createBtn" parent="." instance=ExtResource( 24 )]
+margin_left = 416.366
+margin_top = 416.395
+margin_right = 536.366
+margin_bottom = 441.395
+text = "创建角色"
+
+[node name="backBtn" parent="." instance=ExtResource( 24 )]
+margin_left = 570.366
+margin_top = 416.395
+margin_right = 690.366
+margin_bottom = 441.395
+text = "返回"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="clickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 35 )
+bus = "SFX"
+
+[node name="createWindow" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.25098 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Panel" parent="createWindow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -99.0
+margin_top = 51.0
+margin_right = 99.0
+margin_bottom = 144.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nameText" type="TextEdit" parent="createWindow"]
+margin_left = 311.0
+margin_top = 362.0
+margin_right = 488.0
+margin_bottom = 383.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="okBtn" parent="createWindow" instance=ExtResource( 24 )]
+margin_left = 318.79
+margin_top = 389.0
+margin_right = 395.79
+margin_bottom = 412.0
+text = "创建"
+
+[node name="cancelBtn" parent="createWindow" instance=ExtResource( 24 )]
+margin_left = 403.408
+margin_top = 389.0
+margin_right = 480.408
+margin_bottom = 412.0
+text = "取消"
+
+[node name="tipLabel" type="Label" parent="createWindow"]
+visible = false
+margin_left = 314.0
+margin_top = 416.0
+margin_right = 487.0
+margin_bottom = 433.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "角色名重要"
+align = 1
+valign = 1
+
+[connection signal="toggled" from="swordmanBtn" to="." method="_on_swordmanBtn_toggled"]
+[connection signal="toggled" from="fighterBtn" to="." method="_on_fighterBtn_toggled"]
+[connection signal="toggled" from="gunnerBtn" to="." method="_on_gunnerBtn_toggled"]
+[connection signal="toggled" from="mageBtn" to="." method="_on_mageBtn_toggled"]
+[connection signal="toggled" from="priestBtn" to="." method="_on_priestBtn_toggled"]
+[connection signal="pressed" from="createBtn" to="." method="_on_createBtn_pressed"]
+[connection signal="pressed" from="backBtn" to="." method="_on_backBtn_pressed"]
+[connection signal="pressed" from="createWindow/okBtn" to="." method="_on_okBtn_pressed"]
+[connection signal="pressed" from="createWindow/cancelBtn" to="." method="_on_cancelBtn_pressed"]

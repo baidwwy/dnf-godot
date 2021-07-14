@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bk_fw_04.ogg-449745a43af3cd8d0e2f808f4857db42.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/birken/bk_fw_04.ogg"
+dest_files=[ "res://.import/bk_fw_04.ogg-449745a43af3cd8d0e2f808f4857db42.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

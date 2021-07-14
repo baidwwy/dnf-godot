@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/albert_amb_03.ogg-acc633ec7eabb995a8bde6e4144e517d.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/albert/albert_amb_03.ogg"
+dest_files=[ "res://.import/albert_amb_03.ogg-acc633ec7eabb995a8bde6e4144e517d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

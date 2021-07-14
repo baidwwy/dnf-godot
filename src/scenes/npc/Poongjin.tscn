@@ -1,0 +1,204 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://src/scenes/npc/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/shader/shadow_shader.shader" type="Shader" id=2]
+[ext_resource path="res://assets/images/npc/npc_poongjin/3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/npc/npc_poongjin/0.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/npc/npc_poongjin/1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/npc/npc_poongjin/2.png" type="Texture" id=6]
+[ext_resource path="res://assets/shader/outline_shader.shader" type="Shader" id=7]
+[ext_resource path="res://src/scripts/npc/Poongjin.gd" type="Script" id=8]
+[ext_resource path="res://assets/sounds/npc/poongjin/pj_tk_01.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/npc/poongjin/pj_amb_01.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/npc/poongjin/pj_fw_01.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/npc/poongjin/pj_fw_02.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/npc/poongjin/pj_tk_02.ogg" type="AudioStream" id=13]
+[ext_resource path="res://src/scenes/UI/npc_nemu/Menu_Type3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/images/face/npc/popup/poongjin.png" type="Texture" id=15]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
+shader_param/tilt = 0.4
+shader_param/scale = 0.3
+shader_param/alpha = 0.4
+shader_param/shadow = true
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.654902, 0.964706, 0.192157, 1 )
+shader_param/show_outline = false
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+length = 0.72
+loop = true
+step = 0.18
+tracks/0/type = "value"
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("body_shadow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.18, 0.36, 0.54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "amb_01"
+length = 4.3
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "fw_01"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fw_02"
+length = 1.3
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "tk_01"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "tk_02"
+length = 2.5
+tracks/0/type = "audio"
+tracks/0/path = NodePath("npc_talk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[node name="Poongjin" instance=ExtResource( 1 )]
+script = ExtResource( 8 )
+
+[node name="body_shadow" parent="." index="0"]
+material = SubResource( 1 )
+position = Vector2( -25.4998, 43.0996 )
+frames = SubResource( 2 )
+frame = 3
+
+[node name="body" parent="." index="1"]
+material = SubResource( 3 )
+frames = SubResource( 4 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "default"
+anims/default = SubResource( 5 )
+
+[node name="nameLabel" parent="." index="3"]
+margin_left = -41.6179
+margin_right = 54.3821
+text = "风振"
+
+[node name="talkPlayer" parent="." index="7"]
+anims/amb_01 = SubResource( 6 )
+anims/fw_01 = SubResource( 7 )
+anims/fw_02 = SubResource( 8 )
+anims/tk_01 = SubResource( 9 )
+anims/tk_02 = SubResource( 10 )
+
+[node name="Menu_Type3" parent="." index="10" instance=ExtResource( 14 )]
+visible = true
+
+[node name="faceIcon" parent="Menu_Type3/top" index="0"]
+texture = ExtResource( 15 )
+
+[node name="nameLabel" parent="Menu_Type3/top" index="1"]
+text = "风振"
+
+[editable path="Menu_Type3"]

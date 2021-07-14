@@ -1,0 +1,384 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://assets/images/map/tiles/alfhtileex.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/map/alfhlyra/littlerock.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/alfhlyra/bigrock.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/tiles/alftile.png" type="Texture" id=4]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/map/alfhlyra/alfobj00.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/alfhlyra/mlittlerock.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/alfhlyra/redsign.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_2.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gate.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_0.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_3.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gatelight_4.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/alfhlyra/d_gateedge.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/alfhlyra/udgate.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/map/alfhlyra/udgatelight_0.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/map/alfhlyra/udgatelight_1.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/map/alfhlyra/udgatelight_2.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/map/bg/alffar.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/map/bg/alfmid.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/map/alfhlyra/biggrass.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/map/alfhlyra/smgrass.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/map/alfhlyra/midgrass.png" type="Texture" id=24]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=25]
+
+[sub_resource type="Animation" id=1]
+resource_name = "move"
+length = 40.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1120, 156 ), Vector2( -480, 156 ) ]
+}
+
+[sub_resource type="TileSet" id=2]
+0/name = "alftile.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 256 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "alfhtileex.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 224, 120 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="Animation" id=5]
+resource_name = "move"
+length = 40.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("background/mid/fog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1120, 156 ), Vector2( -480, 156 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 40.377, 12.3853 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 24.5583, 54.545 )
+
+[node name="stage_03" type="Node2D"]
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 362.176, 527.678 ],
+"_edit_vertical_guides_": [ -43.1879, 3.77265 ]
+}
+bgm = "alfhlyra_new"
+env = "amb_forest_04"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 20 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 831, 330 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="fog" type="Sprite" parent="environment/background/mid"]
+position = Vector2( -1120, 156 )
+texture = ExtResource( 21 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 2245, 158 )
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment"]
+autoplay = "move"
+anims/move = SubResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+visible = false
+position = Vector2( 0, 304 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 224, 256 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0 )
+
+[node name="littlerock" type="Sprite" parent="environment"]
+position = Vector2( 201.92, 277.167 )
+texture = ExtResource( 2 )
+
+[node name="littlerock2" type="Sprite" parent="environment"]
+position = Vector2( 466.885, 277.167 )
+texture = ExtResource( 2 )
+
+[node name="bigrock" type="Sprite" parent="environment"]
+position = Vector2( 77.0847, 266.367 )
+texture = ExtResource( 3 )
+
+[node name="bigrock2" type="Sprite" parent="environment"]
+position = Vector2( 845.285, 243.252 )
+texture = ExtResource( 3 )
+
+[node name="mlittlerock" type="Sprite" parent="environment"]
+position = Vector2( 401.437, 291.252 )
+texture = ExtResource( 7 )
+
+[node name="mlittlerock2" type="Sprite" parent="environment"]
+position = Vector2( 642.375, 294.589 )
+texture = ExtResource( 7 )
+
+[node name="mlittlerock3" type="Sprite" parent="environment"]
+position = Vector2( 707.115, 294.589 )
+texture = ExtResource( 7 )
+
+[node name="d_gate" type="Sprite" parent="environment"]
+position = Vector2( 997, 223 )
+texture = ExtResource( 11 )
+
+[node name="light" type="AnimatedSprite" parent="environment/d_gate"]
+position = Vector2( 4, 103 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="udgate" type="Sprite" parent="environment"]
+position = Vector2( 313, 266.819 )
+texture = ExtResource( 16 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="environment/udgate"]
+position = Vector2( 4.00903, -70.381 )
+frames = SubResource( 4 )
+playing = true
+
+[node name="smgrass" type="Sprite" parent="environment"]
+position = Vector2( 646.368, 329.213 )
+texture = ExtResource( 23 )
+
+[node name="midgrass" type="Sprite" parent="environment"]
+position = Vector2( 485.115, 336.34 )
+texture = ExtResource( 24 )
+
+[node name="biggrass" type="Sprite" parent="environment"]
+position = Vector2( 390.68, 455.721 )
+texture = ExtResource( 22 )
+
+[node name="redsign" type="Sprite" parent="environment"]
+position = Vector2( 760.262, 296.852 )
+texture = ExtResource( 8 )
+
+[node name="environment2" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment2"]
+
+[node name="far" type="ParallaxLayer" parent="environment2/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment2/background/far"]
+texture = ExtResource( 20 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 831, 330 )
+
+[node name="mid" type="ParallaxLayer" parent="environment2/background"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="fog" type="Sprite" parent="environment2/background/mid"]
+position = Vector2( -1120, 156 )
+texture = ExtResource( 21 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 2245, 158 )
+
+[node name="fogAPlayer" type="AnimationPlayer" parent="environment2"]
+autoplay = "move"
+anims/move = SubResource( 5 )
+
+[node name="TileMap" type="TileMap" parent="environment2"]
+position = Vector2( 0, 304 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 224, 256 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0 )
+
+[node name="littlerock" type="Sprite" parent="environment2"]
+position = Vector2( 201.92, 277.167 )
+texture = ExtResource( 2 )
+
+[node name="littlerock2" type="Sprite" parent="environment2"]
+position = Vector2( 466.885, 277.167 )
+texture = ExtResource( 2 )
+
+[node name="bigrock" type="Sprite" parent="environment2"]
+position = Vector2( 77.0847, 266.367 )
+texture = ExtResource( 3 )
+
+[node name="bigrock2" type="Sprite" parent="environment2"]
+position = Vector2( 845.285, 243.252 )
+texture = ExtResource( 3 )
+
+[node name="mlittlerock" type="Sprite" parent="environment2"]
+position = Vector2( 401.437, 291.252 )
+texture = ExtResource( 7 )
+
+[node name="mlittlerock2" type="Sprite" parent="environment2"]
+position = Vector2( 642.375, 294.589 )
+texture = ExtResource( 7 )
+
+[node name="mlittlerock3" type="Sprite" parent="environment2"]
+position = Vector2( 707.115, 294.589 )
+texture = ExtResource( 7 )
+
+[node name="d_gate" type="Sprite" parent="environment2"]
+position = Vector2( 997, 223 )
+texture = ExtResource( 11 )
+
+[node name="light" type="AnimatedSprite" parent="environment2/d_gate"]
+position = Vector2( 4, 103 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="udgate" type="Sprite" parent="environment2"]
+position = Vector2( 313, 266.819 )
+texture = ExtResource( 16 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="environment2/udgate"]
+position = Vector2( 4.00903, -70.381 )
+frames = SubResource( 4 )
+frame = 2
+playing = true
+
+[node name="smgrass" type="Sprite" parent="environment2"]
+position = Vector2( 646.368, 329.213 )
+texture = ExtResource( 23 )
+
+[node name="midgrass" type="Sprite" parent="environment2"]
+position = Vector2( 485.115, 336.34 )
+texture = ExtResource( 24 )
+
+[node name="biggrass" type="Sprite" parent="environment2"]
+position = Vector2( 560.841, 416.721 )
+texture = ExtResource( 22 )
+
+[node name="biggrass2" type="Sprite" parent="environment2"]
+position = Vector2( 396.025, 455.721 )
+texture = ExtResource( 22 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="alfobj00" type="Sprite" parent="."]
+position = Vector2( 0, 326.581 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="d_gateedge" type="Sprite" parent="."]
+position = Vector2( 1048, 362 )
+texture = ExtResource( 15 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 313, 346.252 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_03"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource( 6 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_01"]
+position = Vector2( 0, 61.9837 )
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1037.21, 408.236 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_0"
+type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+rotation = -0.462512
+shape = SubResource( 7 )
+
+[node name="pos" type="Position2D" parent="doors/to_Entrance"]
+position = Vector2( -91.2053, 36.7643 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 1120, 599.413 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( 3.77265, 362.176, 257.936, 362.176, 276.645, 337.231, 347.026, 338.122, 368.407, 362.176, 895.664, 362.176, 971.546, 401.376, 1016.98, 400.485, 1049.94, 416.521, 1022.33, 488.684, 986.691, 528.774, -43.1879, 527.678, -43.1879, 599.516, 1120.33, 600.937, 1120.14, 0.0756989, -43.2227, 0.0695, -44.0788, 362.176, -43.3689, 527.658, 3.77265, 527.678 )

@@ -1,0 +1,197 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://assets/tres/stormPass_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/images/map/stormPass/spobj01.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/stormPass/fire_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/stormPass/fire_4.png" type="Texture" id=4]
+[ext_resource path="res://src/component/obj/stormbattlegateleftr.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/component/obj/stormbattlegaterightr.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/images/map/stormPass/cowtotem.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/bg/spfar01.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/stormPass/fire_14.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/stormPass/fire_9.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/stormPass/fire_0.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/stormPass/fire_3.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/stormPass/fire_6.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/stormPass/fire_10.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/stormPass/fire_11.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/stormPass/fire_5.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/map/stormPass/fire_8.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/map/stormPass/fire_15.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/map/stormPass/fire_13.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/map/stormPass/fire_7.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/map/stormPass/fire_12.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/map/stormPass/firebox.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/map/stormPass/fire_1.png" type="Texture" id=23]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=24]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=25]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 23 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 9 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 1.92
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("fire:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96, 1.08, 1.2, 1.32, 1.44, 1.56, 1.68, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.95164, 78.4381 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 448, 80 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 20.2235, 165.834 )
+
+[node name="stage_03" type="Node2D"]
+script = ExtResource( 25 )
+bgm = "storm_pass"
+env = "amb_snowwind_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="environment"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 721, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 0, -500 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 127 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 224, 120 )
+format = 1
+tile_data = PoolIntArray( 65536, 26, 0, 65537, 17, 0, 65538, 17, 0, 65539, 33, 0, 131072, 12, 0, 131073, 0, 0, 131074, 0, 0, 131075, 12, 0, 196608, 15, 0, 196609, 12, 0, 196610, 12, 0, 196611, 1, 0, 262144, 19, 0, 262145, 14, 0, 262146, 14, 0, 262147, 22, 0 )
+
+[node name="spobj01" type="Sprite" parent="environment"]
+position = Vector2( 0, 60.4762 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="stormbattlegateleftr" parent="environment" instance=ExtResource( 5 )]
+position = Vector2( 94, 296 )
+
+[node name="stormbattlegaterightr" parent="environment" instance=ExtResource( 6 )]
+position = Vector2( 129, 465 )
+
+[node name="cowtotem" type="Sprite" parent="environment"]
+position = Vector2( 675.926, 222.455 )
+texture = ExtResource( 7 )
+
+[node name="firebox" type="Sprite" parent="environment"]
+position = Vector2( 311.442, 307.961 )
+texture = ExtResource( 22 )
+
+[node name="fire" type="AnimatedSprite" parent="environment/firebox"]
+position = Vector2( 1.05948, -114.422 )
+frames = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/firebox"]
+autoplay = "idle"
+anims/idle = SubResource( 2 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_Entrance" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 6.36783, 416.155 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_03"
+type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Entrance"]
+shape = SubResource( 3 )
+
+[node name="pos" type="Position2D" parent="doors/to_Entrance"]
+position = Vector2( 85.7781, 0 )
+
+[node name="to_stage_01" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 889.248, 416.155 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_03"
+target = "stage_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_01"]
+shape = SubResource( 3 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_01"]
+position = Vector2( -89.7534, 0 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 896, 726 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+position = Vector2( 448, 263.557 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 448, 570.316 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2( -20.4236, 415.796 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource( 5 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="collision"]
+position = Vector2( 915.967, 415.796 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D4"]
+shape = SubResource( 5 )

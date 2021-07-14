@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/klonter_fw_01.ogg-029d8be6065aa67c1b7e3b27aef53928.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/klonter/klonter_fw_01.ogg"
+dest_files=[ "res://.import/klonter_fw_01.ogg-029d8be6065aa67c1b7e3b27aef53928.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

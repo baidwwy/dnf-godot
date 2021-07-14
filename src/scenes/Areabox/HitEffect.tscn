@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/images/hitEffects/knocksmall/2.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/hitEffects/knocksmall/0.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/hitEffects/knocksmall/1.png" type="Texture" id=3]
+[ext_resource path="res://src/scripts/Areabox/Effests.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="HitEffect" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Effect" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+
+[connection signal="animation_finished" from="Effect" to="." method="_on_Effect_animation_finished"]

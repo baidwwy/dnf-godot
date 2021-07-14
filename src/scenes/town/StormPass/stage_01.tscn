@@ -1,0 +1,442 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/4.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/2.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/6.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/1.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/3.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/0.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/7.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/6.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/0.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/5.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/stormPass/gate_storm.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/2.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/7.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/5.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/4.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/map/light/seriahousewave01/8.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/map/light/seriahousewave00/8.png" type="Texture" id=20]
+[ext_resource path="res://assets/tres/stormPass_tileset.tres" type="TileSet" id=21]
+[ext_resource path="res://assets/images/map/stormPass/frozentrees_0.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/map/stormPass/cowtotem.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/map/stormPass/armorshop.png" type="Texture" id=24]
+[ext_resource path="res://assets/images/map/stormPass/blacksmith.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/map/stormPass/rabbittotem.png" type="Texture" id=26]
+[ext_resource path="res://assets/images/map/stormPass/grocery.png" type="Texture" id=27]
+[ext_resource path="res://assets/images/map/stormPass/frozentrees_3.png" type="Texture" id=28]
+[ext_resource path="res://assets/images/map/stormPass/wolftotem.png" type="Texture" id=29]
+[ext_resource path="res://assets/images/map/stormPass/stormrtw.png" type="Texture" id=30]
+[ext_resource path="res://assets/images/map/stormPass/frozentrees_2.png" type="Texture" id=31]
+[ext_resource path="res://assets/images/map/stormPass/frozentrees_5.png" type="Texture" id=32]
+[ext_resource path="res://assets/images/map/stormPass/orcahouse.png" type="Texture" id=33]
+[ext_resource path="res://src/component/obj/stormbattlegateleftr.tscn" type="PackedScene" id=34]
+[ext_resource path="res://src/component/obj/stormbattlegaterightr.tscn" type="PackedScene" id=35]
+[ext_resource path="res://assets/images/map/bg/spfar01.png" type="Texture" id=36]
+[ext_resource path="res://assets/images/map/stormPass/cow_3.png" type="Texture" id=37]
+[ext_resource path="res://assets/images/map/stormPass/cow_9.png" type="Texture" id=38]
+[ext_resource path="res://assets/images/map/stormPass/cow_1.png" type="Texture" id=39]
+[ext_resource path="res://assets/images/map/stormPass/cow_0.png" type="Texture" id=40]
+[ext_resource path="res://assets/images/map/stormPass/cow_2.png" type="Texture" id=41]
+[ext_resource path="res://assets/images/map/stormPass/cow_4.png" type="Texture" id=42]
+[ext_resource path="res://assets/images/map/stormPass/cow_6.png" type="Texture" id=43]
+[ext_resource path="res://assets/images/map/stormPass/cow_7.png" type="Texture" id=44]
+[ext_resource path="res://assets/images/map/stormPass/cow_5.png" type="Texture" id=45]
+[ext_resource path="res://assets/images/map/stormPass/cow_8.png" type="Texture" id=46]
+[ext_resource path="res://assets/images/map/stormPass/cowsnort_7.png" type="Texture" id=47]
+[ext_resource path="res://assets/images/map/stormPass/cowsnort_6.png" type="Texture" id=48]
+[ext_resource path="res://assets/images/map/stormPass/cowsnort_5.png" type="Texture" id=49]
+[ext_resource path="res://assets/images/map/stormPass/cowsnort_8.png" type="Texture" id=50]
+[ext_resource path="res://assets/images/map/stormPass/orcahousedeco_1.png" type="Texture" id=51]
+[ext_resource path="res://assets/images/map/stormPass/orcahousedeco_3.png" type="Texture" id=52]
+[ext_resource path="res://assets/images/map/stormPass/orcahousedeco_0.png" type="Texture" id=53]
+[ext_resource path="res://assets/images/map/stormPass/orcahousedeco_2.png" type="Texture" id=54]
+[ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=55]
+[ext_resource path="res://src/scenes/npc/Mintai.tscn" type="PackedScene" id=56]
+[ext_resource path="res://src/scenes/npc/Orca.tscn" type="PackedScene" id=57]
+[ext_resource path="res://src/scenes/npc/Rino.tscn" type="PackedScene" id=58]
+[ext_resource path="res://src/scenes/npc/Balena.tscn" type="PackedScene" id=59]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 53 ), ExtResource( 51 ), ExtResource( 54 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 42 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 49 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=6]
+length = 2.0
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("nort:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 1.2, 1.4, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("nort:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 7.91162, 121.303 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8.53808, 65.395 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 54.2943, 13.7959 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 1120, 50 )
+
+[node name="stage_01" type="Node2D"]
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 695.0, 403.659, 459.453, 481.112 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 1429.0 ]
+}
+bgm = "storm_pass"
+env = "amb_snowwind_01"
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 721, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/ParallaxBackground/far"]
+texture = ExtResource( 36 )
+centered = false
+offset = Vector2( 0, -320 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 826, 998 )
+
+[node name="montain" type="TileMap" parent="environment"]
+position = Vector2( 0, 135 )
+tile_set = ExtResource( 21 )
+cell_size = Vector2( 224, 120 )
+format = 1
+tile_data = PoolIntArray( 327680, 32, 0, 327681, 21, 0, 327682, 21, 0, 327683, 21, 0, 327684, 32, 0 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 135 )
+tile_set = ExtResource( 21 )
+cell_size = Vector2( 224, 120 )
+format = 1
+tile_data = PoolIntArray( 65536, 39, 0, 65537, 17, 0, 65538, 17, 0, 65539, 17, 0, 65540, 18, 0, 131072, 12, 0, 131073, 0, 0, 131074, 12, 0, 131075, 12, 0, 131076, 12, 0, 196608, 41, 0, 196609, 0, 0, 196610, 12, 0, 196611, 12, 0, 196612, 12, 0, 196613, 0, 0, 196614, 12, 0, 196615, 18, 0, 262144, 20, 0, 262145, 14, 0, 262146, 14, 0, 262147, 2, 0, 262148, 15, 0, 262149, 12, 0, 262150, 12, 0, 262151, 16, 0, 262152, 17, 0, 262153, 5, 0, 327680, 17, 0, 327681, 17, 0, 327682, 17, 0, 327683, 17, 0, 327684, 26, 0, 327685, 12, 0, 327686, 12, 0, 327687, 0, 0, 327688, 12, 0, 327689, 0, 0, 393216, 0, 0, 393217, 12, 0, 393218, 0, 0, 393219, 12, 0, 393220, 12, 0, 393221, 12, 0, 393222, 0, 0, 393223, 12, 0, 393224, 0, 0, 393225, 12, 0, 458752, 14, 0, 458753, 14, 0, 458754, 2, 0, 458755, 14, 0, 458756, 14, 0, 458757, 2, 0, 458758, 14, 0, 458759, 14, 0, 458760, 14, 0, 458761, 14, 0 )
+
+[node name="egseriahouse" type="Node2D" parent="environment"]
+position = Vector2( 1303, 280 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="environment/egseriahouse"]
+texture = ExtResource( 14 )
+
+[node name="seriahousewave01" type="AnimatedSprite" parent="environment/egseriahouse"]
+position = Vector2( -30.2722, 111.773 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="seriahousewave00" type="AnimatedSprite" parent="environment/egseriahouse"]
+position = Vector2( -30.2722, 111.773 )
+frames = SubResource( 2 )
+frame = 2
+playing = true
+
+[node name="grocery" type="Sprite" parent="environment"]
+position = Vector2( 1573, 566 )
+texture = ExtResource( 27 )
+
+[node name="rabbittotem" type="Sprite" parent="environment"]
+position = Vector2( 1456, 581 )
+texture = ExtResource( 26 )
+
+[node name="armorshop" type="Sprite" parent="environment"]
+position = Vector2( 425, 265 )
+texture = ExtResource( 24 )
+
+[node name="blacksmith" type="Sprite" parent="environment"]
+position = Vector2( 770, 284 )
+texture = ExtResource( 25 )
+
+[node name="cowtotem" type="Sprite" parent="environment"]
+position = Vector2( 579.602, 233.958 )
+texture = ExtResource( 23 )
+
+[node name="cowtotem2" type="Sprite" parent="environment"]
+position = Vector2( 955.323, 287.616 )
+texture = ExtResource( 23 )
+
+[node name="frozentrees_0" type="Sprite" parent="environment"]
+position = Vector2( 218.175, 218.821 )
+texture = ExtResource( 22 )
+
+[node name="frozentrees_5" type="Sprite" parent="environment"]
+position = Vector2( 1017.49, 342.274 )
+texture = ExtResource( 32 )
+
+[node name="frozentrees_2" type="Sprite" parent="environment"]
+position = Vector2( 1830, 588 )
+texture = ExtResource( 31 )
+
+[node name="stormrtw" type="Sprite" parent="environment"]
+position = Vector2( 2148, 559 )
+texture = ExtResource( 30 )
+
+[node name="frozentrees_1" type="Sprite" parent="environment"]
+position = Vector2( 15, 661 )
+texture = ExtResource( 22 )
+
+[node name="frozentrees_3" type="Sprite" parent="environment"]
+position = Vector2( 416, 707 )
+texture = ExtResource( 28 )
+
+[node name="frozentrees_4" type="Sprite" parent="environment"]
+position = Vector2( 492, 706 )
+texture = ExtResource( 31 )
+
+[node name="orcahouse" type="Sprite" parent="environment"]
+position = Vector2( 768, 711 )
+texture = ExtResource( 33 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="environment/orcahouse"]
+position = Vector2( -15.1362, -11.3521 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="wolftotem" type="Sprite" parent="environment"]
+position = Vector2( 655, 700 )
+texture = ExtResource( 29 )
+
+[node name="wolftotem2" type="Sprite" parent="environment"]
+position = Vector2( 882.255, 700 )
+texture = ExtResource( 29 )
+
+[node name="stormbattlegateleftr" parent="environment" instance=ExtResource( 34 )]
+position = Vector2( 101, 294 )
+
+[node name="stormbattlegaterightr" parent="environment" instance=ExtResource( 35 )]
+position = Vector2( 157, 453 )
+
+[node name="cow" type="Node2D" parent="environment"]
+position = Vector2( 1733.9, 629.072 )
+
+[node name="body" type="AnimatedSprite" parent="environment/cow"]
+frames = SubResource( 4 )
+frame = 2
+
+[node name="nort" type="AnimatedSprite" parent="environment/cow"]
+visible = false
+position = Vector2( -43.7029, 40.5245 )
+frames = SubResource( 5 )
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/cow"]
+autoplay = "idle"
+anims/idle = SubResource( 6 )
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="Mintai" parent="npc" instance=ExtResource( 56 )]
+margin_left = 1572.71
+margin_top = 640.579
+margin_right = 1637.71
+margin_bottom = 657.579
+
+[node name="Orca" parent="npc" instance=ExtResource( 57 )]
+margin_left = 776.907
+margin_top = 742.887
+margin_right = 841.907
+margin_bottom = 759.887
+
+[node name="Rino" parent="npc" instance=ExtResource( 58 )]
+margin_left = 760.683
+margin_top = 341.417
+margin_right = 825.683
+margin_bottom = 358.417
+
+[node name="Balena" parent="npc" instance=ExtResource( 59 )]
+margin_left = 474.951
+margin_top = 337.846
+margin_right = 539.951
+margin_bottom = 354.846
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="stormbattlegateleftr2" parent="." instance=ExtResource( 34 )]
+position = Vector2( 104, 747 )
+
+[node name="stormbattlegaterightr2" parent="." instance=ExtResource( 35 )]
+position = Vector2( 124, 893 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_HendonMyre" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 2231.53, 812.752 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "StormPass"
+target = "HendonMyre"
+stage = "stage_07"
+type = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_HendonMyre"]
+shape = SubResource( 7 )
+
+[node name="pos" type="Position2D" parent="doors/to_HendonMyre"]
+position = Vector2( -107.569, 0 )
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 8.04145, 417.842 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "stage_02"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+shape = SubResource( 8 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_02"]
+position = Vector2( 73.6157, 0 )
+
+[node name="to_stage_03" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 8.04145, 870.353 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "stage_03"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_03"]
+shape = SubResource( 8 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_03"]
+position = Vector2( 73.6157, 0 )
+
+[node name="to_Gate" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1272.65, 443.559 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_01"
+target = "Gate"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_Gate"]
+shape = SubResource( 9 )
+
+[node name="pos" type="Position2D" parent="doors/to_Gate"]
+position = Vector2( 0, 54.0937 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 2240.16, 1095.11 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( -1.03618, 354.727, 318.068, 354.68, 450.217, 403.659, 1052.9, 403.659, 1101.9, 459.853, 1225.79, 459.453, 1234.67, 429.201, 1313.15, 429.378, 1322.12, 459.453, 1429, 538, 1428.5, 694, 2240, 695, 2240.88, 1007.38, 2314.3, 1007.38, 2315.8, -0.981628, -1.92761, -0.981689, -91.826, -0.981689, -90.3278, 484.47, -0.429321, 484.47 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D2"]
+polygon = PoolVector2Array( -0.805588, 480.911, 209.684, 481.112, 232.542, 522.977, 250.654, 599.532, 900, 599, 934.967, 653.144, 1086.56, 726.164, 1087.5, 763, 907.462, 798.034, -0.0118866, 811.884 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collision"]
+position = Vector2( 1120, 976.062 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D3"]
+shape = SubResource( 10 )

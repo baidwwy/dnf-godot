@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/orca_tk_02.ogg-076bf7317522b334817bb74723fe209a.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/orca/orca_tk_02.ogg"
+dest_files=[ "res://.import/orca_tk_02.ogg-076bf7317522b334817bb74723fe209a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

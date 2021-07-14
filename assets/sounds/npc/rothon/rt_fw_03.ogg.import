@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rt_fw_03.ogg-c23fddd749506258f921759dda565c4f.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/rothon/rt_fw_03.ogg"
+dest_files=[ "res://.import/rt_fw_03.ogg-c23fddd749506258f921759dda565c4f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kn_tk_01.ogg-14e32aa08e3f5551e1666b8cb1abd3e9.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/kanna/kn_tk_01.ogg"
+dest_files=[ "res://.import/kn_tk_01.ogg-14e32aa08e3f5551e1666b8cb1abd3e9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

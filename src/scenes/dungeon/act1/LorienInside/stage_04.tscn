@@ -1,0 +1,485 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://assets/images/design/洛兰深处/stage4-1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/map/act1/01tile03.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/map/act1/01tile02.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/map/act1/01tile01.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/map/bg/01mid1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/map/bg/01far1.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/map/act1/01tile00.png" type="Texture" id=7]
+[ext_resource path="res://src/component/act1/RightGate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/component/act1/BottomGate.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/component/act1/TopGate.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/images/map/act1/granflorispathtree01.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/map/act1/01obj400.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/map/act1/01obj102.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/map/act1/granflorisbush01.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/map/act1/granfloristree01.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/map/act1/01obj201.png" type="Texture" id=16]
+[ext_resource path="res://src/component/act1/barrel.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/component/act1/grass1lorien.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/component/act1/actiontree1-lorien.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/component/act1/grass2lorien.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/scripts/dungeon/DungeonStage.gd" type="Script" id=21]
+[ext_resource path="res://src/scripts/com/DoorArea.gd" type="Script" id=22]
+
+[sub_resource type="TileSet" id=1]
+0/name = "01tile03.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 480 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "01tile02.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 224, 480 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "01tile01.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 224, 480 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "01tile00.png 3"
+3/texture = ExtResource( 7 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 224, 480 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 65.674, 13.7959 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 46.2991, 80.868 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 51.1207, 42.7596 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 63.9907, 13.7959 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 730.385, 50.3533 )
+
+[node name="stage_04" type="Node2D"]
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 557.21, 372.211 ],
+"_edit_vertical_guides_": [ -104.299 ]
+}
+bgm = "forest01_new"
+env = "amb_forest_01"
+
+[node name="stage4-1" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="background" type="ParallaxBackground" parent="environment"]
+
+[node name="far" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/far"]
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 925, 375 )
+
+[node name="mid" type="ParallaxLayer" parent="environment/background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="environment/background/mid"]
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 810, 379 )
+
+[node name="TileMap" type="TileMap" parent="environment"]
+position = Vector2( 0, 80 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 224, 240 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 3, 0, 3, 3, 0, 4, 2, 0, 5, 0, 0 )
+
+[node name="01obj102" type="Sprite" parent="environment"]
+position = Vector2( 499.793, 171.697 )
+texture = ExtResource( 13 )
+
+[node name="granflorispathtree01" type="Sprite" parent="environment"]
+position = Vector2( 986.896, 161.897 )
+texture = ExtResource( 11 )
+
+[node name="granfloristree01" type="Sprite" parent="environment"]
+position = Vector2( 1220.53, 210.006 )
+texture = ExtResource( 15 )
+
+[node name="01obj400" type="Sprite" parent="environment"]
+position = Vector2( 347.449, 275.041 )
+texture = ExtResource( 12 )
+
+[node name="granflorisbush02" type="Sprite" parent="environment"]
+position = Vector2( -13.1411, 352.583 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="leftGate" parent="environment" instance=ExtResource( 8 )]
+position = Vector2( 43.4509, 363.34 )
+
+[node name="RightGate" parent="environment" instance=ExtResource( 8 )]
+position = Vector2( 1270.77, 359.377 )
+
+[node name="granflorisbush01" type="Sprite" parent="environment"]
+position = Vector2( 1375.04, 523.391 )
+texture = ExtResource( 14 )
+
+[node name="granflorisbush03" type="Sprite" parent="environment"]
+position = Vector2( 64.1997, 544.346 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="TopGate" parent="environment" instance=ExtResource( 10 )]
+position = Vector2( 987.993, 281.274 )
+
+[node name="01obj201" type="Sprite" parent="environment"]
+position = Vector2( 305.895, 487.678 )
+texture = ExtResource( 16 )
+
+[node name="01obj202" type="Sprite" parent="environment"]
+position = Vector2( 541.361, 440.302 )
+texture = ExtResource( 16 )
+
+[node name="01obj203" type="Sprite" parent="environment"]
+position = Vector2( 842.589, 482.021 )
+texture = ExtResource( 16 )
+
+[node name="01obj204" type="Sprite" parent="environment"]
+position = Vector2( 718.845, 428.281 )
+texture = ExtResource( 16 )
+
+[node name="01obj205" type="Sprite" parent="environment"]
+position = Vector2( 526.992, 515.71 )
+texture = ExtResource( 16 )
+
+[node name="stage" type="YSort" parent="."]
+
+[node name="objs" type="YSort" parent="stage"]
+
+[node name="actiontree1-lorien" parent="stage/objs" instance=ExtResource( 19 )]
+position = Vector2( 782.544, 361.595 )
+
+[node name="actiontree1-lorien2" parent="stage/objs" instance=ExtResource( 19 )]
+position = Vector2( 605.525, 430.496 )
+
+[node name="grass1lorien" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1075.1, 440.9 )
+
+[node name="grass1lorien2" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1042.03, 439.325 )
+
+[node name="grass1lorien3" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1014, 447.515 )
+
+[node name="grass1lorien4" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 974.31, 447.2 )
+
+[node name="grass2lorien" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 939.662, 427.671 )
+
+[node name="grass2lorien2" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 873.201, 404.363 )
+
+[node name="grass2lorien3" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 851.468, 426.096 )
+
+[node name="grass1lorien6" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 900.919, 479.643 )
+
+[node name="grass1lorien5" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 869.736, 496.337 )
+
+[node name="grass2lorien4" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 951.946, 462.634 )
+
+[node name="grass2lorien5" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 926.433, 480.588 )
+
+[node name="grass1lorien7" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 983.759, 491.927 )
+
+[node name="grass2lorien6" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 1091.48, 468.619 )
+
+[node name="grass1lorien8" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1128.97, 476.178 )
+
+[node name="grass1lorien9" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1024.39, 496.967 )
+
+[node name="grass2lorien7" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 1039.83, 499.802 )
+
+[node name="grass1lorien10" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1158.26, 525.945 )
+
+[node name="grass1lorien11" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1131.8, 538.544 )
+
+[node name="grass1lorien16" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 848.318, 496.022 )
+
+[node name="grass2lorien8" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 1093.37, 527.52 )
+
+[node name="grass1lorien12" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1054.94, 533.819 )
+
+[node name="grass1lorien13" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 1019.67, 543.584 )
+
+[node name="grass1lorien14" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 988.799, 530.04 )
+
+[node name="grass1lorien15" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 939.662, 525 )
+
+[node name="grass2lorien9" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 915.408, 517.755 )
+
+[node name="grass2lorien10" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 919.503, 538.544 )
+
+[node name="grass2lorien11" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 862.492, 521.22 )
+
+[node name="grass1lorien17" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 337.267, 375.618 )
+
+[node name="grass1lorien18" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 441.959, 376.879 )
+
+[node name="grass1lorien19" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 293.54, 395.8 )
+
+[node name="grass1lorien20" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 365.017, 402.106 )
+
+[node name="grass1lorien21" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 193.474, 382.345 )
+
+[node name="grass2lorien12" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 204.405, 365.107 )
+
+[node name="grass2lorien13" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 234.678, 387.811 )
+
+[node name="grass2lorien14" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 214.917, 400.004 )
+
+[node name="grass1lorien22" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 262.427, 400.004 )
+
+[node name="grass2lorien15" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 220.382, 448.776 )
+
+[node name="grass2lorien16" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 228.371, 490.4 )
+
+[node name="grass1lorien23" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 196.837, 434.481 )
+
+[node name="grass1lorien24" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 328.017, 405.89 )
+
+[node name="grass2lorien17" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 309.097, 429.435 )
+
+[node name="grass1lorien25" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 327.176, 439.526 )
+
+[node name="grass2lorien18" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 391.925, 431.538 )
+
+[node name="grass2lorien19" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 415.891, 426.072 )
+
+[node name="grass1lorien26" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 368.801, 443.731 )
+
+[node name="grass2lorien20" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 509.23, 415.561 )
+
+[node name="grass2lorien21" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 474.754, 422.708 )
+
+[node name="grass1lorien27" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 448.686, 409.674 )
+
+[node name="barrel" parent="stage/objs" instance=ExtResource( 17 )]
+position = Vector2( 426.402, 455.924 )
+
+[node name="barrel2" parent="stage/objs" instance=ExtResource( 17 )]
+position = Vector2( 345.676, 490.821 )
+
+[node name="barrel3" parent="stage/objs" instance=ExtResource( 17 )]
+position = Vector2( 423.459, 529.082 )
+
+[node name="barrel4" parent="stage/objs" instance=ExtResource( 17 )]
+position = Vector2( 500.822, 512.264 )
+
+[node name="grass1lorien28" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 515.117, 533.707 )
+
+[node name="grass2lorien22" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 484.844, 532.866 )
+
+[node name="grass2lorien23" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 353.244, 526.979 )
+
+[node name="grass2lorien24" parent="stage/objs" instance=ExtResource( 20 )]
+position = Vector2( 845.798, 529.725 )
+
+[node name="grass1lorien29" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 804.85, 524.055 )
+
+[node name="grass1lorien30" parent="stage/objs" instance=ExtResource( 18 )]
+position = Vector2( 784.692, 405.307 )
+
+[node name="monster" type="YSort" parent="stage"]
+
+[node name="BottomGate" parent="." instance=ExtResource( 9 )]
+position = Vector2( 264.597, 545.23 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="to_stage_02" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 989.189, 353.054 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_04"
+target = "stage_02"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_02"]
+shape = SubResource( 3 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_02"]
+position = Vector2( 0, 42.9754 )
+
+[node name="to_stage_03" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 38.7009, 383.51 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_04"
+target = "stage_03"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_03"]
+shape = SubResource( 4 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_03"]
+position = Vector2( 108.065, 28.428 )
+
+[node name="to_stage_05" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 1277.96, 404.006 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_04"
+target = "stage_05"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_05"]
+rotation = 0.539307
+shape = SubResource( 5 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_05"]
+position = Vector2( -73.1892, 69.2961 )
+
+[node name="to_stage_07" type="Area2D" parent="doors"]
+modulate = Color( 0.4, 0.00392157, 0.498039, 1 )
+position = Vector2( 262.427, 557.21 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+current = "stage_0"
+target = "stage_0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doors/to_stage_07"]
+shape = SubResource( 6 )
+
+[node name="pos" type="Position2D" parent="doors/to_stage_07"]
+position = Vector2( 0, -53.9976 )
+
+[node name="TopLeft" type="Position2D" parent="."]
+
+[node name="BottomRight" type="Position2D" parent="."]
+position = Vector2( 1344, 600 )
+
+[node name="collision" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision/StaticBody2D"]
+polygon = PoolVector2Array( 169.983, 556.266, 102.968, 471.317, 35.9525, 421.292, 9.27582, 375.564, 91.6411, 331.624, 276.641, 329.736, 475.798, 373.154, 739.139, 365.603, 922.756, 372.164, 930.745, 342.95, 1043.07, 339.175, 1053.94, 372.832, 1112.91, 358.052, 1179.93, 368.435, 1213.25, 423.004, 1232.79, 376.93, 1302.63, 410.909, 1309.24, 466.598, 1267.71, 527.006, 1268.65, 557.21, 1363.04, 556.266, 1330, 0.324066, -105.243, 0.64624, -104.299, 557.21 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collision"]
+position = Vector2( 714.693, 606.814 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision/StaticBody2D2"]
+shape = SubResource( 2 )

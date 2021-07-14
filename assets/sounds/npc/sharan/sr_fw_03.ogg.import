@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sr_fw_03.ogg-578090b07b8f9395f908970682ecfa3f.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/sharan/sr_fw_03.ogg"
+dest_files=[ "res://.import/sr_fw_03.ogg-578090b07b8f9395f908970682ecfa3f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

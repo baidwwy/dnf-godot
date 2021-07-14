@@ -1,0 +1,247 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/images/mainhud/8.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/mainhud/4.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/mainhud/15.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/mainhud/1.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/mainhud/16.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/mainhud/2.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/mainhud/5.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/mainhud/17.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/mainhud/18.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/mainhud/3.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/mainhud/30.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/mainhud/14.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/mainhud/31.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/design/mainui_design.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/mainhud/10.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/mainhud/11.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/mainhud/0.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/mainhud/6.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/mainhud/9.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/mainhud/12.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/mainhud/13.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/mainhud/19.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/mainhud/7.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/mainhud/32.png" type="Texture" id=24]
+[ext_resource path="res://assets/images/mainhud/34.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/mainhud/35.png" type="Texture" id=26]
+[ext_resource path="res://assets/images/mainhud/33.png" type="Texture" id=27]
+[ext_resource path="res://assets/fonts/bitmapfont/level02/10.png" type="Texture" id=28]
+[ext_resource path="res://assets/fonts/bitmapfont/sp/sp.tres" type="BitmapFont" id=29]
+[ext_resource path="res://assets/fonts/bitmapfont/level02/level02.tres" type="BitmapFont" id=30]
+[ext_resource path="res://src/scripts/UI/Mainhud.gd" type="Script" id=31]
+
+[node name="Mainhud" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainui_design" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 14 )
+centered = false
+
+[node name="bg" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -400.0
+margin_top = -110.0
+margin_right = 400.0
+rect_min_size = Vector2( 800, 110 )
+texture = ExtResource( 17 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="expBar" type="TextureProgress" parent="."]
+margin_left = 89.5469
+margin_top = 592.163
+margin_right = 710.547
+margin_bottom = 596.163
+rect_min_size = Vector2( 621, 4 )
+value = 100.0
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fatigueBar" type="TextureProgress" parent="."]
+margin_left = 345.778
+margin_top = 545.323
+margin_right = 453.778
+margin_bottom = 549.323
+rect_min_size = Vector2( 108, 4 )
+value = 50.0
+texture_progress = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SP" type="Label" parent="."]
+margin_left = 733.911
+margin_top = 585.528
+margin_right = 773.911
+margin_bottom = 597.528
+custom_fonts/font = ExtResource( 29 )
+custom_colors/font_color = Color( 0.435294, 0.682353, 0.768627, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hpBar" type="TextureProgress" parent="."]
+margin_left = 15.803
+margin_top = 509.0
+margin_right = 85.803
+margin_bottom = 579.0
+value = 100.0
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mpBar" type="TextureProgress" parent="."]
+margin_left = 715.049
+margin_top = 509.0
+margin_right = 785.049
+margin_bottom = 579.0
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="upBtn" type="TextureButton" parent="."]
+margin_left = 74.966
+margin_top = 585.0
+margin_right = 83.966
+margin_bottom = 599.0
+rect_min_size = Vector2( 9, 14 )
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 26 )
+texture_hover = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="downBtn" type="TextureButton" parent="."]
+margin_left = 74.966
+margin_top = 585.0
+margin_right = 83.966
+margin_bottom = 599.0
+rect_min_size = Vector2( 9, 14 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2( 345.839, 554.479 )
+
+[node name="bagBtn" type="TextureButton" parent="buttons"]
+margin_right = 18.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stateBtn" type="TextureButton" parent="buttons"]
+margin_left = 21.8745
+margin_right = 39.8745
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fightBtn" type="TextureButton" parent="buttons"]
+margin_left = 44.5
+margin_right = 62.5
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tutBtn" type="TextureButton" parent="buttons"]
+margin_left = 67.2042
+margin_right = 85.2042
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setBtn" type="TextureButton" parent="buttons"]
+margin_left = 90.0
+margin_right = 108.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 18, 31 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skillList" type="GridContainer" parent="."]
+margin_left = 471.0
+margin_top = 494.0
+margin_right = 696.0
+margin_bottom = 589.0
+
+[node name="itemList" type="GridContainer" parent="."]
+margin_left = 104.0
+margin_top = 550.0
+margin_right = 329.0
+margin_bottom = 590.0
+
+[node name="lv" type="Label" parent="."]
+margin_left = 39.0
+margin_top = 586.0
+margin_right = 79.0
+margin_bottom = 613.0
+rect_min_size = Vector2( 40, 12 )
+custom_fonts/font = ExtResource( 30 )
+text = "15
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="10" type="Sprite" parent="."]
+position = Vector2( 33.779, 592 )
+texture = ExtResource( 28 )
+
+[connection signal="pressed" from="buttons/bagBtn" to="." method="_on_bag"]
+[connection signal="pressed" from="buttons/stateBtn" to="." method="_on_state"]
+[connection signal="pressed" from="buttons/fightBtn" to="." method="_on_fight"]
+[connection signal="pressed" from="buttons/tutBtn" to="." method="_on_tutBtn_pressed"]
+[connection signal="pressed" from="buttons/setBtn" to="." method="_on_setBtn_pressed"]

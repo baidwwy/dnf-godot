@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/op_fw_05.ogg-863b7332e54fb347c6d71eac7cca7fc4.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/npc/ophelia/op_fw_05.ogg"
+dest_files=[ "res://.import/op_fw_05.ogg-863b7332e54fb347c6d71eac7cca7fc4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

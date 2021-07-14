@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scripts/UI/slot/InvShortcutSlot.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/ui/windowcommon/Grid_Select.png" type="Texture" id=3]
+
+[node name="InvShortcutSlot" type="TextureRect"]
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_right = 34.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 35, 35 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 35, 35 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_InvShortcutSlot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_InvShortcutSlot_mouse_exited"]

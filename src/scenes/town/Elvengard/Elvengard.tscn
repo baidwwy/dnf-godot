@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/scenes/town/Elvengard/stage_01.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scenes/town/Gate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/scripts/town/Elvengard.gd" type="Script" id=4]
+[ext_resource path="res://src/scenes/town/Elvengard/stage_02.tscn" type="PackedScene" id=5]
+
+[node name="Elvengard" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="stage_01" parent="." instance=ExtResource( 2 )]
+
+[node name="stage_02" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2000, 0 )
+
+[node name="background" parent="stage_02/environment" index="5"]
+offset = Vector2( 2000, 0 )
+transform = Transform2D( 1, 0, 0, 1, 2000, 0 )
+
+[node name="Gate" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 1000 )
+
+[editable path="stage_02"]
+[editable path="stage_02/doors/to_stage_01"]
+[editable path="stage_02/doors/to_Entrance"]
