@@ -1,4 +1,4 @@
-[gd_scene load_steps=154 format=2]
+[gd_scene load_steps=152 format=2]
 
 [ext_resource path="res://assets/images/mainhud/8.png" type="Texture" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
@@ -32,7 +32,6 @@
 [ext_resource path="res://assets/images/mainhud/5.png" type="Texture" id=30]
 [ext_resource path="res://assets/images/ui/status_bag/bag_bg1.png" type="Texture" id=31]
 [ext_resource path="res://assets/images/ui/windowcommon/14.png" type="Texture" id=32]
-[ext_resource path="res://assets/images/design/人物和背包.jpg" type="Texture" id=33]
 [ext_resource path="res://assets/images/ui/windowcommon/276.png" type="Texture" id=34]
 [ext_resource path="res://assets/images/ui/status_bag/2.png" type="Texture" id=35]
 [ext_resource path="res://assets/images/ui/windowcommon/278.png" type="Texture" id=36]
@@ -51,7 +50,6 @@
 [ext_resource path="res://assets/images/mainhud/30.png" type="Texture" id=49]
 [ext_resource path="res://assets/images/mainhud/14.png" type="Texture" id=50]
 [ext_resource path="res://assets/images/mainhud/31.png" type="Texture" id=51]
-[ext_resource path="res://assets/images/design/mainui_design.png" type="Texture" id=52]
 [ext_resource path="res://assets/images/mainhud/10.png" type="Texture" id=53]
 [ext_resource path="res://assets/images/mainhud/11.png" type="Texture" id=54]
 [ext_resource path="res://assets/images/mainhud/0.png" type="Texture" id=55]
@@ -184,6 +182,12 @@ region_rect = Rect2( 0, 0, 149, 8 )
 texture = ExtResource( 35 )
 region_rect = Rect2( 0, 0, 151, 10 )
 
+[sub_resource type="DynamicFont" id=19]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.478431 )
+font_data = ExtResource( 7 )
+
 [sub_resource type="StyleBoxTexture" id=14]
 texture = ExtResource( 17 )
 region_rect = Rect2( 0, 0, 56, 23 )
@@ -204,15 +208,15 @@ region_rect = Rect2( 0, 0, 56, 23 )
 texture = ExtResource( 15 )
 region_rect = Rect2( 0, 0, 56, 23 )
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=20]
+size = 15
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=25]
 size = 14
 outline_size = 1
 outline_color = Color( 0, 0, 0, 0.478431 )
 font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=20]
-size = 15
-font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxTexture" id=21]
 texture = ExtResource( 74 )
@@ -230,7 +234,7 @@ region_rect = Rect2( 0, 0, 77, 23 )
 texture = ExtResource( 72 )
 region_rect = Rect2( 0, 0, 77, 23 )
 
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=30]
 size = 14
 outline_size = 1
 outline_color = Color( 0, 0, 0, 0.478431 )
@@ -251,12 +255,6 @@ region_rect = Rect2( 0, 0, 48, 20 )
 [sub_resource type="StyleBoxTexture" id=29]
 texture = ExtResource( 75 )
 region_rect = Rect2( 0, 0, 48, 20 )
-
-[sub_resource type="DynamicFont" id=30]
-size = 14
-outline_size = 1
-outline_color = Color( 0, 0, 0, 0.478431 )
-font_data = ExtResource( 7 )
 
 [sub_resource type="ButtonGroup" id=31]
 
@@ -291,11 +289,6 @@ script = ExtResource( 69 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="mainui_design" type="Sprite" parent="Main/Panel/Mainhud"]
-visible = false
-texture = ExtResource( 52 )
-centered = false
 
 [node name="bg" type="TextureRect" parent="Main/Panel/Mainhud"]
 rect_min_size = Vector2( 800, 110 )
@@ -334,8 +327,8 @@ margin_left = 733.911
 margin_top = 95.528
 margin_right = 773.911
 margin_bottom = 107.528
-custom_fonts/font = ExtResource( 67 )
 custom_colors/font_color = Color( 0.435294, 0.682353, 0.768627, 1 )
+custom_fonts/font = ExtResource( 67 )
 text = "0"
 align = 1
 valign = 1
@@ -662,12 +655,6 @@ script = ExtResource( 44 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="人物和背包" type="Sprite" parent="Main/Panel/Bag"]
-visible = false
-position = Vector2( -395.295, -25.3533 )
-texture = ExtResource( 33 )
-centered = false
 
 [node name="Panel" type="Panel" parent="Main/Panel/Bag"]
 margin_left = 8.0
@@ -2430,8 +2417,8 @@ margin_left = 23.4878
 margin_top = 411.325
 margin_right = 63.4878
 margin_bottom = 428.325
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.890196, 0.854902, 0.756863, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "重量"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2804,8 +2791,8 @@ margin_left = 8.4878
 margin_top = 6.38031
 margin_right = 48.4878
 margin_bottom = 23.3803
-custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.890196, 0.854902, 0.756863, 1 )
+custom_fonts/font = SubResource( 11 )
 text = "重量"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2830,12 +2817,12 @@ margin_top = 3.47128
 margin_right = 299.64
 margin_bottom = 26.4713
 focus_mode = 0
+custom_fonts/font = SubResource( 19 )
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 16 )
 custom_styles/disabled = SubResource( 17 )
 custom_styles/normal = SubResource( 18 )
-custom_fonts/font = SubResource( 19 )
 enabled_focus_mode = 0
 text = "升级"
 
@@ -2845,12 +2832,12 @@ margin_top = 34.0
 margin_right = 102.0
 margin_bottom = 57.0
 focus_mode = 0
+custom_fonts/font = SubResource( 19 )
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 16 )
 custom_styles/disabled = SubResource( 17 )
 custom_styles/normal = SubResource( 18 )
-custom_fonts/font = SubResource( 19 )
 enabled_focus_mode = 0
 text = "放入"
 
@@ -2864,12 +2851,12 @@ margin_top = 4.0
 margin_right = 30.5
 margin_bottom = 27.0
 focus_mode = 0
+custom_fonts/font = SubResource( 19 )
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 16 )
 custom_styles/disabled = SubResource( 17 )
 custom_styles/normal = SubResource( 18 )
-custom_fonts/font = SubResource( 19 )
 enabled_focus_mode = 0
 text = "取出"
 
@@ -2883,12 +2870,12 @@ margin_top = 4.0
 margin_right = 114.353
 margin_bottom = 27.0
 focus_mode = 0
+custom_fonts/font = SubResource( 19 )
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 16 )
 custom_styles/disabled = SubResource( 17 )
 custom_styles/normal = SubResource( 18 )
-custom_fonts/font = SubResource( 19 )
 enabled_focus_mode = 0
 text = "整理"
 
@@ -4164,11 +4151,11 @@ margin_left = 57.1881
 margin_top = 345.29
 margin_right = 134.188
 margin_bottom = 368.29
+custom_fonts/font = SubResource( 25 )
 custom_styles/hover = SubResource( 21 )
 custom_styles/pressed = SubResource( 22 )
 custom_styles/disabled = SubResource( 23 )
 custom_styles/normal = SubResource( 24 )
-custom_fonts/font = SubResource( 25 )
 text = "锁定操作"
 
 [node name="unclockBtn" parent="Main/Panel/Skillinventory" instance=ExtResource( 82 )]
@@ -4176,11 +4163,11 @@ margin_left = 150.027
 margin_top = 345.29
 margin_right = 227.027
 margin_bottom = 368.29
+custom_fonts/font = SubResource( 25 )
 custom_styles/hover = SubResource( 21 )
 custom_styles/pressed = SubResource( 22 )
 custom_styles/disabled = SubResource( 23 )
 custom_styles/normal = SubResource( 24 )
-custom_fonts/font = SubResource( 25 )
 text = "解除操作"
 
 [node name="closeBtn" type="TextureButton" parent="Main/Panel/Skillinventory"]
@@ -4212,11 +4199,11 @@ margin_top = 47.247
 margin_right = 69.1037
 margin_bottom = 69.247
 focus_mode = 0
+custom_fonts/font = SubResource( 30 )
 custom_styles/hover = SubResource( 26 )
 custom_styles/pressed = SubResource( 27 )
 custom_styles/disabled = SubResource( 28 )
 custom_styles/normal = SubResource( 29 )
-custom_fonts/font = SubResource( 30 )
 enabled_focus_mode = 0
 group = SubResource( 31 )
 text = "波动"
@@ -4227,11 +4214,11 @@ margin_top = 47.247
 margin_right = 117.13
 margin_bottom = 69.247
 focus_mode = 0
+custom_fonts/font = SubResource( 30 )
 custom_styles/hover = SubResource( 26 )
 custom_styles/pressed = SubResource( 27 )
 custom_styles/disabled = SubResource( 28 )
 custom_styles/normal = SubResource( 29 )
-custom_fonts/font = SubResource( 30 )
 enabled_focus_mode = 0
 group = SubResource( 31 )
 text = "剑术"
@@ -4242,11 +4229,11 @@ margin_top = 47.247
 margin_right = 165.212
 margin_bottom = 69.247
 focus_mode = 0
+custom_fonts/font = SubResource( 30 )
 custom_styles/hover = SubResource( 26 )
 custom_styles/pressed = SubResource( 27 )
 custom_styles/disabled = SubResource( 28 )
 custom_styles/normal = SubResource( 29 )
-custom_fonts/font = SubResource( 30 )
 enabled_focus_mode = 0
 group = SubResource( 31 )
 text = "血气"
@@ -4257,11 +4244,11 @@ margin_top = 47.247
 margin_right = 212.609
 margin_bottom = 69.247
 focus_mode = 0
+custom_fonts/font = SubResource( 30 )
 custom_styles/hover = SubResource( 26 )
 custom_styles/pressed = SubResource( 27 )
 custom_styles/disabled = SubResource( 28 )
 custom_styles/normal = SubResource( 29 )
-custom_fonts/font = SubResource( 30 )
 enabled_focus_mode = 0
 group = SubResource( 31 )
 text = "鬼神"
@@ -4272,11 +4259,11 @@ margin_top = 47.247
 margin_right = 261.171
 margin_bottom = 69.247
 focus_mode = 0
+custom_fonts/font = SubResource( 30 )
 custom_styles/hover = SubResource( 26 )
 custom_styles/pressed = SubResource( 27 )
 custom_styles/disabled = SubResource( 28 )
 custom_styles/normal = SubResource( 29 )
-custom_fonts/font = SubResource( 30 )
 enabled_focus_mode = 0
 group = SubResource( 31 )
 text = "通用"
@@ -4310,8 +4297,8 @@ margin_top = 314.572
 margin_right = 236.001
 margin_bottom = 331.572
 rect_min_size = Vector2( 55, 17 )
-custom_fonts/font = ExtResource( 67 )
 custom_colors/font_color = Color( 0.435294, 0.682353, 0.768627, 1 )
+custom_fonts/font = ExtResource( 67 )
 text = "0"
 align = 2
 valign = 1

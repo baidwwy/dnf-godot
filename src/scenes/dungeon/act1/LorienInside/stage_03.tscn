@@ -1,10 +1,9 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/component/act1/RightGate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/map/act1/01tile03.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/map/act1/granflorissidegate05.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/map/act1/01tile02.png" type="Texture" id=4]
-[ext_resource path="res://assets/images/design/洛兰深处/stage3-1.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/map/act1/01tile01.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/map/act1/granflorissidedoor05.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/map/bg/01mid1.png" type="Texture" id=8]
@@ -88,11 +87,6 @@ __meta__ = {
 }
 bgm = "forest02"
 env = "amb_forest_01"
-
-[node name="stage3-1" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 5 )
-centered = false
 
 [node name="environment" type="Node2D" parent="."]
 

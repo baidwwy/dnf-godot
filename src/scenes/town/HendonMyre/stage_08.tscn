@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/images/map/hendonMyre/hmbshouse06.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/map/hendonMyre/hmbshouse05.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/map/tiles/hmbstile.png" type="Texture" id=3]
-[ext_resource path="res://assets/images/design/赫顿玛尔-stage8-1.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/map/tiles/hmbstilefloor_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/map/hendonMyre/hmbshouse04.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/map/tiles/hmbstilefloor_0.png" type="Texture" id=7]
@@ -44,11 +43,6 @@ __meta__ = {
 }
 bgm = "hendonmyre"
 env = "amb_town_03"
-
-[node name="赫顿玛尔-stage8-1" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 4 )
-centered = false
 
 [node name="environment" type="Node2D" parent="."]
 

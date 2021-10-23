@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://assets/images/ui/windowcommon/Panel.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/simsun.ttf" type="DynamicFontData" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://assets/images/ui/status_bag/13.png" type="Texture" id=18]
 [ext_resource path="res://assets/images/ui/status_bag/1.png" type="Texture" id=19]
 [ext_resource path="res://assets/images/ui/status_bag/bag_bg1.png" type="Texture" id=20]
-[ext_resource path="res://assets/images/design/人物和背包.jpg" type="Texture" id=21]
 [ext_resource path="res://assets/images/ui/windowcommon/276.png" type="Texture" id=22]
 [ext_resource path="res://assets/images/ui/status_bag/2.png" type="Texture" id=23]
 [ext_resource path="res://assets/images/ui/windowcommon/278.png" type="Texture" id=24]
@@ -76,12 +75,6 @@ script = ExtResource( 31 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="人物和背包" type="Sprite" parent="."]
-visible = false
-position = Vector2( -395.295, -25.3533 )
-texture = ExtResource( 21 )
-centered = false
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 8.0
@@ -484,8 +477,8 @@ margin_left = 23.4878
 margin_top = 411.325
 margin_right = 63.4878
 margin_bottom = 428.325
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.890196, 0.854902, 0.756863, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "重量"
 __meta__ = {
 "_edit_use_anchors_": false

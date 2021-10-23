@@ -194,7 +194,6 @@ texture = ExtResource( 11 )
 [node name="light" type="AnimatedSprite" parent="environment/d_gate"]
 position = Vector2( 4, 103 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="udgate" type="Sprite" parent="environment"]
@@ -292,7 +291,6 @@ texture = ExtResource( 11 )
 [node name="light" type="AnimatedSprite" parent="environment2/d_gate"]
 position = Vector2( 4, 103 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="udgate" type="Sprite" parent="environment2"]

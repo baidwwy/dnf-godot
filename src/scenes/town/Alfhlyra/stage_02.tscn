@@ -97,7 +97,6 @@ texture = ExtResource( 4 )
 [node name="light" type="AnimatedSprite" parent="environment/d_gate"]
 position = Vector2( 4, 103 )
 frames = SubResource( 2 )
-frame = 3
 playing = true
 
 [node name="biggrass" type="Sprite" parent="environment"]

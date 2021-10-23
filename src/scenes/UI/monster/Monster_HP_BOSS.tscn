@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/images/design/BOSS血条.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/DaysOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/images/monster_hp/boss_bg.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/common_etc/monster_type/0.png" type="Texture" id=4]
@@ -25,12 +24,6 @@ margin_bottom = -568.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="BOSS血条" type="Sprite" parent="."]
-visible = false
-position = Vector2( 0, -95.754 )
-texture = ExtResource( 1 )
-centered = false
 
 [node name="bg" type="NinePatchRect" parent="."]
 visible = false

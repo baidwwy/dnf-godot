@@ -1,6 +1,5 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://assets/images/design/洛兰/洛兰stage3-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/map/act1/granfloristree01.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/map/act1/01tile01.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/map/act1/01obj105.png" type="Texture" id=4]
@@ -100,11 +99,6 @@ __meta__ = {
 }
 bgm = "forest01_new"
 env = "amb_forest_01"
-
-[node name="洛兰stage3-1" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 1 )
-centered = false
 
 [node name="environment" type="Node2D" parent="."]
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/music/characterSelectStage.ogg" type="AudioStream" id=1]
 [ext_resource path="res://src/scripts/UI/Start.gd" type="Script" id=2]
 [ext_resource path="res://assets/images/loading/loading.jpg" type="Texture" id=3]
-[ext_resource path="res://assets/images/design/选择角色.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/ui/selectcharacter/7.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/ui/selectcharacter/8.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/ui/selectcharacter/10.png" type="Texture" id=7]
@@ -36,6 +35,9 @@ TooltipLabel/constants/shadow_offset_x = 1
 TooltipLabel/constants/shadow_offset_y = 1
 TooltipLabel/fonts/font = SubResource( 2 )
 
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 21 )
+
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 125, 43 )
@@ -52,23 +54,11 @@ region_rect = Rect2( 0, 0, 125, 43 )
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 125, 43 )
 
-[sub_resource type="DynamicFont" id=8]
-font_data = ExtResource( 21 )
-
 [node name="Start" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="选择角色" type="Sprite" parent="."]
-texture = ExtResource( 4 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 0, 799, 74 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -390,11 +380,11 @@ rect_min_size = Vector2( 125, 43 )
 hint_tooltip = "开始游戏"
 focus_mode = 0
 theme = SubResource( 3 )
+custom_fonts/font = SubResource( 8 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/disabled = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
 enabled_focus_mode = 0
 __meta__ = {
 "_edit_use_anchors_": false

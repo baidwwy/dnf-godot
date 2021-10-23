@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://assets/images/map/light/seriahousewave00/4.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/map/light/seriahousewave00/8.png" type="Texture" id=2]
@@ -23,7 +23,6 @@
 [ext_resource path="res://assets/images/map/light/seriahousewave00/5.png" type="Texture" id=21]
 [ext_resource path="res://assets/images/map/light/seriahousewave01/3.png" type="Texture" id=22]
 [ext_resource path="res://assets/images/map/alfhlyra/alfhltw.png" type="Texture" id=23]
-[ext_resource path="res://assets/images/design/阿法利亚stage1-1.png" type="Texture" id=24]
 [ext_resource path="res://assets/images/map/light/seriahousewave01/8.png" type="Texture" id=25]
 [ext_resource path="res://assets/images/map/light/seriahousewave01/7.png" type="Texture" id=26]
 [ext_resource path="res://assets/images/map/tiles/alftile.png" type="Texture" id=27]
@@ -143,11 +142,6 @@ __meta__ = {
 bgm = "alfhlyra_new"
 env = "amb_forest_04"
 
-[node name="阿法利亚stage1-1" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 24 )
-centered = false
-
 [node name="environment" type="Node2D" parent="."]
 
 [node name="background" type="ParallaxBackground" parent="environment"]
@@ -204,13 +198,13 @@ texture = ExtResource( 6 )
 [node name="seriahousewave01" type="AnimatedSprite" parent="environment/egseriahouse"]
 position = Vector2( 0, 100 )
 frames = SubResource( 2 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="seriahousewave00" type="AnimatedSprite" parent="environment/egseriahouse"]
 position = Vector2( 0, 100 )
 frames = SubResource( 3 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="sign8" type="Sprite" parent="environment"]
@@ -224,7 +218,7 @@ texture = ExtResource( 15 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="environment/cottage"]
 position = Vector2( 138.104, 78.1795 )
 frames = SubResource( 4 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="cottage2" type="Sprite" parent="environment"]
@@ -234,7 +228,7 @@ texture = ExtResource( 15 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="environment/cottage2"]
 position = Vector2( 138.104, 78.1795 )
 frames = SubResource( 4 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="alfhrdg" type="Sprite" parent="environment"]

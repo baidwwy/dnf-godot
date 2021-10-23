@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/images/design/道具信息.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/DS_12.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/images/ui/windowcommon/230.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/ui/windowcommon/ToolTipbg.png" type="Texture" id=4]
@@ -28,12 +27,6 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="道具信息" type="Sprite" parent="."]
-visible = false
-position = Vector2( -368, -36 )
-texture = ExtResource( 1 )
-centered = false
 
 [node name="bg" type="NinePatchRect" parent="."]
 anchor_right = 1.0
@@ -65,7 +58,7 @@ __meta__ = {
 margin_left = 6.0
 margin_top = 7.0
 margin_right = 211.0
-margin_bottom = 506.0
+margin_bottom = 391.0
 mouse_filter = 2
 custom_constants/separation = 0
 
@@ -101,8 +94,8 @@ text = "双龙魔影剑"
 margin_top = 30.0
 margin_right = 205.0
 margin_bottom = 43.0
-custom_styles/separator = SubResource( 1 )
 custom_constants/separation = 13
+custom_styles/separator = SubResource( 1 )
 
 [node name="HBox" type="HBoxContainer" parent="bg/Margin/VBox"]
 margin_top = 43.0
@@ -216,8 +209,8 @@ text = "鬼剑士可以使用"
 margin_top = 147.0
 margin_right = 205.0
 margin_bottom = 160.0
-custom_styles/separator = SubResource( 2 )
 custom_constants/separation = 13
+custom_styles/separator = SubResource( 2 )
 
 [node name="SkillNeed" type="Label" parent="bg/Margin/VBox"]
 margin_top = 160.0
@@ -230,8 +223,8 @@ text = "需要[光剑掌握]技能"
 margin_top = 173.0
 margin_right = 205.0
 margin_bottom = 186.0
-custom_styles/separator = SubResource( 3 )
 custom_constants/separation = 13
+custom_styles/separator = SubResource( 3 )
 
 [node name="Physical" type="Label" parent="bg/Margin/VBox"]
 margin_top = 186.0
@@ -244,8 +237,8 @@ text = "物理攻击力 + 701"
 margin_top = 199.0
 margin_right = 205.0
 margin_bottom = 212.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.282353, 0.576471, 0.639216, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "无视防御物理攻击力 +914"
 
 [node name="Magical" type="Label" parent="bg/Margin/VBox"]
@@ -259,8 +252,8 @@ text = "魔法攻击力 + 701"
 margin_top = 225.0
 margin_right = 205.0
 margin_bottom = 238.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.282353, 0.576471, 0.639216, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "无视防御魔法攻击力 +914"
 
 [node name="STR" type="Label" parent="bg/Margin/VBox"]
@@ -295,8 +288,8 @@ text = "精神 +43"
 margin_top = 290.0
 margin_right = 205.0
 margin_bottom = 303.0
-custom_styles/separator = SubResource( 4 )
 custom_constants/separation = 13
+custom_styles/separator = SubResource( 4 )
 
 [node name="EP" type="Label" parent="bg/Margin/VBox"]
 margin_top = 303.0
@@ -309,8 +302,8 @@ text = "暗属性攻击"
 margin_top = 316.0
 margin_right = 205.0
 margin_bottom = 329.0
-custom_styles/separator = SubResource( 4 )
 custom_constants/separation = 13
+custom_styles/separator = SubResource( 4 )
 
 [node name="Effects" type="Label" parent="bg/Margin/VBox"]
 margin_top = 329.0
@@ -324,15 +317,15 @@ autowrap = true
 margin_top = 358.0
 margin_right = 205.0
 margin_bottom = 371.0
-custom_styles/separator = SubResource( 4 )
 custom_constants/separation = 13
+custom_styles/separator = SubResource( 4 )
 
 [node name="FlavorText" type="Label" parent="bg/Margin/VBox"]
 margin_top = 371.0
 margin_right = 205.0
 margin_bottom = 384.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "它很适合你！ --索德罗斯"
 align = 1
 autowrap = true

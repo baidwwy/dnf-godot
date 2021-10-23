@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/scripts/town/BaseStage.gd" type="Script" id=1]
 [ext_resource path="res://src/component/obj/gatepillar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/images/map/bg/gateback.png" type="Texture" id=3]
 [ext_resource path="res://src/scenes/com/DoorArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/images/design/赛利亚房间.png" type="Texture" id=5]
 [ext_resource path="res://src/scenes/npc/Seria.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/scenes/npc/Postbox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/scenes/npc/Storate.tscn" type="PackedScene" id=8]
@@ -23,11 +22,6 @@ __meta__ = {
 "_edit_vertical_guides_": [ 635.61, 323.678 ]
 }
 bgm = "gate"
-
-[node name="赛利亚房间" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 5 )
-centered = false
 
 [node name="gateback" type="Sprite" parent="."]
 texture = ExtResource( 3 )

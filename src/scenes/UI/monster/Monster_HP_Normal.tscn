@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/DaysOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/images/monster_hp/normal_bg.png" type="Texture" id=2]
-[ext_resource path="res://assets/images/design/小怪血条.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/common_etc/monster_type/0.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/DroidSansChinese.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://src/scenes/UI/monster/progress.gd" type="Script" id=6]
@@ -29,12 +28,6 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-
-[node name="小怪血条" type="Sprite" parent="."]
-visible = false
-position = Vector2( 0, -98 )
-texture = ExtResource( 3 )
-centered = false
 
 [node name="bg" type="NinePatchRect" parent="."]
 margin_left = 4.0
